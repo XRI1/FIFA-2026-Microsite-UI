@@ -28,6 +28,8 @@ import {
   Search,
   MessageCircle,
   MapPin,
+  Zap,
+  ChartNoAxesColumnIncreasing,
 } from "lucide-react";
 import heroBanner from "../../imports/WhatsApp_Image_2026-06-06_at_12.16.13_AM.png";
 import heroBanner2 from "../../imports/kv-banner__1_.png";
@@ -787,29 +789,29 @@ function PublicLeaderboard() {
           <div className="p-5 space-y-5">
             {[
               {
-                icon: "🎯",
+                icon: Target,
                 title: "Complete Missions",
                 desc: "Each weekly mission earns points. Stack multiple missions for higher total.",
               },
               {
-                icon: "⚡",
+                icon: Zap,
                 title: "Double Points Hour",
                 desc: "Every week has a 60-min window where all points scored are 2×.",
               },
               {
-                icon: "🏅",
+                icon: Medal,
                 title: "Badges & Bonuses",
                 desc: "Unlock achievement badges (Prediction King, Legend etc.) for bonus pts.",
               },
               {
-                icon: "📊",
+                icon: ChartNoAxesColumnIncreasing,
                 title: "Live Updates",
                 desc: "Board reshuffles in real-time every time a fan scores.",
               },
-            ].map(({ icon, title, desc }) => (
+            ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="flex gap-3">
-                <span className="text-2xl flex-shrink-0">
-                  {icon}
+                <span className="w-9 h-9 rounded-xl bg-lg-red/10 border border-lg-red/20 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-lg-red" />
                 </span>
                 <div>
                   <p className="text-gray-900 font-bold text-sm">
