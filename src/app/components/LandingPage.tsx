@@ -37,6 +37,7 @@ import heroBanner2Mobile from "../../imports/ChatGPT-Image-Jun-14_-2026_-04_43_0
 import kvWinText from "../../imports/kv-wintext.png";
 import heroBannerMobile from "../../imports/ChatGPT_Image_Jun_10__2026__06_34_37_PM.png";
 import lgLogo from "../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png";
+import superFanLogo from "../../imports/mnewmonic.png";
 import kvText from "../../imports/kv-text.png";
 import leaderboardRibbonLeft from "../../imports/leaderboard-ribbon-left.png";
 import leaderboardRibbonRight from "../../imports/leaderboard-ribbon-right.png";
@@ -344,7 +345,16 @@ function HeroSlider({
           }}
         >
           <motion.img
+            src={superFanLogo}
+            alt="LG Super Fan League"
+            className="w-44 md:w-64 mx-auto drop-shadow-2xl"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          />
+          <motion.img
             src={kvWinText}
+            alt="Join now and win exciting prizes"
             className="w-72 md:w-96 mx-auto drop-shadow-2xl cursor-pointer"
             onClick={onGetStarted}
             whileHover={{
