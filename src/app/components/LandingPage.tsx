@@ -7,14 +7,10 @@ import {
   useTransform,
 } from "motion/react";
 import {
-  CustomCursor,
   TiltCard,
   MagneticButton,
   AnimatedCounter,
   CursorSpotlight,
-  ClickParticles,
-  ScrollProgressBar,
-  ScrambleText,
 } from "./PremiumEffects";
 import { supabase } from "../../../utils/supabase/client";
 import {
@@ -24,6 +20,14 @@ import {
   Calendar,
   Gift,
   Home,
+  Goal,
+  Medal,
+  Scale,
+  Camera,
+  CircleHelp,
+  Search,
+  MessageCircle,
+  MapPin,
 } from "lucide-react";
 import heroBanner from "../../imports/WhatsApp_Image_2026-06-06_at_12.16.13_AM.png";
 import heroBanner2 from "../../imports/kv-banner__1_.png";
@@ -35,6 +39,50 @@ import kvText from "../../imports/kv-text.png";
 
 interface LandingPageProps {
   onGetStarted: () => void;
+}
+
+function FootballIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="m12 7 3 2.2-1.1 3.5h-3.8L9 9.2 12 7Z" />
+      <path d="m9 9.2-3.5-1M15 9.2l3.5-1M10.1 12.7 8 16m5.9-3.3L16 16M8 16l-1 3m9-3 1 3" />
+    </svg>
+  );
+}
+
+function CampaignSectionHeading({
+  eyebrow,
+  title,
+  description,
+  light = false,
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  light?: boolean;
+}) {
+  return (
+    <div className="campaign-section-heading">
+      <div className={`campaign-eyebrow ${light ? "campaign-eyebrow-light" : ""}`}>
+        <span />
+        {eyebrow}
+      </div>
+      <h2 className={light ? "text-white" : "text-gray-900"}>{title}</h2>
+      {description && (
+        <p className={light ? "text-white/70" : "text-gray-500"}>{description}</p>
+      )}
+    </div>
+  );
 }
 
 const FLAG_CODES: Record<string, string> = {
@@ -303,7 +351,7 @@ function HeroSlider({
           />
           <MagneticButton onClick={onGetStarted} strength={0.3}>
             <motion.button
-              className="bg-[#F0ECE4] text-lg-red font-black py-3 px-8 md:py-4 md:px-14 rounded-full text-base md:text-xl shadow-2xl"
+              className="campaign-primary-button py-3 px-8 md:py-4 md:px-14 text-base md:text-xl"
               whileHover={{
                 boxShadow:
                   "0 0 40px rgba(255,255,255,0.5), 0 8px 32px rgba(0,0,0,0.4)",
@@ -541,7 +589,7 @@ function FootballTicker() {
   ];
   return (
     <div
-      className="bg-yellow-400 overflow-hidden py-2"
+      className="campaign-ticker overflow-hidden py-2"
       style={{ zIndex: 10, position: "relative" }}
     >
       <motion.div
@@ -556,7 +604,7 @@ function FootballTicker() {
         {[...items, ...items].map((item, i) => (
           <span
             key={i}
-            className="text-black font-black text-sm tracking-widest uppercase flex-shrink-0"
+            className="text-lg-red font-black text-xs md:text-sm tracking-[0.14em] uppercase flex-shrink-0"
           >
             {item}
           </span>
@@ -902,39 +950,32 @@ export function LandingPage({
 
   const missionTypes = [
     {
-      icon: "📸",
+      icon: Camera,
       label: "Photo Challenges",
-      color: "from-pink-500 to-rose-500",
     },
     {
-      icon: "❓",
+      icon: CircleHelp,
       label: "Trivia Quizzes",
-      color: "from-blue-500 to-indigo-500",
     },
     {
-      icon: "⚽",
+      icon: FootballIcon,
       label: "Score Predictors",
-      color: "from-green-500 to-emerald-500",
     },
     {
-      icon: "🔍",
+      icon: Search,
       label: "Spot & Count",
-      color: "from-orange-500 to-amber-500",
     },
     {
-      icon: "🎯",
+      icon: Target,
       label: "Match Games",
-      color: "from-red-500 to-pink-500",
     },
     {
-      icon: "💬",
+      icon: MessageCircle,
       label: "Share Stories",
-      color: "from-cyan-500 to-blue-500",
     },
     {
-      icon: "📍",
+      icon: MapPin,
       label: "Store Visits",
-      color: "from-teal-500 to-green-500",
     },
   ];
 
@@ -961,14 +1002,9 @@ export function LandingPage({
       className="min-h-screen"
       style={{ backgroundColor: "#F0ECE4" }}
     >
-      {/* Global premium effects */}
-      <CustomCursor />
-      <ClickParticles />
-      <ScrollProgressBar />
-
       {/* Navbar */}
       <motion.nav
-        className="bg-red-dramatic sticky top-0 z-50 shadow-lg"
+        className="premium-campaign-nav sticky top-0 z-50"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -1003,7 +1039,7 @@ export function LandingPage({
                 <a
                   key={id}
                   href="/details"
-                  className="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg text-white/90 hover:text-white hover:bg-white/15 transition-all font-semibold text-sm"
+                  className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
@@ -1012,7 +1048,7 @@ export function LandingPage({
                 <button
                   key={id}
                   onClick={() => scrollTo(id)}
-                  className="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg text-white/90 hover:text-white hover:bg-white/15 transition-all font-semibold text-sm"
+                  className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
@@ -1022,7 +1058,7 @@ export function LandingPage({
           </div>
           <motion.button
             onClick={onGetStarted}
-            className="bg-[#F0ECE4] text-lg-red hover:bg-[#e8e4dc] font-bold py-1.5 px-3 md:py-2 md:px-5 rounded-full text-xs md:text-sm shadow-md flex-shrink-0"
+            className="campaign-primary-button py-1.5 px-3 md:py-2 md:px-5 text-xs md:text-sm flex-shrink-0"
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -1099,7 +1135,7 @@ export function LandingPage({
       {/* Leaderboard Section */}
       <div
         id="leaderboard"
-        className="py-12 md:py-16 relative overflow-hidden"
+        className="premium-editorial-section py-16 md:py-24 relative overflow-hidden"
         style={{ backgroundColor: "#F0ECE4" }}
       >
         <FloatingBalls count={5} opacity={0.06} />
@@ -1108,25 +1144,11 @@ export function LandingPage({
           style={{ zIndex: 1 }}
         >
           <FadeInWhenVisible direction="up">
-            <div className="text-center mb-8 md:mb-10">
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 2.5,
-                  ease: "easeInOut",
-                }}
-                className="inline-block mb-3"
-              >
-                <Trophy className="w-12 h-12 text-lg-red" />
-              </motion.div>
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
-                Live Leaderboard
-              </h2>
-              <p className="text-gray-500 text-sm md:text-base">
-                Updates in real-time as fans score points
-              </p>
-            </div>
+            <CampaignSectionHeading
+              eyebrow="Live competition"
+              title="Live Leaderboard"
+              description="Updates in real-time as fans score points"
+            />
           </FadeInWhenVisible>
           <PublicLeaderboard />
         </div>
@@ -1135,50 +1157,46 @@ export function LandingPage({
       {/* How It Works */}
       <div
         id="how-it-works"
-        className="py-12 md:py-16"
+        className="premium-editorial-section py-16 md:py-24"
         style={{ backgroundColor: "#F0ECE4" }}
       >
         <div className="max-w-6xl mx-auto px-4">
           <FadeInWhenVisible direction="up">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-10 md:mb-14">
-              <ScrambleText text="HOW IT WORKS" />
-            </h2>
+            <CampaignSectionHeading
+              eyebrow="Four simple steps"
+              title="How It Works"
+              description="Choose your side, complete missions, climb the board and win."
+            />
           </FadeInWhenVisible>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
             {[
               {
                 num: "01",
-                icon: "⚽",
+                icon: FootballIcon,
                 title: "Choose Your Team",
                 desc: "Pick the national team you want to represent. Your points boost your team on the global leaderboard. Choose wisely — once per season.",
-                border: "border-lg-red",
-                numBg: "bg-lg-red",
               },
               {
                 num: "02",
-                icon: "🎯",
+                icon: Target,
                 title: "Complete Missions",
                 desc: "New missions drop every week — photo challenges, quizzes, prediction games, reaction videos & memes. Each mission earns points.",
-                border: "border-pink-500",
-                numBg: "bg-pink-500",
               },
               {
                 num: "03",
-                icon: "🏆",
+                icon: Trophy,
                 title: "Climb the Board",
                 desc: "Your points roll up to your team's score AND your personal fan rank. Watch the live board update in real-time every time someone scores.",
-                border: "border-yellow-400",
-                numBg: "bg-yellow-400",
               },
               {
                 num: "04",
-                icon: "🎁",
+                icon: Gift,
                 title: "Win LG Prizes",
                 desc: "Weekly top fans win LG products — Smart TVs, Earbuds, Speakers & more. The bigger your score, the better your chance.",
-                border: "border-green-500",
-                numBg: "bg-green-500",
               },
-            ].map((step, i) => (
+            ].map((step, i) => {
+              const Icon = step.icon;
+              return (
               <FadeInWhenVisible
                 key={step.num}
                 delay={i * 0.12}
@@ -1186,10 +1204,7 @@ export function LandingPage({
               >
                 <TiltCard intensity={8}>
                   <motion.div
-                    className={`rounded-2xl border-2 ${step.border} p-6 h-full flex flex-col gap-4 bg-white`}
-                    style={{
-                      boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-                    }}
+                    className="premium-step-card p-6 h-full flex flex-col gap-4"
                     whileHover={{
                       boxShadow: "0 20px 48px rgba(0,0,0,0.14)",
                     }}
@@ -1200,11 +1215,11 @@ export function LandingPage({
                     }}
                   >
                     <div
-                      className={`w-14 h-14 ${step.numBg} rounded-full flex items-center justify-center font-black text-white text-xl`}
+                      className="w-14 h-14 bg-lg-red rounded-full flex items-center justify-center font-black text-white text-xl"
                     >
                       {step.num}
                     </div>
-                    <div className="text-4xl">{step.icon}</div>
+                    <Icon className="w-10 h-10 text-lg-red" />
                     <h3 className="text-gray-900 font-black text-lg">
                       {step.title}
                     </h3>
@@ -1214,7 +1229,8 @@ export function LandingPage({
                   </motion.div>
                 </TiltCard>
               </FadeInWhenVisible>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -1223,22 +1239,21 @@ export function LandingPage({
       {/* Mission Types */}
       <div
         id="missions"
-        className="py-12 md:py-20 bg-red-dramatic relative"
+        className="py-16 md:py-24 bg-red-dramatic relative overflow-hidden"
       >
         <div className="max-w-6xl mx-auto px-4">
           <FadeInWhenVisible direction="up">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
-                Exciting Mission Types
-              </h2>
-              <p className="text-white/90 text-sm md:text-lg">
-                Earn points through diverse and engaging
-                challenges
-              </p>
-            </div>
+            <CampaignSectionHeading
+              eyebrow="Play your way"
+              title="Exciting Mission Types"
+              description="Earn points through diverse and engaging challenges"
+              light
+            />
           </FadeInWhenVisible>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-6">
-            {missionTypes.map((type, i) => (
+            {missionTypes.map((type, i) => {
+              const Icon = type.icon;
+              return (
               <FadeInWhenVisible
                 key={type.label}
                 delay={i * 0.08}
@@ -1261,19 +1276,17 @@ export function LandingPage({
                       damping: 18,
                     }}
                   >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${type.color} opacity-0 group-hover:opacity-25 transition-opacity duration-300`}
-                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-lg-red/0 via-lg-red/0 to-lg-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="relative z-10">
                       <motion.div
-                        className="text-3xl md:text-5xl mb-2 md:mb-3"
+                        className="mission-type-orb mx-auto mb-3 md:mb-4"
                         whileHover={{
-                          scale: 1.25,
-                          rotate: [-4, 4, -4, 0],
+                          scale: 1.1,
+                          rotate: [-5, 5, -3, 0],
                         }}
                         transition={{ duration: 0.4 }}
                       >
-                        {type.icon}
+                        <Icon className="w-7 h-7 md:w-9 md:h-9 text-lg-red" />
                       </motion.div>
                       <div className="font-bold text-gray-900 text-sm md:text-base leading-tight">
                         {type.label}
@@ -1282,7 +1295,8 @@ export function LandingPage({
                   </motion.div>
                 </TiltCard>
               </FadeInWhenVisible>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -1292,7 +1306,7 @@ export function LandingPage({
       <div id="details" className="py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
         <div className="max-w-4xl mx-auto px-4">
           <FadeInWhenVisible direction="up">
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200">
+            <div className="campaign-feature-card overflow-hidden">
               <div className="bg-red-dramatic px-8 py-8">
                 <h2 className="text-2xl md:text-3xl font-black text-white mb-2">Campaign Details & Policies</h2>
                 <p className="text-white/80 text-sm md:text-base">
@@ -1302,19 +1316,19 @@ export function LandingPage({
               <div className="px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="grid grid-cols-3 gap-4 flex-1">
                   {[
-                    { icon: '🏟️', label: 'About Campaign', color: 'text-cyan-600' },
-                    { icon: '🏅', label: 'Prizes & Products', color: 'text-yellow-600' },
-                    { icon: '⚖️', label: 'Fair Play Policy', color: 'text-purple-600' },
-                  ].map(({ icon, label, color }) => (
+                    { icon: Goal, label: 'About Campaign' },
+                    { icon: Medal, label: 'Prizes & Products' },
+                    { icon: Scale, label: 'Fair Play Policy' },
+                  ].map(({ icon: Icon, label }) => (
                     <div key={label} className="text-center">
-                      <div className="text-3xl mb-1">{icon}</div>
-                      <p className={`text-xs font-bold ${color}`}>{label}</p>
+                      <Icon className="w-8 h-8 mx-auto mb-1 text-lg-red" />
+                      <p className="text-xs font-bold text-lg-red">{label}</p>
                     </div>
                   ))}
                 </div>
                 <a
                   href="/details"
-                  className="flex-shrink-0 inline-flex items-center gap-2 bg-lg-red text-white font-black px-6 py-3 rounded-xl hover:bg-lg-red/90 transition-all hover:-translate-y-0.5 shadow-md text-sm"
+                  className="campaign-primary-button flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 text-sm"
                 >
                   View Full Details →
                 </a>
@@ -1328,9 +1342,9 @@ export function LandingPage({
       <div className="py-8" style={{ backgroundColor: '#F0ECE4' }}>
         <div className="max-w-4xl mx-auto px-4">
           <FadeInWhenVisible direction="up">
-            <div className="bg-white rounded-2xl border border-gray-200 px-6 py-4 flex items-center justify-between gap-4">
+            <div className="campaign-policy-strip px-6 py-4 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-2xl">⚖️</span>
+                <Scale className="w-6 h-6 text-lg-red flex-shrink-0" />
                 <p className="font-bold text-gray-900 text-sm">Fair Play Policy (T&C)</p>
                 <p className="text-gray-500 text-xs hidden sm:block">— Campaign rules, eligibility & prize conditions</p>
               </div>
@@ -1360,7 +1374,7 @@ export function LandingPage({
               strength={0.4}
             >
               <motion.button
-                className="bg-[#F0ECE4] text-lg-red font-black py-3 px-10 md:py-4 md:px-14 rounded-full text-base md:text-lg shadow-2xl"
+                className="campaign-primary-button py-3 px-10 md:py-4 md:px-14 text-base md:text-lg"
                 whileHover={{
                   boxShadow:
                     "0 0 50px rgba(255,255,255,0.4), 0 8px 32px rgba(0,0,0,0.4)",

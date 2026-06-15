@@ -1,6 +1,44 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'motion/react';
 
+function FootballMark() {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M32 14l9 6.5-3.4 10.6H26.4L23 20.5 32 14Z" fill="currentColor" />
+      <path d="m23 20.5-10 3.6M41 20.5l10 3.6M26.4 31.1 19 40m18.6-8.9L45 40M19 40l-2 10m28-10 2 10M24 53h16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function PremiumFootballAtmosphere() {
+  return (
+    <div className="premium-football-atmosphere" aria-hidden="true">
+      <div className="fifa-stadium-beam fifa-stadium-beam-left" />
+      <div className="fifa-stadium-beam fifa-stadium-beam-right" />
+      <div className="fifa-pitch-plane">
+        <div className="fifa-pitch-circle" />
+      </div>
+      <div className="premium-pitch-lines" />
+      <motion.div
+        className="premium-football premium-football-one"
+        animate={{ y: [0, -18, 0], rotate: [8, 18, 8] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <FootballMark />
+      </motion.div>
+      <motion.div
+        className="premium-football premium-football-two"
+        animate={{ y: [0, 14, 0], rotate: [-14, -4, -14] }}
+        transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <FootballMark />
+      </motion.div>
+      <div className="premium-atmosphere-glow premium-atmosphere-glow-one" />
+      <div className="premium-atmosphere-glow premium-atmosphere-glow-two" />
+    </div>
+  );
+}
+
 // ── 1. Custom Glowing Cursor ─────────────────────────────────────
 export function CustomCursor() {
   const cursorX = useMotionValue(-100);

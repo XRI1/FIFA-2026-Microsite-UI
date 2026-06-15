@@ -85,7 +85,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
   // Safety check - if user is incomplete, don't render
   if (!user || !user.phone || !user.name) {
     return (
-      <div className="min-h-screen bg-[#F0ECE4] flex items-center justify-center">
+      <div className="premium-page min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-600">Loading user data...</p>
         </div>
@@ -104,9 +104,9 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F0ECE4' }}>
+    <div className="premium-page min-h-screen">
       {/* Header */}
-      <div className="bg-red-dramatic text-white shadow-2xl" style={{ paddingBottom: '1px' }}>
+      <div className="fifa-broadcast-header text-white" style={{ paddingBottom: '1px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-4 sm:pt-5 pb-4 sm:pb-5">
           {/* Top bar */}
           <div className="flex items-center justify-between mb-4 sm:mb-5">
@@ -127,7 +127,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
           </div>
 
           {/* User Profile Card — glass */}
-          <div className="rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-3"
+          <div className="fifa-score-card rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-3"
             style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.18)' }}>
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-md flex-shrink-0"
@@ -184,7 +184,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto p-4 sm:p-6">
+      <div className="max-w-6xl mx-auto p-4 sm:p-6 relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}

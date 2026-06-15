@@ -89,9 +89,9 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
   };
 
   return (
-    <div className="min-h-screen bg-red-dramatic flex items-center justify-center p-4">
+    <div className="premium-page min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="rounded-2xl shadow-2xl p-8 space-y-6" style={{ backgroundColor: "#F0ECE4" }}>
+        <div className="premium-panel fifa-match-panel rounded-3xl p-8 space-y-6">
           <div className="text-center space-y-4">
             <img src={mnewmonic} alt="LG Super Fan League" className="h-24 w-auto mx-auto" />
             <h2 className="text-xl font-bold text-gray-900">Choose Your Name</h2>
@@ -160,7 +160,7 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
               )}
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-4 space-y-2 text-sm text-gray-600">
+            <div className="premium-panel-soft rounded-xl p-4 space-y-2 text-sm text-gray-600">
               <p className="font-semibold text-gray-900">Name Rules:</p>
               <ul className="list-disc list-inside space-y-1">
                 <li>At least 3 characters</li>

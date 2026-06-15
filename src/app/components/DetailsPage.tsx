@@ -1,12 +1,12 @@
 import { Link } from 'react-router';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Goal, Medal, Scale } from 'lucide-react';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
 
 export function DetailsPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F0ECE4' }}>
+    <div className="premium-page min-h-screen">
       {/* Header */}
-      <div className="bg-red-dramatic text-white px-4 py-4 shadow-lg">
+      <div className="fifa-broadcast-header text-white px-4 py-4">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
           <Link to="/" className="p-2 hover:bg-white/20 rounded-lg transition-colors flex-shrink-0">
             <ArrowLeft className="w-5 h-5" />
@@ -29,9 +29,11 @@ export function DetailsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {/* About the Campaign */}
-            <div className="rounded-2xl border-2 border-cyan-500 p-5 md:p-6 h-full bg-white">
+            <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🏟️</div>
+                <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Goal className="w-6 h-6 text-lg-red" />
+                </div>
                 <h3 className="text-gray-900 font-black text-lg">About the Campaign</h3>
               </div>
               <ul className="space-y-4">
@@ -43,7 +45,7 @@ export function DetailsPage() {
                   "Part of LG's broader 'Life's Good' brand strategy for 2026",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1.5 flex-shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-lg-red mt-1.5 flex-shrink-0" />
                     <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -51,9 +53,11 @@ export function DetailsPage() {
             </div>
 
             {/* Official Prizes & Products */}
-            <div className="rounded-2xl border-2 border-yellow-500 p-5 md:p-6 h-full bg-white">
+            <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🏅</div>
+                <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Medal className="w-6 h-6 text-lg-red" />
+                </div>
                 <h3 className="text-gray-900 font-black text-lg">Official Prizes & Products</h3>
               </div>
               <ul className="space-y-4">
@@ -65,7 +69,7 @@ export function DetailsPage() {
                   'LG reserves right to substitute prizes of equal or higher value',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-yellow-500 mt-1.5 flex-shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-lg-red mt-1.5 flex-shrink-0" />
                     <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -73,9 +77,11 @@ export function DetailsPage() {
             </div>
 
             {/* Terms & Eligibility */}
-            <div className="rounded-2xl border-2 border-purple-500 p-5 md:p-6 h-full bg-white">
+            <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📋</div>
+                <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Scale className="w-6 h-6 text-lg-red" />
+                </div>
                 <h3 className="text-gray-900 font-black text-lg">Terms & Eligibility</h3>
               </div>
               <ul className="space-y-4">
@@ -87,7 +93,7 @@ export function DetailsPage() {
                   'Full terms available at lg.com/bd/superfan-terms',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mt-1.5 flex-shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-lg-red mt-1.5 flex-shrink-0" />
                     <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -101,10 +107,10 @@ export function DetailsPage() {
 
         {/* Fair Play Policy */}
         <section>
-          <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 md:p-10">
+          <div className="premium-panel fifa-match-panel rounded-3xl p-6 md:p-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-lg-red rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-white text-lg">⚖️</span>
+                <Scale className="w-5 h-5 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-black text-gray-900">Fair Play Policy (T&C)</h2>
             </div>

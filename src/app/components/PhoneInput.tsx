@@ -32,12 +32,12 @@ export function PhoneInput({ onSubmit }: PhoneInputProps) {
   };
 
   return (
-    <div className="min-h-screen bg-red-dramatic flex items-center justify-center p-4">
+    <div className="premium-page min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-sm">
         {/* Card */}
-        <div className="rounded-3xl overflow-hidden" style={{ boxShadow: '0 32px 64px rgba(0,0,0,0.35)' }}>
+        <div className="premium-panel fifa-match-panel rounded-3xl overflow-hidden">
           {/* Top brand strip */}
-          <div className="px-8 pt-8 pb-6 text-center" style={{ backgroundColor: '#F0ECE4' }}>
+          <div className="px-8 pt-8 pb-6 text-center" style={{ background: 'linear-gradient(145deg, rgba(240,236,228,0.9), rgba(255,255,255,0.72))' }}>
             <img src={lgLogo} alt="LG Electronics" className="h-8 w-auto mx-auto mb-4 bg-white px-3 py-1.5 rounded-lg shadow-sm" />
             <img src={mnewmonic} alt="LG Super Fan League" className="h-24 w-auto mx-auto" />
             <p className="text-xs font-bold uppercase tracking-[0.15em] mt-3" style={{ color: '#888' }}>FIFA World Cup 2026 · Bangladesh</p>

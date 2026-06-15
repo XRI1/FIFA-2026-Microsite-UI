@@ -1,0 +1,74 @@
+
+> @figma/my-make-file@0.0.1 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m618[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m2:40:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m2:40:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:43:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx, /src/styles/index.css[22m
+[2m2:43:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m2:43:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:43:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:48:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/MissionsListDB.tsx, /src/styles/index.css[22m
+[2m2:48:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/MissionsListDB.tsx, /src/styles/index.css[22m
+[2m2:49:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m2:49:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:49:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:51:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/MissionsListDB.tsx, /src/styles/index.css[22m
+[2m2:51:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m2:51:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:51:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:54:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/MissionsListDB.tsx, /src/styles/index.css[22m
+[2m2:54:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m2:55:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:55:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:57:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/PremiumEffects.tsx, /src/styles/index.css[22m
+[2m2:57:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx, /src/styles/index.css[22m
+[2m2:57:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m2:57:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/app/components/PremiumEffects.tsx[22m Could not Fast Refresh (new export)
+[2m2:57:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css, /src/app/App.tsx[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/PhoneInput.tsx, /src/styles/index.css[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/OTPVerification.tsx, /src/styles/index.css[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/NameInput.tsx, /src/styles/index.css[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/TeamSelection.tsx, /src/styles/index.css[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Dashboard.tsx, /src/styles/index.css[22m
+[2m2:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/DetailsPage.tsx, /src/styles/index.css[22m
+[2m2:58:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m2:58:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:07:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:07:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/DetailsPage.tsx, /src/styles/index.css[22m
+[2m3:07:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:07:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:09:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:09:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:09:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:09:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:14:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:15:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:15:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:15:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:15:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:16:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:16:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:16:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m3:17:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:17:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:18:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/DetailsPage.tsx, /src/styles/index.css[22m
+[2m3:19:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:19:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:23:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/PremiumEffects.tsx, /src/styles/index.css[22m
+[2m3:23:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/PhoneInput.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/OTPVerification.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/NameInput.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/TeamSelection.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Dashboard.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/DetailsPage.tsx, /src/styles/index.css[22m
+[2m3:24:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/MissionsListDB.tsx, /src/styles/index.css[22m
+[2m3:24:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:24:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:25:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m3:25:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m

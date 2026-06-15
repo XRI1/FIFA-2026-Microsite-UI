@@ -80,9 +80,9 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
   };
 
   return (
-    <div className="min-h-screen bg-red-dramatic flex items-center justify-center p-4">
+    <div className="premium-page min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="rounded-2xl shadow-2xl p-8 space-y-6" style={{ backgroundColor: "#F0ECE4" }}>
+        <div className="premium-panel fifa-match-panel rounded-3xl p-8 space-y-6">
           {/* Back Button */}
           <button
             onClick={onBack}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   Trophy,
   CheckCircle2,
@@ -6,6 +6,24 @@ import {
   Calendar,
   Upload,
   Zap,
+  Camera,
+  CircleHelp,
+  Search,
+  Target,
+  Type,
+  ScanSearch,
+  MessageCircle,
+  Goal,
+  Video,
+  MapPin,
+  Palette,
+  BadgeCheck,
+  Lightbulb,
+  Gauge,
+  Gamepad2,
+  Clock3,
+  Play,
+  type LucideIcon,
 } from "lucide-react";
 import {
   supabase,
@@ -532,21 +550,21 @@ interface MissionStatus {
   status: "pending" | "approved" | "rejected";
 }
 
-const MISSION_ICONS: Record<string, string> = {
-  photo: "📸",
-  quiz: "❓",
-  "spot-count": "🔍",
-  "drag-match": "🎯",
-  unscramble: "🔤",
-  "hidden-hunt": "🕵️",
-  comment: "💬",
-  predictor: "⚽",
-  video: "🎬",
-  "external-visit": "📍",
-  "fan-art": "🎨",
-  "social-checkin": "✅",
-  creative: "💡",
-  "rapid-tap": "⚡",
+const MISSION_ICONS: Record<string, LucideIcon> = {
+  photo: Camera,
+  quiz: CircleHelp,
+  "spot-count": Search,
+  "drag-match": Target,
+  unscramble: Type,
+  "hidden-hunt": ScanSearch,
+  comment: MessageCircle,
+  predictor: Goal,
+  video: Video,
+  "external-visit": MapPin,
+  "fan-art": Palette,
+  "social-checkin": BadgeCheck,
+  creative: Lightbulb,
+  "rapid-tap": Gauge,
 };
 
 export function MissionsList({
@@ -707,102 +725,68 @@ export function MissionsList({
           </p>
         </div>
       ) : (
-        <div className="rounded-2xl p-3 grid gap-2.5 grid-cols-2" style={{
-          background: 'linear-gradient(135deg, #f5f0ea 0%, #ede8e0 60%, #f0ece4 100%)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 12px rgba(0,0,0,0.08)',
-          border: '1px solid rgba(200,0,44,0.1)',
-        }}>
+        <div className="cyber-mission-grid fifa-mission-board rounded-2xl p-3 grid gap-2.5 grid-cols-2">
           {missions.map((mission, idx) => {
             const isCompleted = completedMissions.has(mission.id);
-            const accent = isCompleted ? '#16a34a' : '#C8002C';
-            const accentGlow = isCompleted ? 'rgba(22,163,74,0.2)' : 'rgba(200,0,44,0.2)';
-            const accentFaint = isCompleted ? 'rgba(22,163,74,0.06)' : 'rgba(200,0,44,0.06)';
+            const accent = '#222222';
+            const MissionIcon = MISSION_ICONS[mission.type] || Gamepad2;
 
             return (
               <button
                 key={mission.id}
                 onClick={() => !isCompleted && setSelectedMission(mission)}
                 disabled={isCompleted}
-                className="relative text-left overflow-hidden"
-                style={{
-                  borderRadius: '0.625rem',
-                  background: `linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, ${accentFaint} 100%)`,
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  border: `1px solid rgba(200,0,44,0.12)`,
-                  boxShadow: `inset 0 1px 0 rgba(255,255,255,0.95), 0 2px 8px rgba(0,0,0,0.07)`,
-                  padding: '0.75rem',
-                  transition: 'all 0.18s ease',
-                  cursor: isCompleted ? 'default' : 'pointer',
-                }}
-                onMouseEnter={e => {
-                  if (isCompleted) return;
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.transform = 'translateY(-2px) scale(1.01)';
-                  el.style.border = `1px solid ${accent}55`;
-                  el.style.boxShadow = `inset 0 1px 0 rgba(255,255,255,0.95), 0 8px 24px rgba(200,0,44,0.15), 0 0 0 1px ${accentGlow}`;
-                  el.style.background = `linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(200,0,44,0.08) 100%)`;
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.transform = 'translateY(0) scale(1)';
-                  el.style.border = '1px solid rgba(200,0,44,0.12)';
-                  el.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.95), 0 2px 8px rgba(0,0,0,0.07)';
-                  el.style.background = `linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, ${accentFaint} 100%)`;
-                }}
+                className="cyber-mission-card relative text-left overflow-hidden"
+                data-completed={isCompleted}
+                style={{ '--mission-accent': accent } as CSSProperties}
               >
-                {/* Top edge accent line */}
-                <div className="absolute top-0 left-4 right-4 h-px pointer-events-none" style={{ background: `linear-gradient(90deg, transparent, ${accent}50, transparent)` }} />
+                <div className="cyber-mission-scan absolute inset-0 pointer-events-none" />
+                <div className="cyber-mission-rail absolute top-0 left-5 right-5 h-px pointer-events-none" />
 
                 {/* Corner brackets */}
                 {[['top-1', 'left-1', 'borderTop', 'borderLeft'], ['top-1', 'right-1', 'borderTop', 'borderRight'], ['bottom-1', 'left-1', 'borderBottom', 'borderLeft'], ['bottom-1', 'right-1', 'borderBottom', 'borderRight']].map(([t, l, b1, b2], ci) => (
                   <span key={ci} className={`absolute ${t} ${l} w-2 h-2 pointer-events-none`} style={{
-                    [b1]: `1.5px solid ${accent}70`,
-                    [b2]: `1.5px solid ${accent}70`,
+                    [b1]: `1.5px solid ${accent}`,
+                    [b2]: `1.5px solid ${accent}`,
                   }} />
                 ))}
 
-                {/* Shimmer overlay */}
-                <div className="absolute inset-0 pointer-events-none rounded-[inherit]" style={{
-                  background: 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 40%, rgba(255,255,255,0.2) 100%)',
-                }} />
-
-                <div className="relative flex flex-col gap-2">
+                <div className="relative z-10 flex flex-col gap-2.5">
                   {/* Top row: number + icon */}
                   <div className="flex items-start justify-between">
-                    <span className="font-black text-[10px] tracking-[0.2em]" style={{ color: `${accent}99` }}>
-                      {String(idx + 1).padStart(2, '0')}
+                    <span className="cyber-mission-number font-black text-[10px] tracking-[0.24em]">
+                      M-{String(idx + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-lg sm:text-xl leading-none">
-                      {MISSION_ICONS[mission.type] || '🎮'}
+                    <span className="cyber-mission-icon flex h-8 w-8 items-center justify-center">
+                      <MissionIcon className="h-4 w-4" />
                     </span>
                   </div>
 
                   {/* Title */}
                   <h3 className="font-black text-[11px] sm:text-xs leading-snug line-clamp-2" style={{
-                    color: '#1a1a1a',
-                    letterSpacing: '0.02em',
+                    color: '#171717',
+                    letterSpacing: '0.055em',
                   }}>
                     {mission.title}
                   </h3>
 
                   {/* Divider */}
-                  <div className="w-full h-px" style={{ background: `linear-gradient(90deg, transparent, ${accent}30, transparent)` }} />
+                  <div className="cyber-mission-divider w-full h-px" />
 
                   {/* Points + timer/status */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
-                      <Trophy className="w-3 h-3 flex-shrink-0" style={{ color: accent }} />
-                      <span className="font-black text-[11px] sm:text-xs" style={{ color: accent, letterSpacing: '0.05em' }}>
-                        {mission.points}
+                      <Trophy className="w-3 h-3 flex-shrink-0 cyber-mission-accent" />
+                      <span className="font-black text-[11px] sm:text-xs cyber-mission-accent" style={{ letterSpacing: '0.08em' }}>
+                        {mission.points} XP
                       </span>
                     </div>
                     <div>
                       {isCompleted
-                        ? <CheckCircle2 className="w-3.5 h-3.5" style={{ color: accent }} />
+                        ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest cyber-mission-accent"><CheckCircle2 className="w-3.5 h-3.5" /> CLEARED</span>
                         : mission.timedDuration
-                          ? <span className="text-[10px] font-bold" style={{ color: 'rgba(0,0,0,0.35)' }}>⏱{mission.timedDuration}s</span>
-                          : <span className="text-[10px] font-bold" style={{ color: 'rgba(0,0,0,0.3)' }}>▶ START</span>
+                          ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><Clock3 className="w-3 h-3" /> {mission.timedDuration}S</span>
+                          : <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><Play className="w-3 h-3 fill-current" /> INIT</span>
                       }
                     </div>
                   </div>

@@ -92,9 +92,9 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
   };
 
   return (
-    <div className="min-h-screen bg-red-dramatic p-4 py-8">
+    <div className="premium-page min-h-screen p-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <div className="rounded-2xl shadow-2xl p-6 md:p-8 space-y-6" style={{ backgroundColor: "#F0ECE4" }}>
+        <div className="premium-panel fifa-match-panel rounded-3xl p-6 md:p-8 space-y-6">
           {/* Back Button */}
           <button
             onClick={onBack}
@@ -140,7 +140,7 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
                 className={`relative p-2 md:p-3 rounded-xl border-2 transition-all transform hover:scale-105 active:scale-95 ${
                   selectedTeam === team.id
                     ? 'border-lg-deep-purple bg-lg-deep-purple/10 shadow-lg'
-                    : 'border-gray-200 hover:border-lg-purple bg-[#F0ECE4]'
+                    : 'border-white/80 hover:border-lg-red/50 bg-white/70 shadow-sm'
                 }`}
               >
                 {selectedTeam === team.id && (
