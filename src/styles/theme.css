@@ -566,6 +566,34 @@
     box-shadow: 0 18px 42px rgba(72,25,32,0.1), inset 0 1px 0 rgba(255,255,255,0.95);
   }
 
+  .how-it-works-stadium {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .how-it-works-stadium-overlay {
+    background:
+      linear-gradient(180deg, rgba(25,0,7,0.48), rgba(16,0,5,0.75)),
+      radial-gradient(circle at 50% 35%, transparent 0%, rgba(15,0,4,0.16) 45%, rgba(10,0,3,0.55) 100%);
+  }
+
+  .premium-step-card-dark {
+    border-color: rgba(255,255,255,0.16);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.07), transparent 42%),
+      linear-gradient(155deg, rgba(22,22,22,0.94), rgba(8,8,8,0.9));
+    box-shadow:
+      0 22px 46px rgba(0,0,0,0.34),
+      inset 0 1px 0 rgba(255,255,255,0.09);
+    backdrop-filter: blur(12px);
+  }
+
+  .premium-step-card-dark svg {
+    color: #ff315b;
+    filter: drop-shadow(0 4px 8px rgba(200,0,44,0.28));
+  }
+
   .campaign-feature-card {
     border-radius: 2rem;
     border: 1px solid rgba(200,0,44,0.1);
@@ -579,6 +607,65 @@
     background: rgba(255,255,255,0.86);
     box-shadow: 0 14px 36px rgba(65,18,28,0.08);
     backdrop-filter: blur(14px);
+  }
+
+  .campaign-details-ribbon-area {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .campaign-details-ribbon {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    object-fit: contain;
+    opacity: 0.78;
+    filter: drop-shadow(0 20px 28px rgba(70,0,20,0.14));
+  }
+
+  .campaign-details-ribbon-left {
+    width: clamp(25rem, 40vw, 42rem);
+    left: clamp(-15rem, -9vw, -6rem);
+    bottom: -8rem;
+  }
+
+  .campaign-details-ribbon-right {
+    width: clamp(24rem, 38vw, 40rem);
+    right: clamp(-14rem, -8vw, -5rem);
+    top: -6rem;
+  }
+
+  .leaderboard-board {
+    isolation: isolate;
+    margin-top: 1rem;
+  }
+
+  .leaderboard-grid {
+    z-index: 2;
+  }
+
+  .leaderboard-ribbon {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    object-fit: contain;
+    opacity: 0.92;
+    filter: drop-shadow(0 20px 28px rgba(70,0,20,0.16));
+  }
+
+  .leaderboard-ribbon-left {
+    width: clamp(25rem, 39vw, 40rem);
+    left: clamp(-13rem, -8vw, -5rem);
+    bottom: -5rem;
+  }
+
+  .leaderboard-ribbon-right {
+    width: clamp(24rem, 37vw, 39rem);
+    right: clamp(-12rem, -7vw, -4rem);
+    top: -4rem;
   }
 
   .fifa-broadcast-header {
@@ -712,6 +799,43 @@
     .fifa-pitch-plane {
       width: 120vw;
       opacity: 0.65;
+    }
+
+    .leaderboard-ribbon {
+      opacity: 0.42;
+    }
+
+    .leaderboard-ribbon-left {
+      width: 22rem;
+      left: -13rem;
+      bottom: -3rem;
+    }
+
+    .leaderboard-ribbon-right {
+      width: 21rem;
+      right: -12rem;
+      top: -2rem;
+    }
+
+    .campaign-details-ribbon {
+      opacity: 0.34;
+    }
+
+    .campaign-details-ribbon-left {
+      width: 21rem;
+      left: -14rem;
+      bottom: -4rem;
+    }
+
+    .campaign-details-ribbon-right {
+      width: 20rem;
+      right: -13rem;
+      top: -2rem;
+    }
+
+    .how-it-works-stadium {
+      background-attachment: scroll;
+      background-position: center top;
     }
   }
 

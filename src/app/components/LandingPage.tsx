@@ -38,6 +38,9 @@ import kvWinText from "../../imports/kv-wintext.png";
 import heroBannerMobile from "../../imports/ChatGPT_Image_Jun_10__2026__06_34_37_PM.png";
 import lgLogo from "../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png";
 import kvText from "../../imports/kv-text.png";
+import leaderboardRibbonLeft from "../../imports/leaderboard-ribbon-left.png";
+import leaderboardRibbonRight from "../../imports/leaderboard-ribbon-right.png";
+import howItWorksStadium from "../../imports/how-it-works-stadium.jpeg";
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -720,7 +723,20 @@ function PublicLeaderboard() {
     );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+    <div className="leaderboard-board relative">
+      <img
+        src={leaderboardRibbonLeft}
+        alt=""
+        aria-hidden="true"
+        className="leaderboard-ribbon leaderboard-ribbon-left"
+      />
+      <img
+        src={leaderboardRibbonRight}
+        alt=""
+        aria-hidden="true"
+        className="leaderboard-ribbon leaderboard-ribbon-right"
+      />
+      <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
         <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
@@ -877,6 +893,7 @@ function PublicLeaderboard() {
           </div>
         </div>
       </FadeInWhenVisible>
+      </div>
     </div>
   );
 }
@@ -1143,7 +1160,7 @@ export function LandingPage({
         <FloatingBalls count={5} opacity={0.06} />
         <div
           className="max-w-6xl mx-auto px-4 relative"
-          style={{ zIndex: 1 }}
+          style={{ zIndex: 2 }}
         >
           <FadeInWhenVisible direction="up">
             <CampaignSectionHeading
@@ -1159,15 +1176,17 @@ export function LandingPage({
       {/* How It Works */}
       <div
         id="how-it-works"
-        className="premium-editorial-section py-16 md:py-24"
-        style={{ backgroundColor: "#F0ECE4" }}
+        className="how-it-works-stadium py-16 md:py-24 relative overflow-hidden"
+        style={{ backgroundImage: `url(${howItWorksStadium})` }}
       >
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="absolute inset-0 how-it-works-stadium-overlay" />
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
           <FadeInWhenVisible direction="up">
             <CampaignSectionHeading
               eyebrow="Four simple steps"
               title="How It Works"
               description="Choose your side, complete missions, climb the board and win."
+              light
             />
           </FadeInWhenVisible>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
@@ -1206,7 +1225,7 @@ export function LandingPage({
               >
                 <TiltCard intensity={8}>
                   <motion.div
-                    className="premium-step-card p-6 h-full flex flex-col gap-4"
+                    className="premium-step-card premium-step-card-dark p-6 h-full flex flex-col gap-4"
                     whileHover={{
                       boxShadow: "0 20px 48px rgba(0,0,0,0.14)",
                     }}
@@ -1222,10 +1241,10 @@ export function LandingPage({
                       {step.num}
                     </div>
                     <Icon className="w-10 h-10 text-lg-red" />
-                    <h3 className="text-gray-900 font-black text-lg">
+                    <h3 className="text-white font-black text-lg">
                       {step.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">
+                    <p className="text-white/65 text-sm leading-relaxed">
                       {step.desc}
                     </p>
                   </motion.div>
@@ -1305,8 +1324,20 @@ export function LandingPage({
 
       <GrassDivider flip />
       {/* Details & T&C teaser */}
-      <div id="details" className="py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
-        <div className="max-w-4xl mx-auto px-4">
+      <div id="details" className="campaign-details-ribbon-area py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
+        <img
+          src={leaderboardRibbonLeft}
+          alt=""
+          aria-hidden="true"
+          className="campaign-details-ribbon campaign-details-ribbon-left"
+        />
+        <img
+          src={leaderboardRibbonRight}
+          alt=""
+          aria-hidden="true"
+          className="campaign-details-ribbon campaign-details-ribbon-right"
+        />
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
           <FadeInWhenVisible direction="up">
             <div className="campaign-feature-card overflow-hidden">
               <div className="bg-red-dramatic px-8 py-8">
