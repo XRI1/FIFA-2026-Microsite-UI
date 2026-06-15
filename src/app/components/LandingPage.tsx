@@ -372,10 +372,6 @@ function HeroSlider({
             alt="Pick Your Side, Complete Missions, Climb the Leaderboard"
             className="w-72 md:w-[480px] mx-auto drop-shadow-2xl"
           />
-          <p className="text-white text-xs md:text-base font-semibold drop-shadow-lg">
-            Campaign runs throughout FIFA 2026 • New missions
-            weekly
-          </p>
         </motion.div>
       </div>
 
@@ -1418,10 +1414,6 @@ export function LandingPage({
                 JOIN NOW →
               </motion.button>
             </MagneticButton>
-            <p className="text-sm text-white/70">
-              Campaign runs throughout FIFA 2026 • New missions
-              weekly
-            </p>
           </div>
         </FadeInWhenVisible>
       </div>
