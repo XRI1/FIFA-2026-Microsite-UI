@@ -680,20 +680,8 @@
   .fifa-mission-board {
     border-top: 4px solid #C8002C;
     box-shadow:
-      inset 0 0 45px rgba(38,104,65,0.045),
-      0 18px 42px rgba(42,20,24,0.12);
-  }
-
-  .fifa-mission-board::after {
-    content: "WEEKLY FIXTURES";
-    position: absolute;
-    top: 0.45rem;
-    right: 0.8rem;
-    z-index: 4;
-    color: rgba(200,0,44,0.42);
-    font-size: 0.52rem;
-    font-weight: 900;
-    letter-spacing: 0.18em;
+      inset 0 0 45px rgba(200,0,44,0.025),
+      0 14px 32px rgba(42,20,24,0.08);
   }
 
   .cyber-mission-card h3 {
@@ -702,9 +690,9 @@
 
   .cyber-mission-card {
     box-shadow:
-      inset 0 0 0 1px rgba(255,255,255,0.9),
-      inset 0 -20px 36px rgba(38,104,65,0.018),
-      0 5px 14px rgba(0,0,0,0.08);
+      inset 0 0 0 1px rgba(255,255,255,0.58),
+      inset 0 -20px 36px rgba(200,0,44,0.012),
+      0 5px 14px rgba(50,30,34,0.055);
   }
 
   .premium-step-card,
@@ -759,16 +747,16 @@
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(96, 76, 66, 0.13);
     background:
-      linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.9), transparent 48%),
-      linear-gradient(145deg, #ffffff 0%, #f5f5f5 55%, #ffffff 100%);
+      linear-gradient(rgba(96, 76, 66, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96, 76, 66, 0.025) 1px, transparent 1px),
+      radial-gradient(circle at 50% 0%, rgba(255,255,255,0.52), transparent 48%),
+      linear-gradient(145deg, #F4F0E9 0%, #F0ECE4 55%, #F5F1EA 100%);
     background-size: 22px 22px, 22px 22px, auto, auto;
     box-shadow:
-      inset 0 0 40px rgba(255, 255, 255, 0.8),
-      0 14px 32px rgba(0, 0, 0, 0.1);
+      inset 0 0 40px rgba(255,255,255,0.42),
+      0 14px 32px rgba(50,30,34,0.07);
   }
 
   .cyber-mission-grid::before {
@@ -777,7 +765,7 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: linear-gradient(115deg, transparent 20%, rgba(0, 0, 0, 0.035) 48%, transparent 72%);
+    background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.28) 48%, transparent 72%);
     transform: translateX(-100%);
     animation: cyber-grid-sweep 6s linear infinite;
   }
@@ -786,18 +774,18 @@
     --mission-accent: #222222;
     min-height: 7.25rem;
     padding: 0.8rem;
-    border: 1px solid color-mix(in srgb, var(--mission-accent) 48%, transparent);
+    border: 1px solid rgba(58, 45, 40, 0.24);
     border-radius: 0.3rem 0.85rem 0.3rem 0.85rem;
     color: #171717;
     cursor: pointer;
     background:
-      linear-gradient(135deg, rgba(255,255,255,0.95), transparent 38%),
-      radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--mission-accent) 18%, transparent), transparent 38%),
-      linear-gradient(145deg, rgba(255,255,255,0.99), rgba(244,244,244,0.99));
+      linear-gradient(135deg, rgba(255,255,255,0.58), transparent 38%),
+      radial-gradient(circle at 100% 0%, rgba(200,0,44,0.035), transparent 38%),
+      linear-gradient(145deg, rgba(247,243,236,0.98), rgba(236,231,222,0.98));
     box-shadow:
-      inset 0 0 0 1px rgba(255,255,255,0.9),
-      inset 0 -20px 36px rgba(0,0,0,0.018),
-      0 4px 12px rgba(0,0,0,0.08);
+      inset 0 0 0 1px rgba(255,255,255,0.62),
+      inset 0 -20px 36px rgba(200,0,44,0.01),
+      0 4px 12px rgba(50,30,34,0.055);
     transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
   }
 
