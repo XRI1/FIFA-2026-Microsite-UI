@@ -670,10 +670,10 @@ function PublicLeaderboard() {
     );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
+        <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
           <div className="flex items-center gap-2 p-4 border-b border-gray-100">
             <Trophy className="w-5 h-5 text-lg-red" />
             <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide">
@@ -730,7 +730,7 @@ function PublicLeaderboard() {
 
       {/* How Points Work */}
       <FadeInWhenVisible direction="up" delay={0.1}>
-        <div className="rounded-2xl border-2 border-lg-red overflow-hidden bg-white shadow-sm">
+        <div className="h-full rounded-2xl border-2 border-lg-red overflow-hidden bg-white shadow-sm">
           <div className="p-5 border-b border-gray-100">
             <h3 className="text-lg-red font-black text-xl text-center uppercase tracking-widest">
               How Points Work
@@ -779,7 +779,7 @@ function PublicLeaderboard() {
 
       {/* Individual */}
       <FadeInWhenVisible direction="right" delay={0.1}>
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
+        <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
           <div className="flex items-center gap-2 p-4 border-b border-gray-100">
             <span className="text-xl">👤</span>
             <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide">
@@ -915,11 +915,6 @@ export function LandingPage({
       icon: "⚽",
       label: "Score Predictors",
       color: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: "🎨",
-      label: "Fan Art",
-      color: "from-purple-500 to-violet-500",
     },
     {
       icon: "🔍",
