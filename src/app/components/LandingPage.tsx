@@ -1221,7 +1221,7 @@ export function LandingPage({
               >
                 <TiltCard intensity={8}>
                   <motion.div
-                    className="premium-step-card premium-step-card-dark p-6 h-full flex flex-col gap-4"
+                    className="premium-step-card premium-step-card-off-white p-6 h-full flex flex-col gap-4"
                     whileHover={{
                       boxShadow: "0 20px 48px rgba(0,0,0,0.14)",
                     }}
@@ -1237,10 +1237,10 @@ export function LandingPage({
                       {step.num}
                     </div>
                     <Icon className="w-10 h-10 text-lg-red" />
-                    <h3 className="text-white font-black text-lg">
+                    <h3 className="text-gray-900 font-black text-lg">
                       {step.title}
                     </h3>
-                    <p className="text-white/65 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {step.desc}
                     </p>
                   </motion.div>

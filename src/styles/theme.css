@@ -594,6 +594,14 @@
     filter: drop-shadow(0 4px 8px rgba(200,0,44,0.28));
   }
 
+  .premium-step-card-off-white {
+    border-color: rgba(200, 0, 44, 0.12);
+    background: #faf8f3;
+    box-shadow:
+      0 20px 44px rgba(30, 12, 17, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+
   .campaign-feature-card {
     border-radius: 2rem;
     border: 1px solid rgba(200,0,44,0.1);
