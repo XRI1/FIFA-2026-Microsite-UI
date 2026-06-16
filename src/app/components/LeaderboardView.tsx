@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trophy, Medal, TrendingUp, Users } from 'lucide-react';
+import { FlaticonIcon, type FlaticonIconName } from "./FlaticonIcon";
 
 interface LeaderboardViewProps {
   currentUserId: string;
@@ -50,9 +50,9 @@ export function LeaderboardView({ currentUserId, currentTeam }: LeaderboardViewP
   ];
 
   const getRankIcon = (rank: number) => {
-    if (rank === 1) return <Trophy className="w-6 h-6 text-yellow-500" />;
-    if (rank === 2) return <Medal className="w-6 h-6 text-gray-400" />;
-    if (rank === 3) return <Medal className="w-6 h-6 text-amber-700" />;
+    if (rank === 1) return <FlaticonIcon name="trophy" className="w-6 h-6" />;
+    if (rank === 2) return <FlaticonIcon name="medal" className="w-6 h-6" />;
+    if (rank === 3) return <FlaticonIcon name="medal" className="w-6 h-6" />;
     return <span className="text-gray-500 font-bold w-6 text-center">{rank}</span>;
   };
 
@@ -68,9 +68,9 @@ export function LeaderboardView({ currentUserId, currentTeam }: LeaderboardViewP
       {/* View Toggle — pill style */}
       <div className="flex p-1 rounded-2xl gap-1" style={{ background: 'rgba(0,0,0,0.06)' }}>
         {[
-          { id: 'individual', label: 'Individual', Icon: TrendingUp },
-          { id: 'team', label: 'Team', Icon: Users },
-        ].map(({ id, label, Icon }) => (
+          { id: 'individual', label: 'Individual', icon: "chart" as FlaticonIconName },
+          { id: 'team', label: 'Team', icon: "users" as FlaticonIconName },
+        ].map(({ id, label, icon }) => (
           <button
             key={id}
             onClick={() => setView(id as any)}
@@ -81,7 +81,7 @@ export function LeaderboardView({ currentUserId, currentTeam }: LeaderboardViewP
             }`}
             style={view === id ? { background: 'linear-gradient(135deg, #C8002C 0%, #8a0015 100%)' } : {}}
           >
-            <Icon className="w-4 h-4" />
+            <FlaticonIcon name={icon} className="w-4 h-4" />
             {label}
           </button>
         ))}

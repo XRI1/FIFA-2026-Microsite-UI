@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { Check, Loader2, ArrowLeft, Search } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 interface Team {
   id: string;
@@ -100,7 +101,7 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
             onClick={onBack}
             className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <FlaticonIcon name="arrow-left" className="w-4 h-4" />
             <span className="text-sm font-medium">Back</span>
           </button>
 
@@ -115,7 +116,7 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
 
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <FlaticonIcon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-50" />
             <input
               type="text"
               value={searchQuery}
@@ -145,7 +146,7 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
               >
                 {selectedTeam === team.id && (
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-lg-deep-purple rounded-full flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
+                    <FlaticonIcon name="check" className="w-4 h-4" />
                   </div>
                 )}
                 <div className="text-center space-y-1">

@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { supabase } from '../../../utils/supabase/client';
 import mnewmonic from '../../imports/mnewmonic-1.png';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 interface NameInputProps {
   phoneNumber: string;
@@ -125,12 +126,12 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
                 )}
                 {!checking && available === true && (
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                    <CheckCircle2 className="w-5 h-5 text-lg-green" />
+                    <FlaticonIcon name="check" className="w-5 h-5" />
                   </div>
                 )}
                 {!checking && available === false && (
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                    <AlertCircle className="w-5 h-5 text-lg-bright-purple" />
+                    <FlaticonIcon name="alert" className="w-5 h-5" />
                   </div>
                 )}
               </div>
@@ -143,14 +144,14 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
 
               {available === true && (
                 <p className="mt-2 text-sm text-lg-green font-medium flex items-center gap-1">
-                  <CheckCircle2 className="w-4 h-4" />
+                  <FlaticonIcon name="check" className="w-4 h-4" />
                   Name is available!
                 </p>
               )}
 
               {available === false && (
                 <p className="mt-2 text-sm text-lg-bright-purple font-medium flex items-center gap-1">
-                  <AlertCircle className="w-4 h-4" />
+                  <FlaticonIcon name="alert" className="w-4 h-4" />
                   This name is already taken
                 </p>
               )}

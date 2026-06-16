@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Loader2, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
 import mnewmonic from '../../imports/mnewmonic.png';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 interface OTPVerificationProps {
   phoneNumber: string;
@@ -88,14 +89,14 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
             onClick={onBack}
             className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <FlaticonIcon name="arrow-left" className="w-4 h-4" />
             <span className="text-sm font-medium">Back</span>
           </button>
 
           <div className="text-center space-y-4">
             {success ? (
               <div className="w-20 h-20 bg-lg-green rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-10 h-10 text-white" />
+                <FlaticonIcon name="check" className="w-10 h-10" />
               </div>
             ) : (
               <img src={mnewmonic} alt="LG Super Fan League" className="h-24 w-auto mx-auto" />
@@ -140,7 +141,7 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
             {success && (
               <div className="text-center">
                 <p className="text-sm text-lg-green font-medium flex items-center justify-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" />
+                  <FlaticonIcon name="check" className="w-4 h-4" />
                   Verification successful!
                 </p>
               </div>

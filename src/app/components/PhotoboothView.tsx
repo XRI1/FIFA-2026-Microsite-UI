@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Camera, Upload, Download, Share2, Heart } from 'lucide-react';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 interface PhotoEntry {
   id: string;
@@ -20,10 +20,10 @@ export function PhotoboothView() {
   const [caption, setCaption] = useState('');
 
   const frames = [
-    { id: 'fifa-2026', name: 'FIFA 2026', preview: '⚽' },
-    { id: 'lg-football', name: 'LG Football', preview: '📺' },
-    { id: 'superfan', name: 'Superfan', preview: '🏆' },
-    { id: 'team-pride', name: 'Team Pride', preview: '🎉' },
+    { id: 'fifa-2026', name: 'FIFA 2026', icon: "football" as const },
+    { id: 'lg-football', name: 'LG Football', icon: "tv" as const },
+    { id: 'superfan', name: 'Superfan', icon: "trophy" as const },
+    { id: 'team-pride', name: 'Team Pride', icon: "medal" as const },
   ];
 
   const galleryPhotos: PhotoEntry[] = [
@@ -79,7 +79,7 @@ export function PhotoboothView() {
               : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
-          <Camera className="w-5 h-5" />
+          <FlaticonIcon name="camera" className="w-5 h-5" />
           Create
         </button>
         <button
@@ -90,7 +90,7 @@ export function PhotoboothView() {
               : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
-          <Share2 className="w-5 h-5" />
+          <FlaticonIcon name="share" className="w-5 h-5" />
           Gallery
         </button>
       </div>
@@ -111,7 +111,7 @@ export function PhotoboothView() {
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <div className="text-4xl mb-2">{frame.preview}</div>
+                  <FlaticonIcon name={frame.icon} className="w-10 h-10 mx-auto mb-2" />
                   <div className="text-sm font-semibold">{frame.name}</div>
                 </button>
               ))}
@@ -134,7 +134,7 @@ export function PhotoboothView() {
                 </div>
               ) : (
                 <>
-                  <Upload className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                  <FlaticonIcon name="upload" className="w-16 h-16 mx-auto mb-4 opacity-60" />
                   <p className="text-gray-600 mb-2">Upload or take a photo</p>
                 </>
               )}
@@ -171,11 +171,11 @@ export function PhotoboothView() {
                   onClick={handleSubmit}
                   className="flex-1 bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2"
                 >
-                  <Share2 className="w-5 h-5" />
+                  <FlaticonIcon name="share" className="w-5 h-5" />
                   Share to Gallery
                 </button>
                 <button className="px-6 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl transition-all">
-                  <Download className="w-5 h-5 text-gray-700" />
+                  <FlaticonIcon name="download" className="w-5 h-5" />
                 </button>
               </div>
             </>
@@ -202,7 +202,7 @@ export function PhotoboothView() {
 
               <div className="bg-gray-100 aspect-square flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="text-6xl mb-2">📸</div>
+                  <FlaticonIcon name="camera" className="w-16 h-16 mx-auto mb-2 opacity-60" />
                   <p className="text-gray-500">Photo with frame overlay</p>
                 </div>
               </div>
@@ -211,11 +211,11 @@ export function PhotoboothView() {
                 <p className="mb-3">{photo.caption}</p>
                 <div className="flex items-center gap-4">
                   <button className="flex items-center gap-2 text-lg-red hover:text-lg-red/80 transition-colors">
-                    <Heart className="w-5 h-5" />
+                    <FlaticonIcon name="heart" className="w-5 h-5" />
                     <span className="font-semibold">{photo.likes}</span>
                   </button>
                   <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-                    <Share2 className="w-5 h-5" />
+                    <FlaticonIcon name="share" className="w-5 h-5" />
                     <span className="text-sm">Share</span>
                   </button>
                 </div>
@@ -225,7 +225,7 @@ export function PhotoboothView() {
 
           {galleryPhotos.length === 0 && (
             <div className="bg-[#F0ECE4] rounded-xl p-12 text-center">
-              <Camera className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <FlaticonIcon name="camera" className="w-16 h-16 mx-auto mb-4 opacity-60" />
               <h3 className="text-xl font-bold mb-2">No photos yet</h3>
               <p className="text-gray-600 mb-4">Be the first to share a photo!</p>
               <button

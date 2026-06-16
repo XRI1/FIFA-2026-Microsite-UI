@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
-import { ArrowLeft, Goal, Medal, Scale } from 'lucide-react';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 export function DetailsPage() {
   return (
@@ -9,7 +9,7 @@ export function DetailsPage() {
       <div className="fifa-broadcast-header text-white px-4 py-4">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
           <Link to="/" className="p-2 hover:bg-white/20 rounded-lg transition-colors flex-shrink-0">
-            <ArrowLeft className="w-5 h-5" />
+            <FlaticonIcon name="arrow-left" className="w-5 h-5" />
           </Link>
           <img src={lgLogo} alt="LG" className="h-7 w-auto bg-white px-2 py-1 rounded-md" />
           <h1 className="font-black text-lg tracking-wide">Campaign Info</h1>
@@ -32,7 +32,7 @@ export function DetailsPage() {
             <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Goal className="w-6 h-6 text-lg-red" />
+                  <FlaticonIcon name="goal" className="w-6 h-6" />
                 </div>
                 <h3 className="text-gray-900 font-black text-lg">About the Campaign</h3>
               </div>
@@ -56,7 +56,7 @@ export function DetailsPage() {
             <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Medal className="w-6 h-6 text-lg-red" />
+                  <FlaticonIcon name="medal" className="w-6 h-6" />
                 </div>
                 <h3 className="text-gray-900 font-black text-lg">Official Prizes & Products</h3>
               </div>
@@ -80,7 +80,7 @@ export function DetailsPage() {
             <div className="premium-panel-soft rounded-2xl border border-lg-red/15 p-5 md:p-6 h-full">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 bg-lg-red/10 border border-lg-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Scale className="w-6 h-6 text-lg-red" />
+                  <FlaticonIcon name="scale" className="w-6 h-6" />
                 </div>
                 <h3 className="text-gray-900 font-black text-lg">Terms & Eligibility</h3>
               </div>
@@ -110,7 +110,7 @@ export function DetailsPage() {
           <div className="premium-panel fifa-match-panel rounded-3xl p-6 md:p-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-lg-red rounded-xl flex items-center justify-center flex-shrink-0">
-                <Scale className="w-5 h-5 text-white" />
+                <FlaticonIcon name="scale" className="w-5 h-5" />
               </div>
               <h2 className="text-2xl md:text-3xl font-black text-gray-900">Fair Play Policy (T&C)</h2>
             </div>
@@ -138,7 +138,7 @@ export function DetailsPage() {
         {/* Back link */}
         <div className="text-center pb-4">
           <Link to="/" className="inline-flex items-center gap-2 text-lg-red font-bold hover:underline">
-            <ArrowLeft className="w-4 h-4" />
+            <FlaticonIcon name="arrow-left" className="w-4 h-4" />
             Back to Home
           </Link>
         </div>

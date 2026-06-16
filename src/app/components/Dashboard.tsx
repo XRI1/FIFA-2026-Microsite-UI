@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  Trophy,
-  Target,
-  Gift,
-  User,
-  LogOut,
-} from "lucide-react";
+import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import { MissionsList } from "./MissionsListDB";
 import { LeaderboardView } from "./LeaderboardView";
 import lgLogo from "../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png";
@@ -94,13 +88,13 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
   }
 
   const tabs = [
-    { id: "missions" as Tab, label: "Missions", icon: Target },
+    { id: "missions" as Tab, label: "Missions", icon: "target" as FlaticonIconName },
     {
       id: "leaderboard" as Tab,
       label: "Leaderboard",
-      icon: Trophy,
+      icon: "trophy" as FlaticonIconName,
     },
-    { id: "rewards" as Tab, label: "Rewards", icon: Gift },
+    { id: "rewards" as Tab, label: "Rewards", icon: "gift" as FlaticonIconName },
   ];
 
   return (
@@ -121,7 +115,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
               style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)' }}
               title="Logout"
             >
-              <LogOut className="w-4 h-4" />
+              <FlaticonIcon name="logout" className="w-4 h-4" />
               <span>Logout</span>
             </button>
           </div>
@@ -137,7 +131,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <User className="w-3.5 h-3.5 opacity-70" />
+                  <FlaticonIcon name="user" className="w-3.5 h-3.5 opacity-70" />
                   <span className="font-bold text-sm sm:text-base tracking-wide">{user.name || user.phone}</span>
                 </div>
                 <div className="text-xs sm:text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -160,7 +154,6 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
         <div className="max-w-6xl mx-auto px-2 sm:px-6">
           <div className="flex">
             {tabs.map((tab) => {
-              const Icon = tab.icon;
               return (
                 <button
                   key={tab.id}
@@ -171,7 +164,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                       : "text-white/50 hover:text-white/80"
                   }`}
                 >
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <FlaticonIcon name={tab.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
                   {tab.label}
                   {activeTab === tab.id && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 rounded-full bg-white" />
@@ -227,7 +220,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                     />
                     <div className="p-12 sm:p-10 sm:flex-1 relative z-10">
                       <div className="flex items-center gap-2 mb-4">
-                        <Trophy className="w-12 h-12 text-yellow-400" />
+                        <FlaticonIcon name="trophy" className="w-12 h-12" />
                         <h2 className="text-white font-black text-2xl uppercase tracking-wide">
                           Win Big!
                         </h2>
@@ -246,17 +239,17 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                         <ul className="space-y-1.5">
                           {[
                             {
-                              medal: "🥇",
+                              medalRank: 1 as const,
                               rank: "1st Place",
                               prize: 'LG 50" 4K TV',
                             },
                             {
-                              medal: "🥈",
+                              medalRank: 2 as const,
                               rank: "2nd Place",
                               prize: 'LG 43" TV',
                             },
                             {
-                              medal: "🥉",
+                              medalRank: 3 as const,
                               rank: "3rd Place",
                               prize: 'LG 32" TV',
                             },
@@ -265,9 +258,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                               key={item.rank}
                               className="flex items-center gap-2 text-sm"
                             >
-                              <span className="text-xl flex-shrink-0">
-                                {item.medal}
-                              </span>
+                              <RankMedal rank={item.medalRank} className="w-6 h-6 flex-shrink-0" />
                               <span className="text-white/70">
                                 {item.rank}
                               </span>
@@ -287,12 +278,12 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                         <ul className="space-y-1.5">
                           {[
                             {
-                              medal: "🥇",
+                              medalRank: 1 as const,
                               rank: "1st Winner",
                               prize: "Fan Jersey",
                             },
                             {
-                              medal: "🥈🥉",
+                              medalRank: 2 as const,
                               rank: "2nd & 3rd Winner",
                               prize: "Key Ring",
                             },
@@ -301,8 +292,9 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                               key={item.rank}
                               className="flex items-center gap-2 text-sm"
                             >
-                              <span className="text-lg flex-shrink-0">
-                                {item.medal}
+                              <span className="flex items-center gap-1 flex-shrink-0">
+                                <RankMedal rank={item.medalRank} className="w-5 h-5" />
+                                {item.rank.includes("2nd") && <RankMedal rank={3} className="w-5 h-5" />}
                               </span>
                               <span className="text-white/70">
                                 {item.rank}
@@ -333,15 +325,15 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
                     {[
                       {
-                        icon: "🎯",
+                        icon: "target" as FlaticonIconName,
                         text: "Complete weekly missions to earn points",
                       },
                       {
-                        icon: "📊",
+                        icon: "chart" as FlaticonIconName,
                         text: "Climb the leaderboard each week",
                       },
                       {
-                        icon: "🏆",
+                        icon: "trophy" as FlaticonIconName,
                         text: "Top scorers win grand & weekly prizes",
                       },
                     ].map((tip, i) => (
@@ -350,7 +342,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                         className="flex items-start gap-3 bg-white rounded-xl p-3"
                       >
                         <span className="text-2xl flex-shrink-0">
-                          {tip.icon}
+                          <FlaticonIcon name={tip.icon} className="w-7 h-7" />
                         </span>
                         <p className="text-gray-600 leading-snug">
                           {tip.text}

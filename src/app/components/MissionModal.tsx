@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { X, Upload, Trophy, CheckCircle2, Loader2, Clock, AlertCircle } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Mission } from '../types/mission';
 import { supabase } from '../../../utils/supabase/client';
 import confetti from 'canvas-confetti';
+import { FlaticonIcon } from "./FlaticonIcon";
 
 // Week 1 mission images
 import imgSpotProducts from '../../imports/image-9.png';
@@ -121,7 +122,7 @@ export function MissionModal({ mission, userPhone, onClose, onComplete }: Missio
         <div className="sticky top-0 bg-red-dramatic text-white p-4 flex items-center justify-between rounded-t-2xl">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-              <Trophy className="w-6 h-6" />
+              <FlaticonIcon name="trophy" className="w-6 h-6" />
             </div>
             <div>
               <h2 className="font-bold text-lg">{mission.title}</h2>
@@ -129,14 +130,14 @@ export function MissionModal({ mission, userPhone, onClose, onComplete }: Missio
             </div>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-white/20 rounded-lg transition-colors">
-            <X className="w-6 h-6" />
+            <span className="text-2xl leading-none">×</span>
           </button>
         </div>
 
         {/* Timer */}
         {mission.timedDuration && step === 'play' && (
           <div className="bg-lg-yellow text-gray-900 px-4 py-2 flex items-center justify-center gap-2 font-bold">
-            <Clock className="w-5 h-5" />
+            <FlaticonIcon name="clock" className="w-5 h-5" />
             <span>{timeLeft}s remaining</span>
           </div>
         )}
@@ -157,7 +158,7 @@ export function MissionModal({ mission, userPhone, onClose, onComplete }: Missio
           )}
           {step === 'success' && (
             <div className="text-center py-12">
-              <CheckCircle2 className="w-20 h-20 text-lg-green mx-auto mb-4" />
+              <FlaticonIcon name="check" className="w-20 h-20 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Mission Complete!</h3>
               <p className="text-gray-600 mb-4">You earned {mission.points} points</p>
               <div className="text-4xl font-bold text-lg-red animate-pulse">
@@ -336,7 +337,7 @@ function SpotLGProducts({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between text-sm font-semibold">
         <span className="text-gray-600">Count LG products in the image</span>
         <span className={`flex items-center gap-1 ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={15} />
@@ -405,7 +406,7 @@ function FlagColourQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Question {qIndex + 1} / {FLAG_QUESTIONS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 3 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={10} color="bg-yellow-400" />
@@ -453,7 +454,7 @@ function LogoHunt({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between text-sm font-semibold">
         <span className="text-gray-600">Find the hidden LG logo!</span>
         <span className={`flex items-center gap-1 ${timeLeft <= 3 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={10} color="bg-purple-500" />
@@ -515,7 +516,7 @@ function JerseyFlex({ onSubmit }: { onSubmit: (data: any) => void }) {
           <input type="file" accept="image/jpeg,image/png" onChange={handleFile} className="hidden" />
         </label>
       </div>
-      {error && <p className="text-lg-red text-sm flex items-center gap-1"><AlertCircle className="w-4 h-4" />{error}</p>}
+      {error && <p className="text-lg-red text-sm flex items-center gap-1"><FlaticonIcon name="alert" className="w-4 h-4" />{error}</p>}
       <button
         onClick={() => onSubmit({ photo: preview })}
         disabled={!preview}
@@ -561,7 +562,7 @@ function OLEDTrivia({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Question {qIndex + 1} / {OLED_QUESTIONS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 10 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={30} color="bg-blue-500" />
@@ -631,7 +632,7 @@ function FlagPride({ onSubmit }: { onSubmit: (data: any) => void }) {
           <input type="file" accept="image/jpeg,image/png" onChange={handleFile} className="hidden" />
         </label>
       </div>
-      {error && <p className="text-lg-red text-sm flex items-center gap-1"><AlertCircle className="w-4 h-4" />{error}</p>}
+      {error && <p className="text-lg-red text-sm flex items-center gap-1"><FlaticonIcon name="alert" className="w-4 h-4" />{error}</p>}
       <button
         onClick={() => onSubmit({ photo: preview })}
         disabled={!preview}
@@ -677,7 +678,7 @@ function DreamScreen({ onSubmit }: { onSubmit: (data: any) => void }) {
           <input type="file" accept="image/*" onChange={handleFile} className="hidden" />
         </label>
       </div>
-      {error && <p className="text-lg-red text-sm flex items-center gap-1"><AlertCircle className="w-4 h-4" />{error}</p>}
+      {error && <p className="text-lg-red text-sm flex items-center gap-1"><FlaticonIcon name="alert" className="w-4 h-4" />{error}</p>}
       <button
         onClick={() => onSubmit({ screenshot: preview })}
         disabled={!preview}
@@ -708,7 +709,7 @@ function PhotoUpload({ onSubmit }: { onSubmit: (data: any) => void }) {
         {preview ? (
           <img src={preview} alt="Preview" className="max-h-64 mx-auto rounded-lg mb-4" />
         ) : (
-          <Upload className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <FlaticonIcon name="upload" className="w-16 h-16 mx-auto mb-4 opacity-60" />
         )}
         <label className="cursor-pointer">
           <span className="text-lg-red font-semibold hover:underline">
@@ -744,7 +745,7 @@ function VideoUpload({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-        <Upload className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+        <FlaticonIcon name="upload" className="w-16 h-16 mx-auto mb-4 opacity-60" />
         <label className="cursor-pointer">
           <span className="text-lg-red font-semibold hover:underline">Upload Video</span>
           <input type="file" accept="video/*" className="hidden" />
@@ -1101,7 +1102,7 @@ function GoalOrNoGoal({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Picture {qIndex + 1} / {GOAL_IMAGES.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={20} color="bg-green-500" />
@@ -1169,7 +1170,7 @@ function RoomMatchUp({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Puzzle {qIndex + 1} / {PUZZLE_IMAGES.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={20} color="bg-purple-500" />
@@ -1262,7 +1263,7 @@ function LGQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {LG_QUIZ_QUESTIONS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={15} color="bg-lg-red" />
@@ -1442,7 +1443,7 @@ function FastestTapPoll({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {FASTEST_TAP_QUESTIONS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 3 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={10} color="bg-orange-400" />
@@ -1506,7 +1507,7 @@ function ColourMatchGame({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Scene {qIndex + 1} / {COLOUR_MATCH_DATA.length} â€” {q.label}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={15} color="bg-pink-500" />
@@ -1587,7 +1588,7 @@ function LightningQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {LIGHTNING_QUESTIONS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 3 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={10} color="bg-yellow-400" />
@@ -1745,7 +1746,7 @@ function LGUnscramble({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Word {qIndex + 1} / {UNSCRAMBLE_WORDS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 10 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={30} color="bg-green-500" />
@@ -1887,7 +1888,7 @@ function BeatTheClue({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Clue {clueIndex + 1} / {BEAT_CLUES.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={20} color="bg-lg-red" />
@@ -2025,7 +2026,7 @@ function MazeGame({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Maze {qIndex + 1} / {MAZE_ROUNDS.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 8 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={25} color="bg-pink-500" />
@@ -2186,7 +2187,7 @@ function LGBrandTrivia({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {BRAND_TRIVIA.length}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
-          <Clock className="w-4 h-4" />{timeLeft}s
+          <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={20} color="bg-lg-red" />

@@ -13,24 +13,7 @@ import {
   CursorSpotlight,
 } from "./PremiumEffects";
 import { supabase } from "../../../utils/supabase/client";
-import {
-  Trophy,
-  Target,
-  Users,
-  Calendar,
-  Gift,
-  Home,
-  Goal,
-  Medal,
-  Scale,
-  Camera,
-  CircleHelp,
-  Search,
-  MessageCircle,
-  MapPin,
-  Zap,
-  ChartNoAxesColumnIncreasing,
-} from "lucide-react";
+import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import heroBanner from "../../imports/WhatsApp_Image_2026-06-06_at_12.16.13_AM.png";
 import heroBanner2 from "../../imports/kv-banner__1_.png";
 import heroBanner2Mobile from "../../imports/ChatGPT-Image-Jun-14_-2026_-04_43_09-PM.png";
@@ -45,25 +28,6 @@ import howItWorksStadium from "../../imports/how-it-works-stadium.jpeg";
 
 interface LandingPageProps {
   onGetStarted: () => void;
-}
-
-function FootballIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="9" />
-      <path d="m12 7 3 2.2-1.1 3.5h-3.8L9 9.2 12 7Z" />
-      <path d="m9 9.2-3.5-1M15 9.2l3.5-1M10.1 12.7 8 16m5.9-3.3L16 16M8 16l-1 3m9-3 1 3" />
-    </svg>
-  );
 }
 
 function CampaignSectionHeading({
@@ -145,21 +109,21 @@ const FLAG_CODES: Record<string, string> = {
 const RANK_STYLES = [
   {
     bg: "from-yellow-400 to-yellow-600",
-    label: "🥇",
+    rank: 1 as const,
     size: "w-20 h-20",
     order: "order-2",
     mt: "mt-0",
   },
   {
     bg: "from-gray-300 to-gray-500",
-    label: "🥈",
+    rank: 2 as const,
     size: "w-16 h-16",
     order: "order-1",
     mt: "mt-6",
   },
   {
     bg: "from-amber-600 to-amber-800",
-    label: "🥉",
+    rank: 3 as const,
     size: "w-16 h-16",
     order: "order-3",
     mt: "mt-6",
@@ -223,7 +187,7 @@ function TopPlayers() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
               >
-                <span className="text-2xl">{style.label}</span>
+                <RankMedal rank={style.rank} className="w-7 h-7" />
                 <div
                   className={`${style.size} rounded-full bg-gradient-to-br ${style.bg} flex items-center justify-center overflow-hidden shadow-lg border-4 border-white`}
                 >
@@ -335,7 +299,7 @@ function HeroSlider({
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <motion.div
-          className="relative z-10 text-center space-y-6 px-4"
+          className="hero-3d-stage relative z-10 text-center space-y-6 px-4"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -347,7 +311,7 @@ function HeroSlider({
           <motion.img
             src={superFanLogo}
             alt="LG Super Fan League"
-            className="w-44 md:w-64 mx-auto drop-shadow-2xl"
+            className="hero-3d-logo w-44 md:w-64 mx-auto drop-shadow-2xl"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -355,7 +319,7 @@ function HeroSlider({
           <motion.img
             src={kvWinText}
             alt="Join now and win exciting prizes"
-            className="w-72 md:w-96 mx-auto drop-shadow-2xl cursor-pointer"
+            className="hero-3d-prize-text w-72 md:w-96 mx-auto drop-shadow-2xl cursor-pointer"
             onClick={onGetStarted}
             whileHover={{
               scale: 1.08,
@@ -380,7 +344,7 @@ function HeroSlider({
           <img
             src={kvText}
             alt="Pick Your Side, Complete Missions, Climb the Leaderboard"
-            className="w-72 md:w-[480px] mx-auto drop-shadow-2xl"
+            className="hero-3d-subline w-72 md:w-[480px] mx-auto drop-shadow-2xl"
           />
         </motion.div>
       </div>
@@ -593,7 +557,7 @@ function FootballTicker() {
     "🔥 BANGLADESH FANS UNITE",
     "⚡ DOUBLE POINTS HOUR",
     "🇦🇷 PICK YOUR SIDE",
-    "🥇 WIN LG PRIZES",
+    "WIN LG PRIZES",
     "🌍 48 NATIONS • 1 CHAMPION",
     "📺 WATCH ON LG OLED",
     "🎮 COMPLETE MISSIONS • EARN POINTS",
@@ -669,12 +633,6 @@ function StadiumLights() {
   );
 }
 
-const MEDAL: Record<number, string> = {
-  1: "🥇",
-  2: "🥈",
-  3: "🥉",
-};
-
 function PublicLeaderboard() {
   const [individuals, setIndividuals] = useState<any[]>([]);
   const [teams, setTeams] = useState<any[]>([]);
@@ -747,7 +705,7 @@ function PublicLeaderboard() {
       <FadeInWhenVisible direction="left">
         <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
           <div className="flex items-center gap-2 p-4 border-b border-gray-100">
-            <Trophy className="w-5 h-5 text-lg-red" />
+            <FlaticonIcon name="trophy" className="w-5 h-5" />
             <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide">
               Teams
             </h3>
@@ -764,9 +722,7 @@ function PublicLeaderboard() {
                 >
                   <div className="w-8 text-center flex-shrink-0">
                     {isTop3 ? (
-                      <span className="text-xl">
-                        {MEDAL[rank]}
-                      </span>
+                      <RankMedal rank={rank as 1 | 2 | 3} className="w-6 h-6 mx-auto" />
                     ) : (
                       <span className="text-gray-400 font-bold text-sm">
                         #{rank}
@@ -811,29 +767,29 @@ function PublicLeaderboard() {
           <div className="p-5 space-y-5">
             {[
               {
-                icon: Target,
+                icon: "target" as FlaticonIconName,
                 title: "Complete Missions",
                 desc: "Each weekly mission earns points. Stack multiple missions for higher total.",
               },
               {
-                icon: Zap,
+                icon: "zap" as FlaticonIconName,
                 title: "Double Points Hour",
                 desc: "Every week has a 60-min window where all points scored are 2×.",
               },
               {
-                icon: Medal,
+                icon: "medal" as FlaticonIconName,
                 title: "Badges & Bonuses",
                 desc: "Unlock achievement badges (Prediction King, Legend etc.) for bonus pts.",
               },
               {
-                icon: ChartNoAxesColumnIncreasing,
+                icon: "chart" as FlaticonIconName,
                 title: "Live Updates",
                 desc: "Board reshuffles in real-time every time a fan scores.",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ icon, title, desc }) => (
               <div key={title} className="flex gap-3">
                 <span className="w-9 h-9 rounded-xl bg-lg-red/10 border border-lg-red/20 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-lg-red" />
+                  <FlaticonIcon name={icon} className="w-5 h-5" />
                 </span>
                 <div>
                   <p className="text-gray-900 font-bold text-sm">
@@ -869,7 +825,7 @@ function PublicLeaderboard() {
                 >
                   <div className="w-8 text-center flex-shrink-0">
                     {isTop3 ? (
-                      <span className="text-xl">{MEDAL[rank]}</span>
+                      <RankMedal rank={rank as 1 | 2 | 3} className="w-6 h-6 mx-auto" />
                     ) : (
                       <span className="text-gray-400 font-bold text-sm">#{rank}</span>
                     )}
@@ -956,67 +912,67 @@ export function LandingPage({
       num: 4,
       label: "Weeks",
       value: "Week",
-      icon: Calendar,
+      icon: "calendar" as FlaticonIconName,
     },
     {
       num: 28,
       label: "Missions",
       value: "Challenges",
-      icon: Target,
+      icon: "target" as FlaticonIconName,
     },
     {
       num: 1,
       label: "League",
       value: "League",
-      icon: Users,
+      icon: "users" as FlaticonIconName,
     },
-    { num: 0, label: "Amazing", value: "Prizes", icon: Gift },
+    { num: 0, label: "Amazing", value: "Prizes", icon: "gift" as FlaticonIconName },
   ];
 
   const missionTypes = [
     {
-      icon: Camera,
+      icon: "camera" as FlaticonIconName,
       label: "Photo Challenges",
     },
     {
-      icon: CircleHelp,
+      icon: "question" as FlaticonIconName,
       label: "Trivia Quizzes",
     },
     {
-      icon: FootballIcon,
+      icon: "football" as FlaticonIconName,
       label: "Score Predictors",
     },
     {
-      icon: Search,
+      icon: "search" as FlaticonIconName,
       label: "Spot & Count",
     },
     {
-      icon: Target,
+      icon: "target" as FlaticonIconName,
       label: "Match Games",
     },
     {
-      icon: MessageCircle,
+      icon: "message" as FlaticonIconName,
       label: "Share Stories",
     },
     {
-      icon: MapPin,
+      icon: "map" as FlaticonIconName,
       label: "Store Visits",
     },
   ];
 
   const howItWorks = [
     {
-      icon: Users,
+      icon: "users" as FlaticonIconName,
       title: "1. Join & Choose Team",
       desc: "Sign up with your phone number and pick your favorite FIFA 2026 team to support throughout the tournament.",
     },
     {
-      icon: Target,
+      icon: "target" as FlaticonIconName,
       title: "2. Complete Missions",
       desc: "Take photos, answer quizzes, predict scores, and engage in fun football-themed challenges to earn points.",
     },
     {
-      icon: Trophy,
+      icon: "trophy" as FlaticonIconName,
       title: "3. Win Rewards",
       desc: "Climb the leaderboard, compete with other fans, and unlock exclusive LG rewards for top performers.",
     },
@@ -1042,31 +998,31 @@ export function LandingPage({
           />
           <div className="flex items-center gap-1 md:gap-1">
             {[
-              { id: "hero", label: "Home", icon: Home },
+              { id: "hero", label: "Home", icon: "home" as FlaticonIconName },
               {
                 id: "how-it-works",
                 label: "How It Works",
-                icon: Users,
+                icon: "users" as FlaticonIconName,
               },
               {
                 id: "missions",
                 label: "Missions",
-                icon: Target,
+                icon: "target" as FlaticonIconName,
               },
               {
                 id: "leaderboard",
                 label: "Leaderboard",
-                icon: Trophy,
+                icon: "trophy" as FlaticonIconName,
               },
-              { id: "details", label: "Details", icon: Gift },
-            ].map(({ id, label, icon: Icon }) =>
+              { id: "details", label: "Details", icon: "gift" as FlaticonIconName },
+            ].map(({ id, label, icon }) =>
               id === 'details' ? (
                 <a
                   key={id}
                   href="/details"
                   className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
-                  <Icon className="w-5 h-5 flex-shrink-0" />
+                  <FlaticonIcon name={icon} className="w-5 h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
                 </a>
               ) : (
@@ -1075,7 +1031,7 @@ export function LandingPage({
                   onClick={() => scrollTo(id)}
                   className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
-                  <Icon className="w-5 h-5 flex-shrink-0" />
+                  <FlaticonIcon name={icon} className="w-5 h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
                 </button>
               )
@@ -1108,7 +1064,6 @@ export function LandingPage({
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
               {stats.map((stat, i) => {
-                const Icon = stat.icon;
                 return (
                   <FadeInWhenVisible
                     key={stat.label}
@@ -1132,12 +1087,12 @@ export function LandingPage({
                         stiffness: 300,
                       }}
                     >
-                      <Icon className="w-6 h-6 md:w-8 md:h-8 text-white mx-auto mb-1.5" />
+                      <FlaticonIcon name={stat.icon} className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-1.5" />
                       <div className="text-lg md:text-2xl font-black text-white">
                         {stat.num > 0 ? (
                           <AnimatedCounter value={stat.num} />
                         ) : (
-                          "🏆"
+                          <FlaticonIcon name="trophy" className="w-8 h-8 mx-auto" />
                         )}
                       </div>
                       <div
@@ -1199,30 +1154,29 @@ export function LandingPage({
             {[
               {
                 num: "01",
-                icon: FootballIcon,
+                icon: "football" as FlaticonIconName,
                 title: "Choose Your Team",
                 desc: "Pick the national team you want to represent. Your points boost your team on the global leaderboard. Choose wisely — once per season.",
               },
               {
                 num: "02",
-                icon: Target,
+                icon: "target" as FlaticonIconName,
                 title: "Complete Missions",
                 desc: "New missions drop every week — photo challenges, quizzes, prediction games, reaction videos & memes. Each mission earns points.",
               },
               {
                 num: "03",
-                icon: Trophy,
+                icon: "trophy" as FlaticonIconName,
                 title: "Climb the Board",
                 desc: "Your points roll up to your team's score AND your personal fan rank. Watch the live board update in real-time every time someone scores.",
               },
               {
                 num: "04",
-                icon: Gift,
+                icon: "gift" as FlaticonIconName,
                 title: "Win LG Prizes",
                 desc: "Weekly top fans win LG products — Smart TVs, Earbuds, Speakers & more. The bigger your score, the better your chance.",
               },
             ].map((step, i) => {
-              const Icon = step.icon;
               return (
               <FadeInWhenVisible
                 key={step.num}
@@ -1246,7 +1200,7 @@ export function LandingPage({
                     >
                       {step.num}
                     </div>
-                    <Icon className="w-10 h-10 text-lg-red" />
+                    <FlaticonIcon name={step.icon} className="w-10 h-10" />
                     <h3 className="text-gray-900 font-black text-lg">
                       {step.title}
                     </h3>
@@ -1279,7 +1233,6 @@ export function LandingPage({
           </FadeInWhenVisible>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-6">
             {missionTypes.map((type, i) => {
-              const Icon = type.icon;
               return (
               <FadeInWhenVisible
                 key={type.label}
@@ -1313,7 +1266,7 @@ export function LandingPage({
                         }}
                         transition={{ duration: 0.4 }}
                       >
-                        <Icon className="w-7 h-7 md:w-9 md:h-9 text-lg-red" />
+                        <FlaticonIcon name={type.icon} className="w-7 h-7 md:w-9 md:h-9" />
                       </motion.div>
                       <div className="font-bold text-gray-900 text-sm md:text-base leading-tight">
                         {type.label}
@@ -1355,12 +1308,12 @@ export function LandingPage({
               <div className="px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="grid grid-cols-3 gap-4 flex-1">
                   {[
-                    { icon: Goal, label: 'About Campaign' },
-                    { icon: Medal, label: 'Prizes & Products' },
-                    { icon: Scale, label: 'Fair Play Policy' },
-                  ].map(({ icon: Icon, label }) => (
+                    { icon: "goal" as FlaticonIconName, label: 'About Campaign' },
+                    { icon: "medal" as FlaticonIconName, label: 'Prizes & Products' },
+                    { icon: "scale" as FlaticonIconName, label: 'Fair Play Policy' },
+                  ].map(({ icon, label }) => (
                     <div key={label} className="text-center">
-                      <Icon className="w-8 h-8 mx-auto mb-1 text-lg-red" />
+                      <FlaticonIcon name={icon} className="w-8 h-8 mx-auto mb-1" />
                       <p className="text-xs font-bold text-lg-red">{label}</p>
                     </div>
                   ))}
@@ -1383,7 +1336,7 @@ export function LandingPage({
           <FadeInWhenVisible direction="up">
             <div className="campaign-policy-strip px-6 py-4 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <Scale className="w-6 h-6 text-lg-red flex-shrink-0" />
+                <FlaticonIcon name="scale" className="w-6 h-6 flex-shrink-0" />
                 <p className="font-bold text-gray-900 text-sm">Fair Play Policy (T&C)</p>
                 <p className="text-gray-500 text-xs hidden sm:block">— Campaign rules, eligibility & prize conditions</p>
               </div>
@@ -1462,7 +1415,7 @@ export function LandingPage({
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm justify-center md:justify-start"
                 >
-                  <span className="text-lg">📘</span> Facebook —
+                  <FlaticonIcon name="facebook" className="w-5 h-5" /> Facebook —
                   @LGBangladesh
                 </a>
                 <a
@@ -1471,7 +1424,7 @@ export function LandingPage({
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm justify-center md:justify-start"
                 >
-                  <span className="text-lg">📸</span> Instagram
+                  <FlaticonIcon name="instagram" className="w-5 h-5" /> Instagram
                   — @lgbangladesh
                 </a>
               </div>
@@ -1484,7 +1437,7 @@ export function LandingPage({
               </h4>
               <div className="space-y-2 text-sm text-white/70">
                 <div className="flex items-center gap-2 justify-center md:justify-start">
-                  <span>📞</span>
+                  <FlaticonIcon name="phone" className="w-5 h-5 flex-shrink-0" />
                   <div>
                     <p>
                       Toll Free:{" "}
@@ -1501,7 +1454,7 @@ export function LandingPage({
                   </div>
                 </div>
                 <div className="flex items-center gap-2 justify-center md:justify-start">
-                  <span>🕐</span>
+                  <FlaticonIcon name="time" className="w-5 h-5 flex-shrink-0" />
                   <p>
                     Available:{" "}
                     <span className="text-white font-semibold">

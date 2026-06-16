@@ -7,6 +7,7 @@ import {
   PremiumFootballAtmosphere,
   ScrollProgressBar,
 } from './components/PremiumEffects';
+import { Floating3DElements } from './components/Floating3DElements';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <CustomCursor />
         <ClickParticles />
         <ScrollProgressBar />
+        <Floating3DElements />
         <div className="premium-site-content">
           <Routes>
             <Route path="/" element={<MainApp />} />

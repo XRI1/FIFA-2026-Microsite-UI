@@ -1,35 +1,10 @@
 import { useState, type CSSProperties } from "react";
 import {
-  Trophy,
-  CheckCircle2,
-  Lock,
-  Calendar,
-  Upload,
-  Zap,
-  Camera,
-  CircleHelp,
-  Search,
-  Target,
-  Type,
-  ScanSearch,
-  MessageCircle,
-  Goal,
-  Video,
-  MapPin,
-  Palette,
-  BadgeCheck,
-  Lightbulb,
-  Gauge,
-  Gamepad2,
-  Clock3,
-  Play,
-  type LucideIcon,
-} from "lucide-react";
-import {
   supabase,
   Mission,
 } from "../../../utils/supabase/client";
 import { MissionModal } from "./MissionModal";
+import { FlaticonIcon, type FlaticonIconName } from "./FlaticonIcon";
 
 // ── Static mission data (no Supabase) ───────────────────────────
 const ALL_MISSIONS: Mission[] = [
@@ -489,7 +464,7 @@ function InvoiceUpload({ userPhone }: { userPhone: string }) {
   if (status === "success") {
     return (
       <div className="w-full bg-green-50 border-2 border-green-400 rounded-xl p-4 flex items-center gap-3">
-        <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+        <FlaticonIcon name="check" className="w-5 h-5 flex-shrink-0" />
         <div>
           <p className="text-green-800 font-bold text-sm">
             Invoice submitted!
@@ -520,14 +495,14 @@ function InvoiceUpload({ userPhone }: { userPhone: string }) {
           </>
         ) : (
           <>
-            <Upload className="w-4 h-4" />
+            <FlaticonIcon name="upload" className="w-4 h-4" />
             Upload Invoice →
           </>
         )}
       </label>
       {status === "error" && (
         <div className="mt-2 flex items-center gap-2 text-red-600 text-xs">
-          <AlertCircle className="w-4 h-4 flex-shrink-0" />
+          <FlaticonIcon name="alert" className="w-4 h-4 flex-shrink-0" />
           <span>{fileName}</span>
         </div>
       )}
@@ -550,21 +525,21 @@ interface MissionStatus {
   status: "pending" | "approved" | "rejected";
 }
 
-const MISSION_ICONS: Record<string, LucideIcon> = {
-  photo: Camera,
-  quiz: CircleHelp,
-  "spot-count": Search,
-  "drag-match": Target,
-  unscramble: Type,
-  "hidden-hunt": ScanSearch,
-  comment: MessageCircle,
-  predictor: Goal,
-  video: Video,
-  "external-visit": MapPin,
-  "fan-art": Palette,
-  "social-checkin": BadgeCheck,
-  creative: Lightbulb,
-  "rapid-tap": Gauge,
+const MISSION_ICONS: Record<string, FlaticonIconName> = {
+  photo: "camera",
+  quiz: "question",
+  "spot-count": "search",
+  "drag-match": "target",
+  unscramble: "text",
+  "hidden-hunt": "scan",
+  comment: "message",
+  predictor: "goal",
+  video: "video",
+  "external-visit": "map",
+  "fan-art": "palette",
+  "social-checkin": "badge-check",
+  creative: "lightbulb",
+  "rapid-tap": "gauge",
 };
 
 export function MissionsList({
@@ -616,13 +591,13 @@ export function MissionsList({
             <div className="flex-1">
               {/* Badge */}
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full mb-3" style={{ background: 'rgba(255,200,0,0.18)', border: '1px solid rgba(255,200,0,0.4)' }}>
-                <Zap className="w-3 h-3 fill-yellow-300 text-yellow-300" />
+                <FlaticonIcon name="zap" className="w-3 h-3" />
                 <span className="text-yellow-300 font-black text-xs uppercase tracking-[0.18em]">Mega Bonus</span>
               </div>
               <h2 className="text-white font-black text-2xl sm:text-3xl leading-tight">Buy LG. Win Bigger.</h2>
               <p className="mt-1 text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.65)' }}>Every LG Purchase = Mega Bonus</p>
             </div>
-            <div className="text-5xl flex-shrink-0 mt-1" style={{ filter: 'drop-shadow(0 2px 12px rgba(255,200,0,0.5))' }}>🏆</div>
+            <FlaticonIcon name="trophy" className="w-14 h-14 flex-shrink-0 mt-1" style={{ filter: 'drop-shadow(0 2px 12px rgba(255,200,0,0.5))' }} />
           </div>
 
           <p className="relative mt-4 text-xs sm:text-sm leading-relaxed pt-4" style={{ color: 'rgba(255,255,255,0.6)', borderTop: '1px solid rgba(255,255,255,0.12)' }}>
@@ -635,20 +610,20 @@ export function MissionsList({
           <p className="text-xs font-black uppercase tracking-[0.18em] text-gray-400 mb-3">Points by Product</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 mb-5">
             {[
-              { product: 'LG OLED / Smart TV (50"+)', points: '+400', icon: '📺', top: true },
-              { product: 'LG Smart TV (32"–48")',      points: '+350', icon: '🖥️', top: false },
-              { product: 'LG Refrigerator',            points: '+300', icon: '🧊', top: false },
-              { product: 'LG Air Conditioner',         points: '+250', icon: '❄️', top: false },
-              { product: 'LG Washing Machine',         points: '+250', icon: '🫧', top: false },
-              { product: 'LG Soundbar / Speaker',      points: '+200', icon: '🔊', top: false },
-              { product: 'LG Microwave / Appliance',   points: '+200', icon: '📡', top: false },
-              { product: 'Any 2 LG products (combo)',  points: '+400', icon: '🎁', top: true },
+              { product: 'LG OLED / Smart TV (50"+)', points: '+400', icon: "tv" as FlaticonIconName, top: true },
+              { product: 'LG Smart TV (32"–48")',      points: '+350', icon: "tv" as FlaticonIconName, top: false },
+              { product: 'LG Refrigerator',            points: '+300', icon: "fridge" as FlaticonIconName, top: false },
+              { product: 'LG Air Conditioner',         points: '+250', icon: "ac" as FlaticonIconName, top: false },
+              { product: 'LG Washing Machine',         points: '+250', icon: "washer" as FlaticonIconName, top: false },
+              { product: 'LG Soundbar / Speaker',      points: '+200', icon: "speaker" as FlaticonIconName, top: false },
+              { product: 'LG Microwave / Appliance',   points: '+200', icon: "microwave" as FlaticonIconName, top: false },
+              { product: 'Any 2 LG products (combo)',  points: '+400', icon: "combo-gift" as FlaticonIconName, top: true },
             ].map(({ product, points, icon, top }) => (
               <div key={product} className="flex flex-col items-center text-center gap-1 p-3 rounded-2xl transition-all" style={{
                 background: top ? 'rgba(200,0,44,0.05)' : '#f8f7f5',
                 border: top ? '1.5px solid rgba(200,0,44,0.2)' : '1.5px solid #ede8e0',
               }}>
-                <span className="text-2xl">{icon}</span>
+                <FlaticonIcon name={icon} className="w-8 h-8" />
                 <span className="text-xs text-gray-500 font-medium leading-tight">{product}</span>
                 <div className="flex items-baseline gap-0.5 mt-0.5">
                   <span className="font-black text-lg leading-none" style={{ color: top ? '#C8002C' : '#333' }}>{points}</span>
@@ -716,7 +691,7 @@ export function MissionsList({
       {/* Missions Grid */}
       {missions.length === 0 ? (
         <div className="bg-[#F0ECE4] rounded-xl p-12 text-center">
-          <Lock className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <FlaticonIcon name="lock" className="w-16 h-16 mx-auto mb-4 opacity-60" />
           <h3 className="text-xl font-bold mb-2">
             No missions for Week {selectedWeek}
           </h3>
@@ -729,7 +704,7 @@ export function MissionsList({
           {missions.map((mission, idx) => {
             const isCompleted = completedMissions.has(mission.id);
             const accent = '#222222';
-            const MissionIcon = MISSION_ICONS[mission.type] || Gamepad2;
+            const missionIcon = MISSION_ICONS[mission.type] || "gamepad";
 
             return (
               <button
@@ -758,7 +733,7 @@ export function MissionsList({
                       M-{String(idx + 1).padStart(2, '0')}
                     </span>
                     <span className="cyber-mission-icon flex h-8 w-8 items-center justify-center">
-                      <MissionIcon className="h-4 w-4" />
+                      <FlaticonIcon name={missionIcon} className="h-5 w-5" />
                     </span>
                   </div>
 
@@ -776,17 +751,17 @@ export function MissionsList({
                   {/* Points + timer/status */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
-                      <Trophy className="w-3 h-3 flex-shrink-0 cyber-mission-accent" />
+                      <FlaticonIcon name="trophy" className="w-3 h-3 flex-shrink-0" />
                       <span className="font-black text-[11px] sm:text-xs cyber-mission-accent" style={{ letterSpacing: '0.08em' }}>
                         {mission.points} XP
                       </span>
                     </div>
                     <div>
                       {isCompleted
-                        ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest cyber-mission-accent"><CheckCircle2 className="w-3.5 h-3.5" /> CLEARED</span>
+                        ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest cyber-mission-accent"><FlaticonIcon name="check" className="w-3.5 h-3.5" /> CLEARED</span>
                         : mission.timedDuration
-                          ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><Clock3 className="w-3 h-3" /> {mission.timedDuration}S</span>
-                          : <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><Play className="w-3 h-3 fill-current" /> INIT</span>
+                          ? <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><FlaticonIcon name="clock" className="w-3 h-3" /> {mission.timedDuration}S</span>
+                          : <span className="flex items-center gap-1 text-[9px] font-black tracking-widest text-black/45"><FlaticonIcon name="play" className="w-3 h-3" /> INIT</span>
                       }
                     </div>
                   </div>
