@@ -683,9 +683,9 @@
     z-index: 4;
     pointer-events: none;
     user-select: none;
-    width: clamp(60rem, 370vw, 470rem);
-    left: clamp(-18rem, -18vw, -13rem);
-    top: clamp(4rem, -3vw, -9rem);
+    width: clamp(72rem, 430vw, 540rem);
+    left: clamp(-19rem, -18vw, -13rem);
+    top: clamp(2rem, -3vw, -9rem);
     opacity: 0.82;
     transform: rotate(36deg);
     filter: drop-shadow(0 18px 28px rgba(70,0,20,0.18));
@@ -872,7 +872,7 @@
     }
 
     .leaderboard-top-left-ribbon {
-      width: 27rem;
+      width: 36rem;
       left: -18rem;
       top: -2rem;
       opacity: 0.38;
