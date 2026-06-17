@@ -7,7 +7,7 @@ import { MissionModal } from "./MissionModal";
 import { FlaticonIcon, type FlaticonIconName } from "./FlaticonIcon";
 
 // ── Static mission data (no Supabase) ───────────────────────────
-const ALL_MISSIONS: Mission[] = [
+export const ALL_MISSIONS: Mission[] = [
   // Week 1
   {
     id: "w1-spot-products",
@@ -525,7 +525,7 @@ interface MissionStatus {
   status: "pending" | "approved" | "rejected";
 }
 
-const MISSION_ICONS: Record<string, FlaticonIconName> = {
+export const MISSION_ICONS: Record<string, FlaticonIconName> = {
   photo: "camera",
   quiz: "question",
   "spot-count": "search",

@@ -14,6 +14,7 @@ import {
 } from "./PremiumEffects";
 import { supabase } from "../../../utils/supabase/client";
 import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
+import { ALL_MISSIONS, MISSION_ICONS } from "./MissionsListDB";
 import heroBanner from "../../imports/WhatsApp_Image_2026-06-06_at_12.16.13_AM.png";
 import heroBanner2 from "../../imports/kv-banner__1_.png";
 import heroBanner2Mobile from "../../imports/ChatGPT-Image-Jun-14_-2026_-04_43_09-PM.png";
@@ -929,36 +930,7 @@ export function LandingPage({
     { num: 0, label: "Amazing", value: "Prizes", icon: "gift" as FlaticonIconName },
   ];
 
-  const missionTypes = [
-    {
-      icon: "camera" as FlaticonIconName,
-      label: "Photo Challenges",
-    },
-    {
-      icon: "question" as FlaticonIconName,
-      label: "Trivia Quizzes",
-    },
-    {
-      icon: "football" as FlaticonIconName,
-      label: "Score Predictors",
-    },
-    {
-      icon: "search" as FlaticonIconName,
-      label: "Spot & Count",
-    },
-    {
-      icon: "target" as FlaticonIconName,
-      label: "Match Games",
-    },
-    {
-      icon: "message" as FlaticonIconName,
-      label: "Share Stories",
-    },
-    {
-      icon: "map" as FlaticonIconName,
-      label: "Store Visits",
-    },
-  ];
+  const weekOneMissions = ALL_MISSIONS.filter((mission) => mission.week === 1);
 
   const howItWorks = [
     {
@@ -1227,21 +1199,23 @@ export function LandingPage({
             <CampaignSectionHeading
               eyebrow="Play your way"
               title="Exciting Mission Types"
-              description="Earn points through diverse and engaging challenges"
+              description="Week 1 missions are live. Log in to play and start earning points."
               light
             />
           </FadeInWhenVisible>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-6">
-            {missionTypes.map((type, i) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+            {weekOneMissions.map((mission, i) => {
+              const icon = MISSION_ICONS[mission.type] || "gamepad";
+
               return (
               <FadeInWhenVisible
-                key={type.label}
+                key={mission.id}
                 delay={i * 0.08}
                 direction="up"
               >
                 <TiltCard intensity={10}>
                   <motion.div
-                    className="group relative overflow-hidden rounded-2xl p-4 md:p-6 text-center cursor-pointer"
+                    className="group relative overflow-hidden rounded-2xl p-4 md:p-5 h-full flex flex-col text-left"
                     style={{
                       backgroundColor: "#F0ECE4",
                       boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
@@ -1257,20 +1231,39 @@ export function LandingPage({
                     }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-lg-red/0 via-lg-red/0 to-lg-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex h-full flex-col">
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <span className="inline-flex items-center rounded-full bg-lg-red/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-lg-red">
+                          Week 1
+                        </span>
+                        <span className="text-xs font-black text-gray-500">
+                          {mission.points} XP
+                        </span>
+                      </div>
                       <motion.div
-                        className="mission-type-orb mx-auto mb-3 md:mb-4"
+                        className="mission-type-orb mb-3 md:mb-4"
                         whileHover={{
                           scale: 1.1,
                           rotate: [-5, 5, -3, 0],
                         }}
                         transition={{ duration: 0.4 }}
                       >
-                        <FlaticonIcon name={type.icon} className="w-7 h-7 md:w-9 md:h-9" />
+                        <FlaticonIcon name={icon} className="w-7 h-7 md:w-9 md:h-9" />
                       </motion.div>
-                      <div className="font-bold text-gray-900 text-sm md:text-base leading-tight">
-                        {type.label}
-                      </div>
+                      <h3 className="font-black text-gray-900 text-base md:text-lg leading-tight">
+                        {mission.title}
+                      </h3>
+                      <p className="mt-2 text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-3">
+                        {mission.description}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={onGetStarted}
+                        className="campaign-primary-button mt-4 inline-flex items-center justify-center gap-2 px-4 py-2 text-xs md:text-sm"
+                      >
+                        <FlaticonIcon name="play" className="w-4 h-4" />
+                        Play
+                      </button>
                     </div>
                   </motion.div>
                 </TiltCard>
