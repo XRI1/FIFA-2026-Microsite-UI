@@ -24,8 +24,6 @@ import heroBannerMobile from "../../imports/ChatGPT_Image_Jun_10__2026__06_34_37
 import lgLogo from "../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png";
 import superFanLogo from "../../imports/mnewmonic.png";
 import kvText from "../../imports/kv-text.png";
-import leaderboardRibbonLeft from "../../imports/leaderboard-ribbon-left.png";
-import leaderboardRibbonRight from "../../imports/leaderboard-ribbon-right.png";
 import howItWorksStadium from "../../imports/how-it-works-stadium.jpeg";
 
 interface LandingPageProps {
@@ -640,18 +638,6 @@ function PublicLeaderboard() {
 
   return (
     <div className="leaderboard-board relative">
-      <img
-        src={leaderboardRibbonLeft}
-        alt=""
-        aria-hidden="true"
-        className="leaderboard-ribbon leaderboard-ribbon-left"
-      />
-      <img
-        src={leaderboardRibbonRight}
-        alt=""
-        aria-hidden="true"
-        className="leaderboard-ribbon leaderboard-ribbon-right"
-      />
       <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-[1fr_0.92fr_1fr] gap-4 md:gap-5 items-start">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
@@ -1224,19 +1210,7 @@ export function LandingPage({
       </div>
 
       {/* Details & T&C teaser */}
-      <div id="details" className="campaign-details-ribbon-area py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
-        <img
-          src={leaderboardRibbonLeft}
-          alt=""
-          aria-hidden="true"
-          className="campaign-details-ribbon campaign-details-ribbon-left"
-        />
-        <img
-          src={leaderboardRibbonRight}
-          alt=""
-          aria-hidden="true"
-          className="campaign-details-ribbon campaign-details-ribbon-right"
-        />
+      <div id="details" className="campaign-details-area py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
         <div className="max-w-5xl mx-auto px-4 relative z-10">
           <FadeInWhenVisible direction="up">
             <div className="campaign-details-heading">

@@ -565,32 +565,10 @@
     backdrop-filter: blur(14px);
   }
 
-  .campaign-details-ribbon-area {
+  .campaign-details-area {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-  }
-
-  .campaign-details-ribbon {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    user-select: none;
-    object-fit: contain;
-    opacity: 0.78;
-    filter: drop-shadow(0 20px 28px rgba(70,0,20,0.14));
-  }
-
-  .campaign-details-ribbon-left {
-    width: clamp(25rem, 40vw, 42rem);
-    left: clamp(-15rem, -9vw, -6rem);
-    bottom: -8rem;
-  }
-
-  .campaign-details-ribbon-right {
-    width: clamp(24rem, 38vw, 40rem);
-    right: clamp(-14rem, -8vw, -5rem);
-    top: -6rem;
   }
 
   .leaderboard-board {
@@ -648,28 +626,6 @@
   .leaderboard-points-card {
     border: 2px solid #C8002C;
     box-shadow: 0 2px 8px rgba(200,0,44,0.1);
-  }
-
-  .leaderboard-ribbon {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    user-select: none;
-    object-fit: contain;
-    opacity: 0.92;
-    filter: drop-shadow(0 20px 28px rgba(70,0,20,0.16));
-  }
-
-  .leaderboard-ribbon-left {
-    width: clamp(35rem, 49vw, 51rem);
-    left: clamp(-21rem, -17vw, -12rem);
-    top: clamp(-10rem, -8vw, -5.5rem);
-  }
-
-  .leaderboard-ribbon-right {
-    width: clamp(35rem, 49vw, 51rem);
-    right: clamp(-19rem, -15vw, -10rem);
-    top: clamp(-10rem, -8vw, -5.5rem);
   }
 
   .fifa-broadcast-header {
@@ -798,38 +754,6 @@
   @media (max-width: 767px) {
     .fifa-broadcast-header::after {
       display: none;
-    }
-
-    .leaderboard-ribbon {
-      opacity: 0.32;
-    }
-
-    .leaderboard-ribbon-left {
-      width: 24rem;
-      left: -14rem;
-      top: -4rem;
-    }
-
-    .leaderboard-ribbon-right {
-      width: 24rem;
-      right: -14rem;
-      top: -4rem;
-    }
-
-    .campaign-details-ribbon {
-      opacity: 0.34;
-    }
-
-    .campaign-details-ribbon-left {
-      width: 21rem;
-      left: -14rem;
-      bottom: -4rem;
-    }
-
-    .campaign-details-ribbon-right {
-      width: 20rem;
-      right: -13rem;
-      top: -2rem;
     }
 
     .how-it-works-stadium {
