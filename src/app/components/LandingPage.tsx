@@ -12,6 +12,7 @@ import {
   AnimatedCounter,
   CursorSpotlight,
 } from "./PremiumEffects";
+import { Trophy, UserRound } from "lucide-react";
 import { supabase } from "../../../utils/supabase/client";
 import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import { ALL_MISSIONS, MISSION_ICONS } from "./MissionsListDB";
@@ -627,11 +628,11 @@ function PublicLeaderboard() {
 
   if (loading)
     return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-[1fr_0.92fr_1fr] gap-4 md:gap-5 items-start">
         {[0, 1, 2].map((i) => (
           <div
             key={i}
-            className="h-80 bg-white/10 rounded-2xl animate-pulse"
+            className="h-80 rounded-lg border border-gray-200 bg-white/70 animate-pulse"
           />
         ))}
       </div>
@@ -651,13 +652,13 @@ function PublicLeaderboard() {
         aria-hidden="true"
         className="leaderboard-ribbon leaderboard-ribbon-right"
       />
-      <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+      <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-[1fr_0.92fr_1fr] gap-4 md:gap-5 items-start">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
-        <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
-          <div className="flex items-center gap-2 p-4 border-b border-gray-100">
-            <FlaticonIcon name="trophy" className="w-5 h-5" />
-            <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide">
+        <div className="leaderboard-panel overflow-hidden bg-white">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+            <Trophy className="w-4 h-4 text-lg-red" strokeWidth={2.4} />
+            <h3 className="text-gray-900 font-black text-base uppercase tracking-wide">
               Teams
             </h3>
           </div>
@@ -669,11 +670,11 @@ function PublicLeaderboard() {
               return (
                 <div
                   key={t.team}
-                  className={`flex items-center gap-3 px-4 py-3 ${isTop3 ? "bg-gray-50" : ""}`}
+                  className={`flex items-center gap-3 px-4 py-2.5 ${isTop3 ? "bg-gray-50" : ""}`}
                 >
-                  <div className="w-8 text-center flex-shrink-0">
+                  <div className="w-7 text-center flex-shrink-0">
                     {isTop3 ? (
-                      <RankMedal rank={rank as 1 | 2 | 3} className="w-6 h-6 mx-auto" />
+                      <RankMedal rank={rank as 1 | 2 | 3} className="w-5 h-5 mx-auto" />
                     ) : (
                       <span className="text-gray-400 font-bold text-sm">
                         #{rank}
@@ -683,10 +684,10 @@ function PublicLeaderboard() {
                   <img
                     src={`https://flagcdn.com/w40/${flagCode}.png`}
                     alt={t.team}
-                    className="w-8 h-5 object-cover rounded flex-shrink-0"
+                    className="w-7 h-5 object-cover rounded flex-shrink-0"
                   />
                   <span
-                    className={`flex-1 font-bold uppercase text-sm tracking-wide ${isTop3 ? "text-gray-900" : "text-gray-600"}`}
+                    className={`flex-1 font-black uppercase text-sm tracking-wide ${isTop3 ? "text-gray-900" : "text-gray-600"}`}
                   >
                     {t.team}
                   </span>
@@ -709,13 +710,13 @@ function PublicLeaderboard() {
 
       {/* How Points Work */}
       <FadeInWhenVisible direction="up" delay={0.1}>
-        <div className="h-full rounded-2xl border-2 border-lg-red overflow-hidden bg-white shadow-sm">
-          <div className="p-5 border-b border-gray-100">
-            <h3 className="text-lg-red font-black text-xl text-center uppercase tracking-widest">
+        <div className="leaderboard-points-card overflow-hidden bg-white">
+          <div className="px-5 py-4 border-b border-gray-100">
+            <h3 className="text-lg-red font-black text-lg text-center uppercase tracking-[0.14em]">
               How Points Work
             </h3>
           </div>
-          <div className="p-5 space-y-5">
+          <div className="px-5 py-5 space-y-4">
             {[
               {
                 icon: "target" as FlaticonIconName,
@@ -739,7 +740,7 @@ function PublicLeaderboard() {
               },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="flex gap-3">
-                <span className="w-9 h-9 rounded-xl bg-lg-red/10 border border-lg-red/20 flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 flex items-center justify-center flex-shrink-0">
                   <FlaticonIcon name={icon} className="w-5 h-5" />
                 </span>
                 <div>
@@ -758,10 +759,10 @@ function PublicLeaderboard() {
 
       {/* Individual */}
       <FadeInWhenVisible direction="right" delay={0.1}>
-        <div className="h-full rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
-          <div className="flex items-center gap-2 p-4 border-b border-gray-100">
-            <span className="text-xl">👤</span>
-            <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide">
+        <div className="leaderboard-panel overflow-hidden bg-white">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+            <UserRound className="w-4 h-4 text-[#2b165c]" strokeWidth={2.6} />
+            <h3 className="text-gray-900 font-black text-base uppercase tracking-wide">
               Individual
             </h3>
           </div>
@@ -772,20 +773,15 @@ function PublicLeaderboard() {
               return (
                 <div
                   key={u.name + i}
-                  className={`flex items-center gap-3 px-4 py-3 ${isTop3 ? "bg-gray-50" : ""}`}
+                  className={`flex items-center gap-3 px-4 py-2.5 ${isTop3 ? "bg-gray-50" : ""}`}
                 >
-                  <div className="w-8 text-center flex-shrink-0">
+                  <div className="w-7 text-center flex-shrink-0">
                     {isTop3 ? (
-                      <RankMedal rank={rank as 1 | 2 | 3} className="w-6 h-6 mx-auto" />
+                      <RankMedal rank={rank as 1 | 2 | 3} className="w-5 h-5 mx-auto" />
                     ) : (
                       <span className="text-gray-400 font-bold text-sm">#{rank}</span>
                     )}
                   </div>
-                  <img
-                    src={`https://flagcdn.com/w40/${FLAG_CODES[u.team] || "un"}.png`}
-                    alt={u.team}
-                    className="w-8 h-5 object-cover rounded flex-shrink-0"
-                  />
                   <div className="flex-1 min-w-0">
                     <p className={`font-bold text-sm truncate ${isTop3 ? "text-gray-900" : "text-gray-600"}`}>
                       {u.name}
@@ -1038,20 +1034,19 @@ export function LandingPage({
       {/* Leaderboard Section */}
       <div
         id="leaderboard"
-        className="premium-editorial-section py-16 md:py-24 relative overflow-hidden"
+        className="premium-editorial-section leaderboard-section py-12 md:py-16 relative overflow-hidden"
         style={{ backgroundColor: "#F0ECE4" }}
       >
-        <FloatingBalls count={5} opacity={0.06} />
         <div
-          className="max-w-6xl mx-auto px-4 relative"
+          className="max-w-5xl mx-auto px-4 relative"
           style={{ zIndex: 2 }}
         >
           <FadeInWhenVisible direction="up">
-            <CampaignSectionHeading
-              eyebrow="Live competition"
-              title="Live Leaderboard"
-              description="Updates in real-time as fans score points"
-            />
+            <div className="leaderboard-heading">
+              <Trophy className="w-8 h-8 mx-auto text-lg-red" strokeWidth={2.4} />
+              <h2>Live Leaderboard</h2>
+              <p>Updates in real-time as fans score points</p>
+            </div>
           </FadeInWhenVisible>
           <PublicLeaderboard />
         </div>

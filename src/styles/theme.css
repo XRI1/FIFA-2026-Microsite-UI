@@ -595,11 +595,59 @@
 
   .leaderboard-board {
     isolation: isolate;
-    margin-top: 1rem;
+    margin-top: 1.9rem;
+  }
+
+  .leaderboard-section {
+    scroll-margin-top: 4.75rem;
   }
 
   .leaderboard-grid {
     z-index: 2;
+    max-width: 58rem;
+    margin-inline: auto;
+  }
+
+  .leaderboard-heading {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-bottom: 1.9rem;
+  }
+
+  .leaderboard-heading .flaticon-icon {
+    filter: drop-shadow(0 4px 7px rgba(200,0,44,0.18));
+  }
+
+  .leaderboard-heading h2 {
+    margin-top: 1rem;
+    color: #111827;
+    font-size: clamp(1.65rem, 3vw, 2.05rem);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .leaderboard-heading p {
+    margin-top: 0.55rem;
+    color: #8b94a3;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .leaderboard-panel,
+  .leaderboard-points-card {
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 10px rgba(20,20,20,0.12);
+  }
+
+  .leaderboard-panel {
+    border: 1px solid rgba(17,24,39,0.12);
+  }
+
+  .leaderboard-points-card {
+    border: 2px solid #C8002C;
+    box-shadow: 0 2px 8px rgba(200,0,44,0.1);
   }
 
   .leaderboard-ribbon {
@@ -613,15 +661,15 @@
   }
 
   .leaderboard-ribbon-left {
-    width: clamp(25rem, 39vw, 40rem);
-    left: clamp(-13rem, -8vw, -5rem);
-    bottom: -5rem;
+    width: clamp(35rem, 49vw, 51rem);
+    left: clamp(-21rem, -17vw, -12rem);
+    top: clamp(-10rem, -8vw, -5.5rem);
   }
 
   .leaderboard-ribbon-right {
-    width: clamp(24rem, 37vw, 39rem);
-    right: clamp(-12rem, -7vw, -4rem);
-    top: -4rem;
+    width: clamp(35rem, 49vw, 51rem);
+    right: clamp(-19rem, -15vw, -10rem);
+    top: clamp(-10rem, -8vw, -5.5rem);
   }
 
   .fifa-broadcast-header {
@@ -753,19 +801,19 @@
     }
 
     .leaderboard-ribbon {
-      opacity: 0.42;
+      opacity: 0.32;
     }
 
     .leaderboard-ribbon-left {
-      width: 22rem;
-      left: -13rem;
-      bottom: -3rem;
+      width: 24rem;
+      left: -14rem;
+      top: -4rem;
     }
 
     .leaderboard-ribbon-right {
-      width: 21rem;
-      right: -12rem;
-      top: -2rem;
+      width: 24rem;
+      right: -14rem;
+      top: -4rem;
     }
 
     .campaign-details-ribbon {
