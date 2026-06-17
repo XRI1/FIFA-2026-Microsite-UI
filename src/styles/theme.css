@@ -683,7 +683,7 @@
     z-index: 4;
     pointer-events: none;
     user-select: none;
-    width: clamp(72rem, 430vw, 540rem);
+    width: clamp(72rem, 431vw, 540rem);
     left: clamp(-19rem, -18vw, -13rem);
     top: clamp(2rem, -3vw, -9rem);
     opacity: 0.82;
