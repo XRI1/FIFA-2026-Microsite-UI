@@ -12,7 +12,7 @@ import {
   AnimatedCounter,
   CursorSpotlight,
 } from "./PremiumEffects";
-import { ArrowRight, FileText, Gift, Scale, Trophy, UserRound } from "lucide-react";
+import { ArrowRight, FileText, Gift, Scale, Target, Trophy, UserRound } from "lucide-react";
 import { supabase } from "../../../utils/supabase/client";
 import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import { ALL_MISSIONS, MISSION_ICONS } from "./MissionsListDB";
@@ -1221,23 +1221,25 @@ export function LandingPage({
             <div className="campaign-details-grid">
               {[
                 {
-                  icon: "goal" as FlaticonIconName,
+                  icon: Target,
                   label: 'About Campaign',
                   desc: 'Weekly missions, team selection, leaderboard mechanics, and participation timeline.',
                 },
                 {
-                  icon: "medal" as FlaticonIconName,
+                  icon: Gift,
                   label: 'Prizes & Products',
                   desc: 'LG rewards, product bonus points, invoice verification, and winner eligibility.',
                 },
                 {
-                  icon: "scale" as FlaticonIconName,
+                  icon: Scale,
                   label: 'Fair Play Policy',
                   desc: 'Campaign rules, audit process, submission checks, and final decision terms.',
                 },
-              ].map(({ icon, label, desc }) => (
+              ].map(({ icon: Icon, label, desc }) => (
                 <div key={label} className="campaign-details-card">
-                  <FlaticonIcon name={icon} className="w-8 h-8 mx-auto mb-3" />
+                  <div className="campaign-details-icon">
+                    <Icon className="w-6 h-6" strokeWidth={2.3} />
+                  </div>
                   <h3>{label}</h3>
                   <p>{desc}</p>
                 </div>
@@ -1256,24 +1258,6 @@ export function LandingPage({
               <a href="/details" className="campaign-details-button">
                 View Full Details
                 <ArrowRight className="w-4 h-4" strokeWidth={2.6} />
-              </a>
-            </div>
-          </FadeInWhenVisible>
-        </div>
-      </div>
-
-      {/* Terms & Conditions */}
-      <div className="py-8" style={{ backgroundColor: '#F0ECE4' }}>
-        <div className="max-w-4xl mx-auto px-4">
-          <FadeInWhenVisible direction="up">
-            <div className="campaign-policy-strip px-6 py-4 flex items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <FlaticonIcon name="scale" className="w-6 h-6 flex-shrink-0" />
-                <p className="font-bold text-gray-900 text-sm">Fair Play Policy (T&C)</p>
-                <p className="text-gray-500 text-xs hidden sm:block">— Campaign rules, eligibility & prize conditions</p>
-              </div>
-              <a href="/details#tnc" className="text-lg-red font-bold text-sm hover:underline flex-shrink-0">
-                Read Policy →
               </a>
             </div>
           </FadeInWhenVisible>

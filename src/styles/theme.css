@@ -557,18 +557,120 @@
     box-shadow: 0 26px 64px rgba(65,18,28,0.13);
   }
 
-  .campaign-policy-strip {
-    border-radius: 1.5rem;
-    border: 1px solid rgba(200,0,44,0.1);
-    background: rgba(255,255,255,0.86);
-    box-shadow: 0 14px 36px rgba(65,18,28,0.08);
-    backdrop-filter: blur(14px);
-  }
-
   .campaign-details-area {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+  }
+
+  .campaign-details-heading {
+    text-align: center;
+    margin-bottom: 1.9rem;
+  }
+
+  .campaign-details-heading h2 {
+    margin-top: 1rem;
+    color: #111827;
+    font-size: clamp(1.65rem, 3vw, 2.05rem);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .campaign-details-heading p {
+    max-width: 38rem;
+    margin: 0.55rem auto 0;
+    color: #8b94a3;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .campaign-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 58rem;
+    margin-inline: auto;
+  }
+
+  .campaign-details-card {
+    min-height: 13rem;
+    border: 1px solid rgba(17,24,39,0.12);
+    border-radius: 0.6rem;
+    background: rgba(255,255,255,0.94);
+    box-shadow: 0 2px 10px rgba(20,20,20,0.1);
+    padding: 1.35rem 1.2rem;
+    text-align: center;
+  }
+
+  .campaign-details-icon,
+  .campaign-policy-icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    color: #C8002C;
+    background: rgba(200,0,44,0.08);
+    border: 1px solid rgba(200,0,44,0.13);
+  }
+
+  .campaign-details-icon {
+    margin: 0 auto 0.85rem;
+  }
+
+  .campaign-details-card h3,
+  .campaign-policy-card h3 {
+    color: #111827;
+    font-size: 0.98rem;
+    line-height: 1.25;
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .campaign-details-card p,
+  .campaign-policy-card p {
+    margin-top: 0.55rem;
+    color: #6b7280;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+
+  .campaign-policy-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    max-width: 58rem;
+    margin: 1rem auto 0;
+    border: 2px solid #C8002C;
+    border-radius: 0.6rem;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 2px 10px rgba(200,0,44,0.1);
+    padding: 1rem 1.2rem;
+  }
+
+  .campaign-details-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    flex-shrink: 0;
+    min-height: 2.6rem;
+    border-radius: 999px;
+    background: #C8002C;
+    color: #fff;
+    padding: 0 1.1rem;
+    font-size: 0.82rem;
+    font-weight: 900;
+    box-shadow: 0 10px 20px rgba(200,0,44,0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .campaign-details-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(200,0,44,0.28);
   }
 
   .leaderboard-board {
@@ -754,6 +856,28 @@
   @media (max-width: 767px) {
     .fifa-broadcast-header::after {
       display: none;
+    }
+
+    .campaign-details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .campaign-details-card {
+      min-height: auto;
+      text-align: left;
+    }
+
+    .campaign-details-icon {
+      margin-inline: 0;
+    }
+
+    .campaign-policy-card {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .campaign-details-button {
+      width: 100%;
     }
 
     .how-it-works-stadium {
@@ -979,7 +1103,6 @@
 .premium-step-card .flaticon-icon,
 .mission-type-orb .flaticon-icon,
 .campaign-feature-card .flaticon-icon,
-.campaign-policy-strip .flaticon-icon,
 .premium-panel-soft .flaticon-icon {
   filter: saturate(0.88) contrast(1.08) drop-shadow(0 2px 4px rgba(200, 0, 44, 0.12));
 }
