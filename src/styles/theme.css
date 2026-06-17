@@ -678,6 +678,19 @@
     margin-top: 1.9rem;
   }
 
+  .leaderboard-top-left-ribbon {
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    user-select: none;
+    width: clamp(60rem, 370vw, 470rem);
+    left: clamp(-18rem, -18vw, -13rem);
+    top: clamp(4rem, -3vw, -9rem);
+    opacity: 0.82;
+    transform: rotate(36deg);
+    filter: drop-shadow(0 18px 28px rgba(70,0,20,0.18));
+  }
+
   .leaderboard-section {
     scroll-margin-top: 4.75rem;
   }
@@ -856,6 +869,13 @@
   @media (max-width: 767px) {
     .fifa-broadcast-header::after {
       display: none;
+    }
+
+    .leaderboard-top-left-ribbon {
+      width: 27rem;
+      left: -18rem;
+      top: -2rem;
+      opacity: 0.38;
     }
 
     .campaign-details-grid {

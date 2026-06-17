@@ -24,6 +24,7 @@ import heroBannerMobile from "../../imports/ChatGPT_Image_Jun_10__2026__06_34_37
 import lgLogo from "../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png";
 import superFanLogo from "../../imports/mnewmonic.png";
 import kvText from "../../imports/kv-text.png";
+import leaderboardRibbonTopLeft from "../../imports/leaderboard-ribbon-top-left.png";
 import howItWorksStadium from "../../imports/how-it-works-stadium.jpeg";
 
 interface LandingPageProps {
@@ -638,6 +639,12 @@ function PublicLeaderboard() {
 
   return (
     <div className="leaderboard-board relative">
+      <img
+        src={leaderboardRibbonTopLeft}
+        alt=""
+        aria-hidden="true"
+        className="leaderboard-top-left-ribbon"
+      />
       <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-[1fr_0.92fr_1fr] gap-4 md:gap-5 items-start">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
