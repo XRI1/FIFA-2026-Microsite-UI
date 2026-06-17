@@ -962,13 +962,13 @@ export function LandingPage({
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="max-w-6xl mx-auto px-3 py-2.5 flex items-center justify-between gap-2">
+        <div className="max-w-6xl mx-auto px-2 sm:px-3 py-2.5 flex items-center justify-between gap-1.5 sm:gap-2">
           <img
             src={lgLogo}
             alt="LG Electronics"
-            className="h-7 md:h-8 w-auto bg-[#F0ECE4] px-2 py-1 rounded-md flex-shrink-0"
+            className="h-6 sm:h-7 md:h-8 w-auto max-w-[58px] sm:max-w-none bg-[#F0ECE4] px-1.5 sm:px-2 py-1 rounded-md flex-shrink-0"
           />
-          <div className="flex items-center gap-1 md:gap-1">
+          <div className="flex min-w-0 items-center gap-0.5 sm:gap-1">
             {[
               { id: "hero", label: "Home", icon: "home" as FlaticonIconName },
               {
@@ -992,18 +992,18 @@ export function LandingPage({
                 <a
                   key={id}
                   href="/details"
-                  className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
+                  className="premium-nav-link flex items-center gap-1.5 px-2 sm:px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
-                  <FlaticonIcon name={icon} className="w-5 h-5 flex-shrink-0" />
+                  <FlaticonIcon name={icon} className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
                 </a>
               ) : (
                 <button
                   key={id}
                   onClick={() => scrollTo(id)}
-                  className="premium-nav-link flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
+                  className="premium-nav-link flex items-center gap-1.5 px-2 sm:px-3 md:px-4 py-2 rounded-full text-white/90 hover:text-white transition-all font-semibold text-sm"
                 >
-                  <FlaticonIcon name={icon} className="w-5 h-5 flex-shrink-0" />
+                  <FlaticonIcon name={icon} className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span className="hidden md:inline">{label}</span>
                 </button>
               )
@@ -1011,11 +1011,12 @@ export function LandingPage({
           </div>
           <motion.button
             onClick={onGetStarted}
-            className="campaign-primary-button py-1.5 px-3 md:py-2 md:px-5 text-xs md:text-sm flex-shrink-0"
+            className="campaign-primary-button py-1.5 px-2 sm:px-3 md:py-2 md:px-5 text-[11px] sm:text-xs md:text-sm flex-shrink-0 whitespace-nowrap"
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
           >
-            Join Now
+            <span className="hidden sm:inline">Join Now</span>
+            <span className="sm:hidden">Join</span>
           </motion.button>
         </div>
       </motion.nav>
@@ -1192,9 +1193,9 @@ export function LandingPage({
       {/* Mission Types */}
       <div
         id="missions"
-        className="py-16 md:py-24 bg-red-dramatic relative overflow-hidden"
+        className="py-12 sm:py-16 md:py-24 bg-red-dramatic relative overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4">
           <FadeInWhenVisible direction="up">
             <CampaignSectionHeading
               eyebrow="Play your way"
@@ -1203,7 +1204,7 @@ export function LandingPage({
               light
             />
           </FadeInWhenVisible>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3 md:gap-5">
             {weekOneMissions.map((mission, i) => {
               const icon = MISSION_ICONS[mission.type] || "gamepad";
 
@@ -1215,7 +1216,7 @@ export function LandingPage({
               >
                 <TiltCard intensity={10}>
                   <motion.div
-                    className="group relative overflow-hidden rounded-2xl p-4 md:p-5 h-full flex flex-col text-left"
+                    className="group relative overflow-hidden rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 h-full min-h-[186px] sm:min-h-[230px] md:min-h-[260px] flex flex-col text-left"
                     style={{
                       backgroundColor: "#F0ECE4",
                       boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
@@ -1231,37 +1232,41 @@ export function LandingPage({
                     }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-lg-red/0 via-lg-red/0 to-lg-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative z-10 flex h-full flex-col">
-                      <div className="flex items-start justify-between gap-3 mb-3">
-                        <span className="inline-flex items-center rounded-full bg-lg-red/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-lg-red">
+                    <div className="relative z-10 flex h-full min-w-0 flex-col">
+                      <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
+                        <span className="inline-flex min-w-0 items-center rounded-full bg-lg-red/10 px-2 sm:px-2.5 py-1 text-[8px] sm:text-[10px] font-black uppercase tracking-[0.12em] sm:tracking-[0.18em] text-lg-red whitespace-nowrap">
                           Week 1
                         </span>
-                        <span className="text-xs font-black text-gray-500">
+                        <span className="text-[10px] sm:text-xs font-black text-gray-500 whitespace-nowrap">
                           {mission.points} XP
                         </span>
                       </div>
                       <motion.div
-                        className="mission-type-orb mb-3 md:mb-4"
+                        className="mission-type-orb mb-2.5 sm:mb-3 md:mb-4"
+                        style={{
+                          width: "clamp(3rem, 13vw, 5.25rem)",
+                          height: "clamp(3rem, 13vw, 5.25rem)",
+                        }}
                         whileHover={{
                           scale: 1.1,
                           rotate: [-5, 5, -3, 0],
                         }}
                         transition={{ duration: 0.4 }}
                       >
-                        <FlaticonIcon name={icon} className="w-7 h-7 md:w-9 md:h-9" />
+                        <FlaticonIcon name={icon} className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
                       </motion.div>
-                      <h3 className="font-black text-gray-900 text-base md:text-lg leading-tight">
+                      <h3 className="font-black text-gray-900 text-[11px] sm:text-sm md:text-lg leading-tight line-clamp-2 break-words">
                         {mission.title}
                       </h3>
-                      <p className="mt-2 text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-3">
+                      <p className="mt-2 hidden sm:block text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-3">
                         {mission.description}
                       </p>
                       <button
                         type="button"
                         onClick={onGetStarted}
-                        className="campaign-primary-button mt-4 inline-flex items-center justify-center gap-2 px-4 py-2 text-xs md:text-sm"
+                        className="campaign-primary-button mt-auto inline-flex w-full items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 text-[11px] sm:text-xs md:text-sm whitespace-nowrap"
                       >
-                        <FlaticonIcon name="play" className="w-4 h-4" />
+                        <FlaticonIcon name="play" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         Play
                       </button>
                     </div>
