@@ -15,10 +15,6 @@ export function PremiumFootballAtmosphere() {
     <div className="premium-football-atmosphere" aria-hidden="true">
       <div className="fifa-stadium-beam fifa-stadium-beam-left" />
       <div className="fifa-stadium-beam fifa-stadium-beam-right" />
-      <div className="fifa-pitch-plane">
-        <div className="fifa-pitch-circle" />
-      </div>
-      <div className="premium-pitch-lines" />
       <motion.div
         className="premium-football premium-football-one"
         animate={{ y: [0, -18, 0], rotate: [8, 18, 8] }}

@@ -223,7 +223,7 @@
     isolation: isolate;
     background:
       radial-gradient(circle at 14% 8%, rgba(200,0,44,0.08), transparent 24rem),
-      radial-gradient(circle at 88% 42%, rgba(34,95,60,0.08), transparent 28rem),
+      radial-gradient(circle at 88% 42%, rgba(200,0,44,0.04), transparent 28rem),
       linear-gradient(180deg, #f8f5ef 0%, #eee9df 100%);
   }
 
@@ -239,16 +239,6 @@
     z-index: 0;
     overflow: hidden;
     pointer-events: none;
-  }
-
-  .premium-pitch-lines {
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
-    background:
-      linear-gradient(90deg, transparent 49.9%, rgba(38,104,65,0.2) 50%, transparent 50.1%),
-      radial-gradient(circle at 50% 50%, transparent 0 8rem, rgba(38,104,65,0.16) 8.1rem 8.2rem, transparent 8.3rem);
-    mask-image: linear-gradient(to bottom, transparent, black 20%, black 78%, transparent);
   }
 
   .premium-football {
@@ -314,7 +304,7 @@
   .premium-atmosphere-glow-two {
     right: 8%;
     bottom: -16rem;
-    background: rgba(38,104,65,0.1);
+    background: rgba(200,0,44,0.06);
   }
 
   .fifa-stadium-beam {
@@ -338,54 +328,12 @@
     transform: rotate(18deg);
   }
 
-  .fifa-pitch-plane {
-    position: absolute;
-    left: 50%;
-    bottom: -24rem;
-    width: min(90vw, 82rem);
-    height: 42rem;
-    transform: translateX(-50%) perspective(700px) rotateX(62deg);
-    border: 1px solid rgba(38,104,65,0.12);
-    background:
-      repeating-linear-gradient(90deg, rgba(38,104,65,0.04) 0 4rem, rgba(255,255,255,0.02) 4rem 8rem),
-      linear-gradient(rgba(38,104,65,0.08), rgba(38,104,65,0.015));
-    box-shadow: inset 0 0 90px rgba(38,104,65,0.08);
-  }
-
-  .fifa-pitch-plane::before {
-    content: "";
-    position: absolute;
-    inset: 8%;
-    border: 2px solid rgba(38,104,65,0.16);
-  }
-
-  .fifa-pitch-plane::after {
-    content: "";
-    position: absolute;
-    top: 8%;
-    bottom: 8%;
-    left: 50%;
-    width: 2px;
-    background: rgba(38,104,65,0.16);
-  }
-
-  .fifa-pitch-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid rgba(38,104,65,0.16);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .premium-page {
     position: relative;
     background:
       linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
       radial-gradient(circle at top, rgba(200,0,44,0.08), transparent 38rem),
-      linear-gradient(180deg, rgba(38,104,65,0.045), transparent 26rem) !important;
+      linear-gradient(180deg, rgba(200,0,44,0.025), transparent 26rem) !important;
   }
 
   .premium-panel {
@@ -802,11 +750,6 @@
   @media (max-width: 767px) {
     .fifa-broadcast-header::after {
       display: none;
-    }
-
-    .fifa-pitch-plane {
-      width: 120vw;
-      opacity: 0.65;
     }
 
     .leaderboard-ribbon {
