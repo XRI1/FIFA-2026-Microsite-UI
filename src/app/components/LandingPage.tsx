@@ -12,7 +12,7 @@ import {
   AnimatedCounter,
   CursorSpotlight,
 } from "./PremiumEffects";
-import { Trophy, UserRound } from "lucide-react";
+import { ArrowRight, FileText, Gift, Scale, Trophy, UserRound } from "lucide-react";
 import { supabase } from "../../../utils/supabase/client";
 import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import { ALL_MISSIONS, MISSION_ICONS } from "./MissionsListDB";
@@ -1237,35 +1237,52 @@ export function LandingPage({
           aria-hidden="true"
           className="campaign-details-ribbon campaign-details-ribbon-right"
         />
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 relative z-10">
           <FadeInWhenVisible direction="up">
-            <div className="campaign-feature-card overflow-hidden">
-              <div className="bg-red-dramatic px-8 py-8">
-                <h2 className="text-2xl md:text-3xl font-black text-white mb-2">Campaign Details & Policies</h2>
-                <p className="text-white/80 text-sm md:text-base">
-                  Learn about the campaign rules, prizes, eligibility and our Fair Play Policy.
-                </p>
-              </div>
-              <div className="px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="grid grid-cols-3 gap-4 flex-1">
-                  {[
-                    { icon: "goal" as FlaticonIconName, label: 'About Campaign' },
-                    { icon: "medal" as FlaticonIconName, label: 'Prizes & Products' },
-                    { icon: "scale" as FlaticonIconName, label: 'Fair Play Policy' },
-                  ].map(({ icon, label }) => (
-                    <div key={label} className="text-center">
-                      <FlaticonIcon name={icon} className="w-8 h-8 mx-auto mb-1" />
-                      <p className="text-xs font-bold text-lg-red">{label}</p>
-                    </div>
-                  ))}
+            <div className="campaign-details-heading">
+              <FileText className="w-8 h-8 mx-auto text-lg-red" strokeWidth={2.4} />
+              <h2>Campaign Details & Policies</h2>
+              <p>Learn about the campaign rules, prizes, eligibility and our Fair Play Policy.</p>
+            </div>
+            <div className="campaign-details-grid">
+              {[
+                {
+                  icon: "goal" as FlaticonIconName,
+                  label: 'About Campaign',
+                  desc: 'Weekly missions, team selection, leaderboard mechanics, and participation timeline.',
+                },
+                {
+                  icon: "medal" as FlaticonIconName,
+                  label: 'Prizes & Products',
+                  desc: 'LG rewards, product bonus points, invoice verification, and winner eligibility.',
+                },
+                {
+                  icon: "scale" as FlaticonIconName,
+                  label: 'Fair Play Policy',
+                  desc: 'Campaign rules, audit process, submission checks, and final decision terms.',
+                },
+              ].map(({ icon, label, desc }) => (
+                <div key={label} className="campaign-details-card">
+                  <FlaticonIcon name={icon} className="w-8 h-8 mx-auto mb-3" />
+                  <h3>{label}</h3>
+                  <p>{desc}</p>
                 </div>
-                <a
-                  href="/details"
-                  className="campaign-primary-button flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 text-sm"
-                >
-                  View Full Details →
-                </a>
+              ))}
+            </div>
+            <div className="campaign-policy-card">
+              <div className="flex items-start gap-4">
+                <div className="campaign-policy-icon">
+                  <Scale className="w-6 h-6" strokeWidth={2.3} />
+                </div>
+                <div>
+                  <h3>Fair Play Policy (T&C)</h3>
+                  <p>Campaign rules, eligibility, prize conditions, and verification standards.</p>
+                </div>
               </div>
+              <a href="/details" className="campaign-details-button">
+                View Full Details
+                <ArrowRight className="w-4 h-4" strokeWidth={2.6} />
+              </a>
             </div>
           </FadeInWhenVisible>
         </div>
