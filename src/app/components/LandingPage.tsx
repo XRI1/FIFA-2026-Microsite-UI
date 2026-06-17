@@ -500,56 +500,6 @@ function FloatingBalls({
   );
 }
 
-function GrassDivider({ flip = false }: { flip?: boolean }) {
-  return (
-    <div
-      className="w-full overflow-hidden leading-none"
-      style={{
-        transform: flip ? "scaleY(-1)" : "none",
-        marginBottom: flip ? undefined : -1,
-      }}
-    >
-      <svg
-        viewBox="0 0 1440 60"
-        preserveAspectRatio="none"
-        className="w-full"
-        style={{ height: 40 }}
-      >
-        <defs>
-          <linearGradient
-            id="grass"
-            x1="0"
-            x2="0"
-            y1="0"
-            y2="1"
-          >
-            <stop offset="0%" stopColor="#2d6a2d" />
-            <stop offset="100%" stopColor="#1a4a1a" />
-          </linearGradient>
-        </defs>
-        {/* Wavy grass top */}
-        <path
-          d="M0,30 C120,0 240,60 360,30 C480,0 600,60 720,30 C840,0 960,60 1080,30 C1200,0 1320,60 1440,30 L1440,60 L0,60 Z"
-          fill="url(#grass)"
-        />
-        {/* Grass blades */}
-        {Array.from({ length: 72 }).map((_, i) => (
-          <line
-            key={i}
-            x1={i * 20 + 4}
-            y1="60"
-            x2={i * 20}
-            y2={30 + Math.sin(i) * 15}
-            stroke="#3a8a3a"
-            strokeWidth="1.5"
-            opacity="0.6"
-          />
-        ))}
-      </svg>
-    </div>
-  );
-}
-
 function FootballTicker() {
   const items = [
     "⚽ FIFA WORLD CUP 2026",
@@ -1189,7 +1139,6 @@ export function LandingPage({
         </div>
       </div>
 
-      <GrassDivider />
       {/* Mission Types */}
       <div
         id="missions"
@@ -1279,7 +1228,6 @@ export function LandingPage({
         </div>
       </div>
 
-      <GrassDivider flip />
       {/* Details & T&C teaser */}
       <div id="details" className="campaign-details-ribbon-area py-12 md:py-16" style={{ backgroundColor: '#F0ECE4' }}>
         <img
@@ -1346,7 +1294,6 @@ export function LandingPage({
         </div>
       </div>
 
-      <GrassDivider />
       {/* CTA Footer */}
       <div className="bg-red-dramatic py-12 md:py-16 relative overflow-hidden">
         <FloatingBalls count={6} opacity={0.1} />
