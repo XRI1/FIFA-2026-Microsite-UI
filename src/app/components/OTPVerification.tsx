@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Loader2 } from 'lucide-react';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
 import mnewmonic from '../../imports/mnewmonic.png';
-import { FlaticonIcon } from "./FlaticonIcon";
+import { FlaticonIcon, LoadingSpinner } from "./FlaticonIcon";
 
 interface OTPVerificationProps {
   phoneNumber: string;
@@ -149,7 +148,7 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
 
             {loading && (
               <div className="text-center">
-                <Loader2 className="w-6 h-6 animate-spin text-lg-red mx-auto" />
+                <LoadingSpinner className="w-6 h-6 text-lg-red mx-auto" />
               </div>
             )}
           </div>

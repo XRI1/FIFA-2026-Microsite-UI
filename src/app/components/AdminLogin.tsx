@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Shield, Loader2, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router';
 import { supabase } from '../../../utils/supabase/client';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
+import { FlaticonIcon } from './FlaticonIcon';
 
 interface AdminLoginProps {
   onLoginSuccess: (adminId: string, sessionToken: string) => void;
@@ -106,7 +106,7 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
               SUPER FAN LEAGUE
             </h1>
             <div className="w-20 h-20 bg-gradient-to-br from-lg-deep-purple to-lg-purple rounded-full flex items-center justify-center mx-auto">
-              <Shield className="w-10 h-10 text-white" />
+              <FlaticonIcon name="shield" className="w-10 h-10" />
             </div>
             <div>
               <h2 className="text-xl font-bold text-gray-900">Admin Login</h2>
@@ -149,7 +149,7 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
 
             {error && (
               <div className="bg-red-50 border-2 border-red-200 rounded-xl p-3 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <FlaticonIcon name="alert" className="w-5 h-5 flex-shrink-0" />
                 <p className="text-sm text-red-600 font-medium">{error}</p>
               </div>
             )}
@@ -161,12 +161,12 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
             >
               {loading ? (
                 <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <span className="w-5 h-5 rounded-full border-2 border-white/40 border-t-white animate-spin" />
                   Logging in...
                 </>
               ) : (
                 <>
-                  <Shield className="w-5 h-5" />
+                  <FlaticonIcon name="shield" className="w-5 h-5" />
                   Login to Admin Panel
                 </>
               )}

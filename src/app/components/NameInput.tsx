@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Loader2 } from 'lucide-react';
 import { supabase } from '../../../utils/supabase/client';
 import mnewmonic from '../../imports/mnewmonic-1.png';
-import { FlaticonIcon } from "./FlaticonIcon";
+import { FlaticonIcon, LoadingSpinner } from "./FlaticonIcon";
 
 interface NameInputProps {
   phoneNumber: string;
@@ -121,7 +120,7 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
                 />
                 {checking && (
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                    <Loader2 className="w-5 h-5 animate-spin text-gray-400" />
+                    <LoadingSpinner className="w-5 h-5 text-gray-400" />
                   </div>
                 )}
                 {!checking && available === true && (
@@ -178,7 +177,7 @@ export function NameInput({ phoneNumber, onSubmit }: NameInputProps) {
             >
               {loading ? (
                 <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <LoadingSpinner className="w-5 h-5" />
                   Saving...
                 </>
               ) : (

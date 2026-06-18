@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Trophy, Clock, CheckCircle2, Lock, Calendar } from 'lucide-react';
 import { MISSIONS_DATA, Mission } from '../types/mission';
 import { MissionModal } from './MissionModal';
+import { FlaticonIcon, type FlaticonIconName } from './FlaticonIcon';
 
 interface MissionsListProps {
   userTeam: string;
@@ -15,26 +15,25 @@ export function MissionsList({ userTeam }: MissionsListProps) {
   const weeks = [1, 2, 3, 4, 5, 6];
   const weekMissions = MISSIONS_DATA.filter(m => m.week === selectedWeek);
 
-  const getMissionIcon = (type: string) => {
-    const icons: Record<string, string> = {
-      photo: '📸',
-      quiz: '❓',
-      'spot-count': '🔍',
-      'drag-match': '🎯',
-      unscramble: '🔤',
-      'hidden-hunt': '🕵️',
-      comment: '💬',
-      predictor: '⚽',
-      video: '🎬',
-      'external-visit': '📍',
-      'fan-art': '🎨',
-      'social-checkin': '✅',
-      creative: '💡',
-      'rapid-tap': '⚡',
+  const getMissionIcon = (type: string): FlaticonIconName => {
+    const icons: Record<string, FlaticonIconName> = {
+      photo: 'camera',
+      quiz: 'question',
+      'spot-count': 'search',
+      'drag-match': 'target',
+      unscramble: 'text',
+      'hidden-hunt': 'scan',
+      comment: 'message',
+      predictor: 'goal',
+      video: 'video',
+      'external-visit': 'map',
+      'fan-art': 'palette',
+      'social-checkin': 'badge-check',
+      creative: 'lightbulb',
+      'rapid-tap': 'gauge',
     };
-    return icons[type] || '🎮';
+    return icons[type] || 'gamepad';
   };
-
   const handleMissionComplete = (missionId: string, points: number) => {
     setCompletedMissions(prev => new Set(prev).add(missionId));
     setSelectedMission(null);
@@ -45,7 +44,7 @@ export function MissionsList({ userTeam }: MissionsListProps) {
       {/* Week Selector */}
       <div className="bg-white rounded-xl p-4 shadow-sm">
         <div className="flex items-center gap-2 mb-3">
-          <Calendar className="w-5 h-5 text-lg-purple" />
+          <FlaticonIcon name="calendar" className="w-5 h-5" />
           <h2 className="font-bold text-lg">Select Week</h2>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-2">
@@ -83,23 +82,23 @@ export function MissionsList({ userTeam }: MissionsListProps) {
               } ${isCompleted ? 'ring-2 ring-lg-green' : ''}`}
             >
               <div className="flex items-start gap-3">
-                <div className="text-3xl">{getMissionIcon(mission.type)}</div>
+                <FlaticonIcon name={getMissionIcon(mission.type)} className="w-8 h-8 flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-1">
                     <h3 className="font-bold text-gray-900 leading-tight">{mission.title}</h3>
-                    {isLocked && <Lock className="w-4 h-4 text-gray-400 flex-shrink-0" />}
-                    {isCompleted && <CheckCircle2 className="w-5 h-5 text-lg-green flex-shrink-0" />}
+                    {isLocked && <FlaticonIcon name="lock" className="w-4 h-4 opacity-55 flex-shrink-0" />}
+                    {isCompleted && <FlaticonIcon name="check" className="w-5 h-5 flex-shrink-0" />}
                   </div>
                   <p className="text-sm text-gray-600 mb-3 line-clamp-2">{mission.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1 text-lg-red font-bold">
-                        <Trophy className="w-4 h-4" />
+                        <FlaticonIcon name="trophy" className="w-4 h-4" />
                         <span>{mission.points}</span>
                       </div>
                       {mission.timedDuration && (
                         <div className="flex items-center gap-1 text-lg-purple text-xs">
-                          <Clock className="w-3 h-3" />
+                          <FlaticonIcon name="clock" className="w-3 h-3" />
                           <span>{mission.timedDuration}s</span>
                         </div>
                       )}

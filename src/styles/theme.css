@@ -678,17 +678,47 @@
     margin-top: 1.9rem;
   }
 
-  .leaderboard-top-left-ribbon {
+  .leaderboard-top-left-ribbon,
+  .leaderboard-top-right-ribbon {
     position: absolute;
     z-index: 1;
     pointer-events: none;
     user-select: none;
     width: clamp(52rem, 300vw, 360rem);
-    left: clamp(-21rem, -20vw, -15rem);
     top: clamp(-9rem, -10vw, -5rem);
     opacity: 0.52;
-    transform: rotate(36deg);
     filter: drop-shadow(0 18px 28px rgba(70,0,20,0.18));
+  }
+
+  .leaderboard-top-left-ribbon {
+    left: clamp(-21rem, -20vw, -15rem);
+    transform: rotate(36deg);
+  }
+
+  .leaderboard-top-right-ribbon {
+    right: clamp(-21rem, -20vw, -15rem);
+    transform: scaleX(-1) rotate(36deg);
+  }
+
+  .campaign-cta-ribbon {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    width: clamp(34rem, 118vw, 88rem);
+    top: 50%;
+    opacity: 0.28;
+    filter: drop-shadow(0 16px 24px rgba(70,0,20,0.22));
+  }
+
+  .campaign-cta-ribbon-left {
+    left: clamp(-26rem, -28vw, -14rem);
+    transform: translateY(-50%) rotate(28deg);
+  }
+
+  .campaign-cta-ribbon-right {
+    right: clamp(-26rem, -28vw, -14rem);
+    transform: translateY(-50%) scaleX(-1) rotate(28deg);
   }
 
   .leaderboard-section {
@@ -871,11 +901,33 @@
       display: none;
     }
 
-    .leaderboard-top-left-ribbon {
+    .leaderboard-top-left-ribbon,
+    .leaderboard-top-right-ribbon {
       width: 28rem;
-      left: -17rem;
       top: -5rem;
       opacity: 0.28;
+    }
+
+    .leaderboard-top-left-ribbon {
+      left: -17rem;
+    }
+
+    .leaderboard-top-right-ribbon {
+      right: -17rem;
+    }
+
+    .campaign-cta-ribbon {
+      width: 30rem;
+      top: 50%;
+      opacity: 0.2;
+    }
+
+    .campaign-cta-ribbon-left {
+      left: -23rem;
+    }
+
+    .campaign-cta-ribbon-right {
+      right: -23rem;
     }
 
     .campaign-details-grid {

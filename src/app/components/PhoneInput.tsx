@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Loader2 } from 'lucide-react';
 import lgLogo from '../../imports/LGE_Electronics_Logo_HeritageRed_Grey_RGB.png';
 import mnewmonic from '../../imports/mnewmonic.png';
+import { LoadingSpinner } from './FlaticonIcon';
 
 interface PhoneInputProps {
   onSubmit: (phoneNumber: string) => Promise<void>;
@@ -65,7 +65,7 @@ export function PhoneInput({ onSubmit }: PhoneInputProps) {
             </div>
 
             <button type="submit" onClick={handleSubmit} disabled={loading} className="btn-premium w-full flex items-center justify-center gap-2">
-              {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending…</> : 'Send OTP →'}
+              {loading ? <><LoadingSpinner className="w-4 h-4" /> Sending…</> : 'Send OTP →'}
             </button>
 
             <p className="text-center text-xs text-gray-400 pt-1">

@@ -1,19 +1,6 @@
 import { useState } from 'react';
-import {
-  LayoutDashboard,
-  Target,
-  FileText,
-  BarChart3,
-  Users,
-  Plus,
-  Edit,
-  Trash2,
-  Check,
-  X,
-  Eye,
-  TrendingUp
-} from 'lucide-react';
 import { Mission, MISSIONS_DATA } from '../types/mission';
+import { FlaticonIcon, type FlaticonIconName } from './FlaticonIcon';
 
 interface AdminPanelProps {
   onLogout?: () => void;
@@ -24,10 +11,10 @@ export function AdminPanel({ onLogout }: AdminPanelProps = {}) {
   const adminName = localStorage.getItem('admin_name') || 'Admin';
 
   const tabs = [
-    { id: 'overview' as const, label: 'Overview', icon: LayoutDashboard },
-    { id: 'missions' as const, label: 'Missions', icon: Target },
-    { id: 'submissions' as const, label: 'Submissions', icon: FileText },
-    { id: 'analytics' as const, label: 'Analytics', icon: BarChart3 },
+    { id: 'overview' as const, label: 'Overview', icon: 'chart' as FlaticonIconName },
+    { id: 'missions' as const, label: 'Missions', icon: 'target' as FlaticonIconName },
+    { id: 'submissions' as const, label: 'Submissions', icon: 'text' as FlaticonIconName },
+    { id: 'analytics' as const, label: 'Analytics', icon: 'gauge' as FlaticonIconName },
   ];
 
   return (
@@ -60,7 +47,6 @@ export function AdminPanel({ onLogout }: AdminPanelProps = {}) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex overflow-x-auto">
             {tabs.map((tab) => {
-              const Icon = tab.icon;
               return (
                 <button
                   key={tab.id}
@@ -71,7 +57,7 @@ export function AdminPanel({ onLogout }: AdminPanelProps = {}) {
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <FlaticonIcon name={tab.icon} className="w-5 h-5" />
                   {tab.label}
                 </button>
               );
@@ -93,10 +79,10 @@ export function AdminPanel({ onLogout }: AdminPanelProps = {}) {
 
 function OverviewTab() {
   const stats = [
-    { label: 'Total Users', value: '1,234', change: '+12%', icon: Users, color: 'bg-blue-500' },
-    { label: 'Active Missions', value: '7', change: 'Week 1', icon: Target, color: 'bg-lg-red' },
-    { label: 'Pending Submissions', value: '45', change: 'Review needed', icon: FileText, color: 'bg-lg-yellow' },
-    { label: 'Total Points Awarded', value: '125K', change: '+8%', icon: TrendingUp, color: 'bg-lg-green' },
+    { label: 'Total Users', value: '1,234', change: '+12%', icon: 'users' as FlaticonIconName, color: 'bg-blue-500' },
+    { label: 'Active Missions', value: '7', change: 'Week 1', icon: 'target' as FlaticonIconName, color: 'bg-lg-red' },
+    { label: 'Pending Submissions', value: '45', change: 'Review needed', icon: 'text' as FlaticonIconName, color: 'bg-lg-yellow' },
+    { label: 'Total Points Awarded', value: '125K', change: '+8%', icon: 'chart' as FlaticonIconName, color: 'bg-lg-green' },
   ];
 
   return (
@@ -104,12 +90,11 @@ function OverviewTab() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat) => {
-          const Icon = stat.icon;
           return (
             <div key={stat.label} className="bg-[#F0ECE4] rounded-xl p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <div className={`${stat.color} w-12 h-12 rounded-lg flex items-center justify-center`}>
-                  <Icon className="w-6 h-6 text-white" />
+                  <FlaticonIcon name={stat.icon} className="w-6 h-6" />
                 </div>
                 <span className="text-sm text-gray-600">{stat.change}</span>
               </div>
@@ -125,15 +110,15 @@ function OverviewTab() {
         <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <button className="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl hover:border-lg-red transition-all">
-            <Plus className="w-6 h-6 text-lg-red" />
+            <FlaticonIcon name="target" className="w-6 h-6" />
             <span className="font-semibold">Create Mission</span>
           </button>
           <button className="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl hover:border-lg-purple transition-all">
-            <Eye className="w-6 h-6 text-lg-purple" />
+            <FlaticonIcon name="search" className="w-6 h-6" />
             <span className="font-semibold">Review Submissions</span>
           </button>
           <button className="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl hover:border-lg-green transition-all">
-            <BarChart3 className="w-6 h-6 text-lg-green" />
+            <FlaticonIcon name="chart" className="w-6 h-6" />
             <span className="font-semibold">View Reports</span>
           </button>
         </div>
@@ -188,7 +173,7 @@ function MissionsTab() {
           onClick={() => setShowCreateForm(!showCreateForm)}
           className="bg-lg-red hover:bg-lg-red/90 text-white font-semibold py-2 px-6 rounded-lg transition-all flex items-center gap-2"
         >
-          <Plus className="w-5 h-5" />
+          <FlaticonIcon name="target" className="w-5 h-5" />
           Create Mission
         </button>
       </div>
@@ -300,13 +285,13 @@ function MissionsTab() {
                       onClick={() => setEditingId(mission.id)}
                       className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                     >
-                      <Edit className="w-4 h-4 text-gray-600" />
+                      <FlaticonIcon name="text" className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => deleteMission(mission.id)}
                       className="p-2 hover:bg-red-50 rounded-lg transition-colors"
                     >
-                      <Trash2 className="w-4 h-4 text-red-600" />
+                      <FlaticonIcon name="alert" className="w-4 h-4" />
                     </button>
                   </div>
                 </td>
@@ -379,11 +364,11 @@ function SubmissionsTab() {
             {submission.status === 'pending' && (
               <div className="flex gap-3">
                 <button className="flex-1 bg-lg-green hover:bg-lg-green/90 text-white font-semibold py-2 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
-                  <Check className="w-5 h-5" />
+                  <FlaticonIcon name="check" className="w-5 h-5" />
                   Approve
                 </button>
                 <button className="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
-                  <X className="w-5 h-5" />
+                  <FlaticonIcon name="alert" className="w-5 h-5" />
                   Reject
                 </button>
               </div>

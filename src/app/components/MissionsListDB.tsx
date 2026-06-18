@@ -4,7 +4,7 @@ import {
   Mission,
 } from "../../../utils/supabase/client";
 import { MissionModal } from "./MissionModal";
-import { FlaticonIcon, type FlaticonIconName } from "./FlaticonIcon";
+import { FlaticonIcon, LoadingSpinner, type FlaticonIconName } from "./FlaticonIcon";
 
 // ── Static mission data (no Supabase) ───────────────────────────
 export const ALL_MISSIONS: Mission[] = [
@@ -490,7 +490,7 @@ function InvoiceUpload({ userPhone }: { userPhone: string }) {
         />
         {status === "uploading" ? (
           <>
-            <Loader2 className="w-4 h-4 animate-spin" />
+            <LoadingSpinner className="w-4 h-4" />
             Uploading...
           </>
         ) : (

@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Loader2 } from 'lucide-react';
-import { FlaticonIcon } from "./FlaticonIcon";
+import { FlaticonIcon, LoadingSpinner } from "./FlaticonIcon";
 
 interface Team {
   id: string;
@@ -169,7 +168,7 @@ export function TeamSelection({ onTeamSelected, onBack }: TeamSelectionProps) {
           >
             {loading ? (
               <>
-                <Loader2 className="w-5 h-5 animate-spin" />
+                <LoadingSpinner className="w-5 h-5" />
                 Confirming...
               </>
             ) : (

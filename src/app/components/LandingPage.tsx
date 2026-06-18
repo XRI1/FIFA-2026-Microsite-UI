@@ -12,7 +12,6 @@ import {
   AnimatedCounter,
   CursorSpotlight,
 } from "./PremiumEffects";
-import { ArrowRight, FileText, Gift, Scale, Target, Trophy, UserRound } from "lucide-react";
 import { supabase } from "../../../utils/supabase/client";
 import { FlaticonIcon, RankMedal, type FlaticonIconName } from "./FlaticonIcon";
 import { ALL_MISSIONS, MISSION_ICONS } from "./MissionsListDB";
@@ -645,12 +644,18 @@ function PublicLeaderboard() {
         aria-hidden="true"
         className="leaderboard-top-left-ribbon"
       />
+      <img
+        src={leaderboardRibbonTopLeft}
+        alt=""
+        aria-hidden="true"
+        className="leaderboard-top-right-ribbon"
+      />
       <div className="leaderboard-grid relative grid grid-cols-1 md:grid-cols-[1fr_0.92fr_1fr] gap-4 md:gap-5 items-start">
       {/* Teams */}
       <FadeInWhenVisible direction="left">
         <div className="leaderboard-panel overflow-hidden bg-white">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-            <Trophy className="w-4 h-4 text-lg-red" strokeWidth={2.4} />
+            <FlaticonIcon name="trophy" className="w-4 h-4" />
             <h3 className="text-gray-900 font-black text-base uppercase tracking-wide">
               Teams
             </h3>
@@ -754,7 +759,7 @@ function PublicLeaderboard() {
       <FadeInWhenVisible direction="right" delay={0.1}>
         <div className="leaderboard-panel overflow-hidden bg-white">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-            <UserRound className="w-4 h-4 text-[#2b165c]" strokeWidth={2.6} />
+            <FlaticonIcon name="user" className="w-4 h-4" />
             <h3 className="text-gray-900 font-black text-base uppercase tracking-wide">
               Individual
             </h3>
@@ -1036,7 +1041,7 @@ export function LandingPage({
         >
           <FadeInWhenVisible direction="up">
             <div className="leaderboard-heading">
-              <Trophy className="w-8 h-8 mx-auto text-lg-red" strokeWidth={2.4} />
+              <FlaticonIcon name="trophy" className="w-8 h-8 mx-auto" />
               <h2>Live Leaderboard</h2>
               <p>Updates in real-time as fans score points</p>
             </div>
@@ -1221,31 +1226,31 @@ export function LandingPage({
         <div className="max-w-5xl mx-auto px-4 relative z-10">
           <FadeInWhenVisible direction="up">
             <div className="campaign-details-heading">
-              <FileText className="w-8 h-8 mx-auto text-lg-red" strokeWidth={2.4} />
+              <FlaticonIcon name="text" className="w-8 h-8 mx-auto" />
               <h2>Campaign Details & Policies</h2>
               <p>Learn about the campaign rules, prizes, eligibility and our Fair Play Policy.</p>
             </div>
             <div className="campaign-details-grid">
               {[
                 {
-                  icon: Target,
+                  icon: "target" as FlaticonIconName,
                   label: 'About Campaign',
                   desc: 'Weekly missions, team selection, leaderboard mechanics, and participation timeline.',
                 },
                 {
-                  icon: Gift,
+                  icon: "gift" as FlaticonIconName,
                   label: 'Prizes & Products',
                   desc: 'LG rewards, product bonus points, invoice verification, and winner eligibility.',
                 },
                 {
-                  icon: Scale,
+                  icon: "scale" as FlaticonIconName,
                   label: 'Fair Play Policy',
                   desc: 'Campaign rules, audit process, submission checks, and final decision terms.',
                 },
-              ].map(({ icon: Icon, label, desc }) => (
+              ].map(({ icon, label, desc }) => (
                 <div key={label} className="campaign-details-card">
                   <div className="campaign-details-icon">
-                    <Icon className="w-6 h-6" strokeWidth={2.3} />
+                    <FlaticonIcon name={icon} className="w-6 h-6" />
                   </div>
                   <h3>{label}</h3>
                   <p>{desc}</p>
@@ -1255,7 +1260,7 @@ export function LandingPage({
             <div className="campaign-policy-card">
               <div className="flex items-start gap-4">
                 <div className="campaign-policy-icon">
-                  <Scale className="w-6 h-6" strokeWidth={2.3} />
+                  <FlaticonIcon name="scale" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3>Fair Play Policy (T&C)</h3>
@@ -1264,7 +1269,7 @@ export function LandingPage({
               </div>
               <a href="/details" className="campaign-details-button">
                 View Full Details
-                <ArrowRight className="w-4 h-4" strokeWidth={2.6} />
+                <FlaticonIcon name="arrow-left" className="w-4 h-4 rotate-180" />
               </a>
             </div>
           </FadeInWhenVisible>
@@ -1272,10 +1277,22 @@ export function LandingPage({
       </div>
 
       {/* CTA Footer */}
-      <div className="bg-red-dramatic py-12 md:py-16 relative overflow-hidden">
+      <div className="campaign-cta-footer bg-red-dramatic py-12 md:py-16 relative overflow-hidden">
         <FloatingBalls count={6} opacity={0.1} />
+        <img
+          src={leaderboardRibbonTopLeft}
+          alt=""
+          aria-hidden="true"
+          className="campaign-cta-ribbon campaign-cta-ribbon-left"
+        />
+        <img
+          src={leaderboardRibbonTopLeft}
+          alt=""
+          aria-hidden="true"
+          className="campaign-cta-ribbon campaign-cta-ribbon-right"
+        />
         <FadeInWhenVisible direction="up">
-          <div className="max-w-4xl mx-auto px-4 text-center space-y-4 md:space-y-6">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-4 md:space-y-6">
             <h2 className="text-2xl md:text-4xl font-bold text-white">
               Ready to Join the League?
             </h2>
