@@ -1410,6 +1410,9 @@ export function LandingPage({
               LG Super Fan League • FIFA 2026 Bangladesh •
               Campaign runs mid-June to late July 2026
             </p>
+            <p className="mt-2 text-white/40 text-xs">
+              Developed by XR Interactive
+            </p>
           </div>
         </div>
       </div>
