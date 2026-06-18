@@ -2,96 +2,9 @@
 > @figma/my-make-file@0.0.1 dev
 > vite --host 127.0.0.1
 
-[2m9:02:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
 
-  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m555[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m1000[22m[2m[0m ms[22m
 
   [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
-[2m9:08:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:09:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:09:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:09:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:11:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\Dashboard.tsx, /src/styles/index.css[22m
-[2m9:12:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\Dashboard.tsx, /src/styles/index.css[22m
-[2m9:12:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:13:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:14:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:14:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:14:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:14:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LeaderboardView.tsx, /src/styles/index.css[22m
-[2m9:15:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/DetailsPage.tsx, /src/styles/index.css[22m
-[2m9:16:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\TeamSelection.tsx, /src/styles/index.css[22m
-[2m9:17:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/PhotoboothView.tsx[22m
-[2m9:17:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\NameInput.tsx, /src/styles/index.css[22m
-[2m9:17:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\OTPVerification.tsx, /src/styles/index.css[22m
-[2m9:18:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx, /src/styles/index.css[22m
-[2m9:18:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx, /src/styles/index.css[22m
-[2m9:19:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /src/styles/index.css[22m
-[2m9:19:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:19:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/PhotoboothView.tsx[22m
-[2m9:19:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:20:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:20:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:20:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:32:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\FlaticonIcon.tsx, /src/styles/index.css[22m
-[2m9:32:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m9:32:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\FlaticonIcon.tsx[22m Could not Fast Refresh ("FLATICON_ICONS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
-[2m9:32:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\Dashboard.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LeaderboardView.tsx, /src/app/components/DetailsPage.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\TeamSelection.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\NameInput.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\OTPVerification.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx[22m
-[2m9:32:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m9:33:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:33:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:36:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\FlaticonIcon.tsx, /src/styles/index.css[22m
-[2m9:36:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m9:36:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\FlaticonIcon.tsx[22m Could not Fast Refresh (new export)
-[2m9:36:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\Dashboard.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionsListDB.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LeaderboardView.tsx, /src/app/components/DetailsPage.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\TeamSelection.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\NameInput.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\OTPVerification.tsx, /@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx[22m
-[2m9:37:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:37:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\Dashboard.tsx, /src/styles/index.css[22m
-[2m9:37:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m9:37:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:37:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:48:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx, /src/styles/index.css[22m
-[2m9:48:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m9:48:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mthree[32m[39m
-[2m9:48:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
-[2m9:48:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:48:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:49:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m9:49:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:49:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m9:59:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m10:00:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:00:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:05:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m10:05:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:06:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:06:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:08:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m10:08:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:09:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:09:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:10:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m10:11:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:11:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:13:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:13:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/Floating3DElements.tsx, /src/styles/index.css[22m
-[2m10:13:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:13:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:15:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx, /src/styles/index.css[22m
-[2m10:15:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/MainApp.tsx, /src/styles/index.css[22m
-[2m10:16:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/MainApp.tsx, /src/styles/index.css[22m
-[2m10:16:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:16:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:16:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:19:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx, /src/styles/index.css[22m
-[2m10:19:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/MainApp.tsx, /src/styles/index.css[22m
-[2m10:19:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:19:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\PageTransition.tsx[22m
-[2m10:19:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:19:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:30:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Reza\Downloads\FIFA 2026 Microsite UI (1)\FIFA 2026 Microsite UI (1)\src\app\components\LandingPage.tsx, /src/styles/index.css[22m
-[2m10:31:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:31:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:31:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:32:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
-[2m10:32:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
-[2m10:32:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m5:20:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m
+[2m5:24:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/components/LandingPage.tsx, /src/styles/index.css[22m

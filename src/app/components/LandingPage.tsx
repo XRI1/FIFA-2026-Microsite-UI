@@ -1281,7 +1281,7 @@ export function LandingPage({
             </h2>
             <p className="text-base md:text-xl text-white/90">
               Sign up now and start your journey to becoming an
-              LG Superfan!
+              LG Super fan!
             </p>
             <MagneticButton
               onClick={onGetStarted}
