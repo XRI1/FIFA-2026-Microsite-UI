@@ -20,9 +20,9 @@ const TEAM_FLAG_CODES: Record<string, string> = {
   Canada: "ca",
   Colombia: "co",
   "Congo DR": "cd",
-  "Côte d'Ivoire": "ci",
+  "Cote d'Ivoire": "ci",
   Croatia: "hr",
-  Curaçao: "cw",
+  Curacao: "cw",
   Czechia: "cz",
   Ecuador: "ec",
   Egypt: "eg",
@@ -53,7 +53,7 @@ const TEAM_FLAG_CODES: Record<string, string> = {
   Sweden: "se",
   Switzerland: "ch",
   Tunisia: "tn",
-  Türkiye: "tr",
+  Turkiye: "tr",
   "United States": "us",
   Uruguay: "uy",
   Uzbekistan: "uz",
@@ -120,7 +120,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
             </button>
           </div>
 
-          {/* User Profile Card — glass */}
+          {/* User Profile Card  glass */}
           <div className="fifa-score-card rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-3"
             style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.18)' }}>
             <div className="flex items-center gap-3 sm:gap-4">
@@ -150,7 +150,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
           </div>
         </div>
 
-        {/* Tab Navigation — sits inside header, at the bottom */}
+        {/* Tab Navigation  sits inside header, at the bottom */}
         <div className="max-w-6xl mx-auto px-2 sm:px-6">
           <div className="flex">
             {tabs.map((tab) => {
@@ -227,14 +227,14 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                       </div>
                       <p className="text-white/80 text-sm mb-5 leading-relaxed">
                         Complete missions, earn points, climb
-                        the leaderboard — and walk away with
+                        the leaderboard  and walk away with
                         exclusive LG prizes every week!
                       </p>
 
                       {/* Grand Prize list */}
                       <div className="mb-4">
                         <p className="text-yellow-400 font-black text-xs uppercase tracking-widest mb-2">
-                          🏆 Grand Prizes
+                           Grand Prizes
                         </p>
                         <ul className="space-y-1.5">
                           {[
@@ -273,7 +273,7 @@ export function Dashboard({ user, onLogout }: DashboardProps) {
                       {/* Weekly Prize list */}
                       <div>
                         <p className="text-yellow-400 font-black text-xs uppercase tracking-widest mb-2">
-                          ⭐ Weekly Prizes
+                           Weekly Prizes
                         </p>
                         <ul className="space-y-1.5">
                           {[

@@ -30,23 +30,23 @@ export function LeaderboardView({ currentUserId, currentTeam }: LeaderboardViewP
 
   // Mock data
   const individualLeaderboard: LeaderboardUser[] = [
-    { id: '1', name: 'Rahul Ahmed', team: 'Argentina', teamFlag: '🇦🇷', flagCode: 'ar', points: 2500, rank: 1 },
-    { id: '2', name: 'Priya Das', team: 'Brazil', teamFlag: '🇧🇷', flagCode: 'br', points: 2350, rank: 2 },
-    { id: '3', name: 'Karim Hassan', team: 'Germany', teamFlag: '🇩🇪', flagCode: 'de', points: 2200, rank: 3 },
-    { id: '4', name: 'Nazia Khan', team: 'France', teamFlag: '🇫🇷', flagCode: 'fr', points: 2100, rank: 4 },
-    { id: '5', name: 'Sakib Rahman', team: 'Spain', teamFlag: '🇪🇸', flagCode: 'es', points: 2000, rank: 5 },
-    { id: '6', name: 'Fatima Islam', team: 'England', teamFlag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flagCode: 'gb-eng', points: 1950, rank: 6 },
-    { id: '7', name: 'Tanvir Haque', team: 'Portugal', teamFlag: '🇵🇹', flagCode: 'pt', points: 1900, rank: 7 },
-    { id: '8', name: 'Rupa Begum', team: 'Netherlands', teamFlag: '🇳🇱', flagCode: 'nl', points: 1850, rank: 8 },
-    { id: currentUserId, name: 'You', team: currentTeam, teamFlag: '🇦🇷', flagCode: 'ar', points: 1200, rank: 15 },
+    { id: '1', name: 'Rahul Ahmed', team: 'Argentina', teamFlag: '', flagCode: 'ar', points: 2500, rank: 1 },
+    { id: '2', name: 'Priya Das', team: 'Brazil', teamFlag: '', flagCode: 'br', points: 2350, rank: 2 },
+    { id: '3', name: 'Karim Hassan', team: 'Germany', teamFlag: '', flagCode: 'de', points: 2200, rank: 3 },
+    { id: '4', name: 'Nazia Khan', team: 'France', teamFlag: '', flagCode: 'fr', points: 2100, rank: 4 },
+    { id: '5', name: 'Sakib Rahman', team: 'Spain', teamFlag: '', flagCode: 'es', points: 2000, rank: 5 },
+    { id: '6', name: 'Fatima Islam', team: 'England', teamFlag: '', flagCode: 'gb-eng', points: 1950, rank: 6 },
+    { id: '7', name: 'Tanvir Haque', team: 'Portugal', teamFlag: '', flagCode: 'pt', points: 1900, rank: 7 },
+    { id: '8', name: 'Rupa Begum', team: 'Netherlands', teamFlag: '', flagCode: 'nl', points: 1850, rank: 8 },
+    { id: currentUserId, name: 'You', team: currentTeam, teamFlag: '', flagCode: 'ar', points: 1200, rank: 15 },
   ];
 
   const teamLeaderboard: TeamLeaderboard[] = [
-    { team: 'Brazil', teamFlag: '🇧🇷', flagCode: 'br', totalPoints: 45600, memberCount: 234, rank: 1 },
-    { team: 'Argentina', teamFlag: '🇦🇷', flagCode: 'ar', totalPoints: 43200, memberCount: 198, rank: 2 },
-    { team: 'Germany', teamFlag: '🇩🇪', flagCode: 'de', totalPoints: 41800, memberCount: 187, rank: 3 },
-    { team: 'Spain', teamFlag: '🇪🇸', flagCode: 'es', totalPoints: 39500, memberCount: 176, rank: 4 },
-    { team: 'France', teamFlag: '🇫🇷', flagCode: 'fr', totalPoints: 38200, memberCount: 165, rank: 5 },
+    { team: 'Brazil', teamFlag: '', flagCode: 'br', totalPoints: 45600, memberCount: 234, rank: 1 },
+    { team: 'Argentina', teamFlag: '', flagCode: 'ar', totalPoints: 43200, memberCount: 198, rank: 2 },
+    { team: 'Germany', teamFlag: '', flagCode: 'de', totalPoints: 41800, memberCount: 187, rank: 3 },
+    { team: 'Spain', teamFlag: '', flagCode: 'es', totalPoints: 39500, memberCount: 176, rank: 4 },
+    { team: 'France', teamFlag: '', flagCode: 'fr', totalPoints: 38200, memberCount: 165, rank: 5 },
   ];
 
   const getRankIcon = (rank: number) => {
@@ -65,7 +65,7 @@ export function LeaderboardView({ currentUserId, currentTeam }: LeaderboardViewP
 
   return (
     <div className="space-y-4">
-      {/* View Toggle — pill style */}
+      {/* View Toggle  pill style */}
       <div className="flex p-1 rounded-2xl gap-1" style={{ background: 'rgba(0,0,0,0.06)' }}>
         {[
           { id: 'individual', label: 'Individual', icon: "chart" as FlaticonIconName },

@@ -35,7 +35,7 @@ export default function AdminApp() {
         return;
       }
 
-      console.log('✅ Admin session valid:', session.admin_users.name);
+      console.log(' Admin session valid:', session.admin_users.name);
       setIsAuthenticated(true);
     } catch (err) {
       console.error('Session check error:', err);

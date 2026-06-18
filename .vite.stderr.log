@@ -1,0 +1,277 @@
+[2m7:05:54 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx: Unexpected token, expected "," (545:45)
+
+[0m [90m 543 |[31m
+ [90m 544 |[31m   [36mconst[31m handleNext [33m=[31m () [33m=>[31m {
+[31m[1m>[22m[31m[90m 545 |[31m     [36mconst[31m newAnswers [33m=[31m [[33m...[31manswers[33m,[31m selected x [36mfalse[31m][33m;[31m
+ [90m     |[31m                                              [31m[1m^[22m[31m
+ [90m 546 |[31m     setAnswers(newAnswers)[33m;[31m
+ [90m 547 |[31m     setSelected([36mnull[31m)[33m;[31m
+ [90m 548 |[31m     setExpired([36mfalse[31m)[33m;[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/MissionModal.tsx[39m:545:45
+[33m  543|  
+  544|    const handleNext = () => {
+  545|      const newAnswers = [...answers, selected x false];
+     |                                               ^
+  546|      setAnswers(newAnswers);
+  547|      setSelected(null);[39m
+      at constructor (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.expect (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6916:12)
+      at TypeScriptParserMixin.parseExprList (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12158:14)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12074:26)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9210:24)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11352:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9425:31)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12868:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12764:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13333:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13314:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12117:24)
+      at TypeScriptParserMixin.parseArrowExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12092:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11704:12)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+[2m7:07:10 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx: Unexpected token, expected "," (545:45)
+
+[0m [90m 543 |[31m
+ [90m 544 |[31m   [36mconst[31m handleNext [33m=[31m () [33m=>[31m {
+[31m[1m>[22m[31m[90m 545 |[31m     [36mconst[31m newAnswers [33m=[31m [[33m...[31manswers[33m,[31m selected x [36mfalse[31m][33m;[31m
+ [90m     |[31m                                              [31m[1m^[22m[31m
+ [90m 546 |[31m     setAnswers(newAnswers)[33m;[31m
+ [90m 547 |[31m     setSelected([36mnull[31m)[33m;[31m
+ [90m 548 |[31m     setExpired([36mfalse[31m)[33m;[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/MissionModal.tsx[39m:545:45
+[33m  543|  
+  544|    const handleNext = () => {
+  545|      const newAnswers = [...answers, selected x false];
+     |                                               ^
+  546|      setAnswers(newAnswers);
+  547|      setSelected(null);[39m
+      at constructor (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.expect (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6916:12)
+      at TypeScriptParserMixin.parseExprList (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12158:14)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12074:26)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9210:24)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11352:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9425:31)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12868:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12764:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13333:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13314:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12117:24)
+      at TypeScriptParserMixin.parseArrowExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12092:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11704:12)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+[2m7:07:31 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\src\app\components\MissionModal.tsx: Unexpected token, expected "," (1663:45)
+
+[0m [90m 1661 |[31m
+ [90m 1662 |[31m   [36mconst[31m handleNext [33m=[31m () [33m=>[31m {
+[31m[1m>[22m[31m[90m 1663 |[31m     [36mconst[31m newAnswers [33m=[31m [[33m...[31manswers[33m,[31m selected x [33m-[31m[35m1[31m][33m;[31m
+ [90m      |[31m                                              [31m[1m^[22m[31m
+ [90m 1664 |[31m     setAnswers(newAnswers)[33m;[31m
+ [90m 1665 |[31m     setSelected([36mnull[31m)[33m;[31m
+ [90m 1666 |[31m     [36mif[31m (qIndex [33m<[31m [33mWRONG_ANSWER_QUESTIONS[31m[33m.[31mlength [33m-[31m [35m1[31m) {[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/MissionModal.tsx[39m:1663:45
+[33m  1661|  
+  1662|    const handleNext = () => {
+  1663|      const newAnswers = [...answers, selected x -1];
+     |                                               ^
+  1664|      setAnswers(newAnswers);
+  1665|      setSelected(null);[39m
+      at constructor (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.expect (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:6916:12)
+      at TypeScriptParserMixin.parseExprList (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12158:14)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12074:26)
+      at TypeScriptParserMixin.parseArrayLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9210:24)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11352:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9425:31)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12868:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12764:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13333:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13314:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12117:24)
+      at TypeScriptParserMixin.parseArrowExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12092:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11704:12)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:9803:20)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseVar (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13401:91)
+      at TypeScriptParserMixin.parseVarStatement (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\@babel\parser\lib\index.js:13247:10)
+[2m7:08:37 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:360:24: ERROR: The character ">" is not valid inside a JSX element
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:1335:26: ERROR: The character ">" is not valid inside a JSX element
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx[39m:341:0
+[33m  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  358|                style={{ letterSpacing: "0.04em" }}>
+  359|                
+  360|                JOIN NOW -> 
+     |                          ^
+  361|              </motion.button>
+  362|            </MagneticButton>
+  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  1333|                  style={{ letterSpacing: "0.04em" }}>
+  1334|                  
+  1335|                  JOIN NOW -> 
+     |                            ^
+  1336|                </motion.button>
+  1337|              </MagneticButton>
+  [39m
+[2m7:08:37 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:360:24: ERROR: The character ">" is not valid inside a JSX element
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:1335:26: ERROR: The character ">" is not valid inside a JSX element
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx[39m:341:0
+[33m  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  358|                style={{ letterSpacing: "0.04em" }}>
+  359|                
+  360|                JOIN NOW -> 
+     |                          ^
+  361|              </motion.button>
+  362|            </MagneticButton>
+  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  1333|                  style={{ letterSpacing: "0.04em" }}>
+  1334|                  
+  1335|                  JOIN NOW -> 
+     |                            ^
+  1336|                </motion.button>
+  1337|              </MagneticButton>
+  [39m
+[2m7:08:37 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 2 errors:
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:360:24: ERROR: The character ">" is not valid inside a JSX element
+C:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx:1335:26: ERROR: The character ">" is not valid inside a JSX element[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/XRI/Downloads/LG/FIFA 2026 Microsite UI (1)/src/app/components/LandingPage.tsx[39m:341:0
+[33m  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  358|                style={{ letterSpacing: "0.04em" }}>
+  359|                
+  360|                JOIN NOW -> 
+     |                          ^
+  361|              </motion.button>
+  362|            </MagneticButton>
+  
+  [33mThe character ">" is not valid inside a JSX element[33m
+  1333|                  style={{ letterSpacing: "0.04em" }}>
+  1334|                  
+  1335|                  JOIN NOW -> 
+     |                            ^
+  1336|                </motion.button>
+  1337|              </MagneticButton>
+  [39m
+      at failureErrorWithLog (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\esbuild\lib\main.js:1467:15)
+      at C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\esbuild\lib\main.js:736:50
+      at responseCallbacks.<computed> (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\esbuild\lib\main.js:603:9)
+      at handleIncomingPacket (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\esbuild\lib\main.js:658:12)
+      at Socket.readFromStdout (C:\Users\XRI\Downloads\LG\FIFA 2026 Microsite UI (1)\node_modules\esbuild\lib\main.js:581:7)
+      at Socket.emit (node:events:519:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)

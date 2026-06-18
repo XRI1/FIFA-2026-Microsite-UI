@@ -54,7 +54,7 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
 
     try {
       // Dummy OTP - Accept any 4-digit code
-      console.log(`✅ OTP verified (dummy mode): ${otpCode}`);
+      console.log(` OTP verified (dummy mode): ${otpCode}`);
       setSuccess(true);
 
       // Wait a moment to show success, then proceed
@@ -76,7 +76,7 @@ export function OTPVerification({ phoneNumber, onVerified, onBack }: OTPVerifica
     setResendTimer(30);
     setOtp(['', '', '', '']);
     setError('');
-    console.log('📱 OTP resend requested (dummy mode)');
+    console.log(' OTP resend requested (dummy mode)');
   };
 
   return (

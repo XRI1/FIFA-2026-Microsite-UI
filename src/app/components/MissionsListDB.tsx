@@ -6,7 +6,7 @@ import {
 import { MissionModal } from "./MissionModal";
 import { FlaticonIcon, LoadingSpinner, type FlaticonIconName } from "./FlaticonIcon";
 
-// ── Static mission data (no Supabase) ───────────────────────────
+//  Static mission data (no Supabase) 
 export const ALL_MISSIONS: Mission[] = [
   // Week 1
   {
@@ -15,7 +15,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 1,
     title: "Spot the LG Products",
     description:
-      "Look at our living room image on the microsite — how many LG products can you count? Comment your answer!",
+      "Look at our living room image on the microsite  how many LG products can you count? Comment your answer!",
     type: "spot-count",
     points: 80,
     timedDuration: 15,
@@ -80,7 +80,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 6,
     title: "Flag Pride",
     description:
-      "Decorate any surface — wall, bag, desk — with your team flag and snap a photo. Show your pride!",
+      "Decorate any surface  wall, bag, desk  with your team flag and snap a photo. Show your pride!",
     type: "photo",
     points: 80,
     timedDuration: null,
@@ -147,7 +147,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 4,
     title: "Goal Reaction Picture",
     description:
-      "Upload a goal reaction moment — real or acted!",
+      "Upload a goal reaction moment  real or acted!",
     type: "photo",
     points: 100,
     timedDuration: null,
@@ -227,7 +227,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 3,
     title: "Fastest Tap Poll",
     description:
-      "Answer 3 rapid-fire football rules questions — 10 seconds each!",
+      "Answer 3 rapid-fire football rules questions  10 seconds each!",
     type: "quiz",
     points: 80,
     timedDuration: 10,
@@ -307,7 +307,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 2,
     title: "Beat the Clue",
     description:
-      "Identify a team from progressive clues — faster answers earn more points!",
+      "Identify a team from progressive clues  faster answers earn more points!",
     type: "quiz",
     points: 100,
     timedDuration: 20,
@@ -333,7 +333,7 @@ export const ALL_MISSIONS: Mission[] = [
     day: 4,
     title: "My Football Memory",
     description:
-      "Share your all-time favourite World Cup moment in 1–2 sentences. Max 250 characters.",
+      "Share your all-time favourite World Cup moment in 1-2 sentences. Max 250 characters.",
     type: "comment",
     points: 80,
     timedDuration: null,
@@ -496,7 +496,7 @@ function InvoiceUpload({ userPhone }: { userPhone: string }) {
         ) : (
           <>
             <FlaticonIcon name="upload" className="w-4 h-4" />
-            Upload Invoice →
+            Upload Invoice 
           </>
         )}
       </label>
@@ -611,7 +611,7 @@ export function MissionsList({
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 mb-5">
             {[
               { product: 'LG OLED / Smart TV (50"+)', points: '+400', icon: "tv" as FlaticonIconName, top: true },
-              { product: 'LG Smart TV (32"–48")',      points: '+350', icon: "tv" as FlaticonIconName, top: false },
+              { product: 'LG Smart TV (32"-48")',      points: '+350', icon: "tv" as FlaticonIconName, top: false },
               { product: 'LG Refrigerator',            points: '+300', icon: "fridge" as FlaticonIconName, top: false },
               { product: 'LG Air Conditioner',         points: '+250', icon: "ac" as FlaticonIconName, top: false },
               { product: 'LG Washing Machine',         points: '+250', icon: "washer" as FlaticonIconName, top: false },

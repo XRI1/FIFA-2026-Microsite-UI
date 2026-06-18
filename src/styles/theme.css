@@ -148,7 +148,7 @@
     background: radial-gradient(ellipse at 60% 35%, #CC001A 0%, #880012 50%, #1C0005 100%);
   }
 
-  /* Premium card — white with soft shadow + hover lift */
+  /* Premium card  white with soft shadow + hover lift */
   .card-premium {
     background: #ffffff;
     border-radius: 1.25rem;
@@ -161,7 +161,7 @@
     transform: translateY(-2px);
   }
 
-  /* Glass card — frosted translucent */
+  /* Glass card  frosted translucent */
   .card-glass {
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(16px);
@@ -792,7 +792,7 @@
   }
 
   .fifa-broadcast-header::after {
-    content: "LG SUPER FAN LEAGUE  •  FIFA 2026  •  MATCH CENTRE";
+    content: "LG SUPER FAN LEAGUE    FIFA 2026    MATCH CENTRE";
     position: absolute;
     right: 1rem;
     bottom: 0.35rem;

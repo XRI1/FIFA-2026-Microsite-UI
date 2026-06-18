@@ -32,9 +32,9 @@ export function PhotoboothView() {
       userId: '123',
       userName: 'Rahul Ahmed',
       team: 'Argentina',
-      teamFlag: '🇦🇷',
+      teamFlag: '',
       imageUrl: '',
-      caption: 'Ready for the match! 🔥',
+      caption: 'Ready for the match! ',
       likes: 45,
       timestamp: '2 hours ago',
     },
@@ -43,8 +43,8 @@ export function PhotoboothView() {
       userId: '124',
       userName: 'Priya Das',
       team: 'Brazil',
-      teamFlag: '🇧🇷',
-      caption: 'Life is Good with LG! ⚽',
+      teamFlag: '',
+      caption: 'Life is Good with LG! ',
       imageUrl: '',
       likes: 38,
       timestamp: '3 hours ago',
@@ -195,7 +195,7 @@ export function PhotoboothView() {
                 <div className="flex-1">
                   <h4 className="font-semibold">{photo.userName}</h4>
                   <p className="text-xs text-gray-500">
-                    {photo.teamFlag} Team {photo.team} • {photo.timestamp}
+                    {photo.teamFlag} Team {photo.team}  {photo.timestamp}
                   </p>
                 </div>
               </div>

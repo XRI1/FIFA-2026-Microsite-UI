@@ -67,9 +67,9 @@ const FLAG_CODES: Record<string, string> = {
   Canada: "ca",
   Colombia: "co",
   "Congo DR": "cd",
-  "Côte d'Ivoire": "ci",
+  "Cote d'Ivoire": "ci",
   Croatia: "hr",
-  Curaçao: "cw",
+  Curacao: "cw",
   Czechia: "cz",
   Ecuador: "ec",
   Egypt: "eg",
@@ -100,7 +100,7 @@ const FLAG_CODES: Record<string, string> = {
   Sweden: "se",
   Switzerland: "ch",
   Tunisia: "tn",
-  Türkiye: "tr",
+  Turkiye: "tr",
   "United States": "us",
   Uruguay: "uy",
   Uzbekistan: "uz",
@@ -338,7 +338,7 @@ function HeroSlider({
               whileTap={{ scale: 0.95 }}
               style={{ letterSpacing: "0.04em" }}
             >
-              JOIN NOW →
+              JOIN NOW
             </motion.button>
           </MagneticButton>
           <img
@@ -370,7 +370,7 @@ function HeroSlider({
   );
 }
 
-// ── Football Atmosphere Components ──────────────────────────────
+//  Football Atmosphere Components 
 
 const BALL_CONFIGS = [
   {
@@ -501,16 +501,16 @@ function FloatingBalls({
 
 function FootballTicker() {
   const items = [
-    "⚽ FIFA WORLD CUP 2026",
-    "🏆 LG SUPER FAN LEAGUE",
-    "🎯 WEEK 1 MISSIONS LIVE",
-    "🔥 BANGLADESH FANS UNITE",
-    "⚡ DOUBLE POINTS HOUR",
-    "🇦🇷 PICK YOUR SIDE",
+    " FIFA WORLD CUP 2026",
+    " LG SUPER FAN LEAGUE",
+    " WEEK 1 MISSIONS LIVE",
+    " BANGLADESH FANS UNITE",
+    " DOUBLE POINTS HOUR",
+    " PICK YOUR SIDE",
     "WIN LG PRIZES",
-    "🌍 48 NATIONS • 1 CHAMPION",
-    "📺 WATCH ON LG OLED",
-    "🎮 COMPLETE MISSIONS • EARN POINTS",
+    " 48 NATIONS  1 CHAMPION",
+    " WATCH ON LG OLED",
+    " COMPLETE MISSIONS  EARN POINTS",
   ];
   return (
     <div
@@ -724,7 +724,7 @@ function PublicLeaderboard() {
               {
                 icon: "zap" as FlaticonIconName,
                 title: "Double Points Hour",
-                desc: "Every week has a 60-min window where all points scored are 2×.",
+                desc: "Every week has a 60-min window where all points scored are 2.",
               },
               {
                 icon: "medal" as FlaticonIconName,
@@ -1072,13 +1072,13 @@ export function LandingPage({
                 num: "01",
                 icon: "football" as FlaticonIconName,
                 title: "Choose Your Team",
-                desc: "Pick the national team you want to represent. Your points boost your team on the global leaderboard. Choose wisely — once per season.",
+                desc: "Pick the national team you want to represent. Your points boost your team on the global leaderboard. Choose wisely  once per season.",
               },
               {
                 num: "02",
                 icon: "target" as FlaticonIconName,
                 title: "Complete Missions",
-                desc: "New missions drop every week — photo challenges, quizzes, prediction games, reaction videos & memes. Each mission earns points.",
+                desc: "New missions drop every week  photo challenges, quizzes, prediction games, reaction videos & memes. Each mission earns points.",
               },
               {
                 num: "03",
@@ -1090,7 +1090,7 @@ export function LandingPage({
                 num: "04",
                 icon: "gift" as FlaticonIconName,
                 title: "Win LG Prizes",
-                desc: "Weekly top fans win LG products — Smart TVs, Earbuds, Speakers & more. The bigger your score, the better your chance.",
+                desc: "Weekly top fans win LG products  Smart TVs, Earbuds, Speakers & more. The bigger your score, the better your chance.",
               },
             ].map((step, i) => {
               return (
@@ -1313,7 +1313,7 @@ export function LandingPage({
                 whileTap={{ scale: 0.95 }}
                 style={{ letterSpacing: "0.04em" }}
               >
-                JOIN NOW →
+                JOIN NOW
               </motion.button>
             </MagneticButton>
           </div>
@@ -1338,7 +1338,7 @@ export function LandingPage({
                 Life's Good
               </p>
               <p className="text-white/40 text-xs">
-                © 2026 LG Electronics. All rights reserved.
+                 2026 LG Electronics. All rights reserved.
               </p>
             </div>
 
@@ -1354,7 +1354,7 @@ export function LandingPage({
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm justify-center md:justify-start"
                 >
-                  <FlaticonIcon name="facebook" className="w-5 h-5" /> Facebook —
+                  <FlaticonIcon name="facebook" className="w-5 h-5" /> Facebook 
                   @LGBangladesh
                 </a>
                 <a
@@ -1364,7 +1364,7 @@ export function LandingPage({
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm justify-center md:justify-start"
                 >
                   <FlaticonIcon name="instagram" className="w-5 h-5" /> Instagram
-                  — @lgbangladesh
+                   @lgbangladesh
                 </a>
               </div>
             </div>
@@ -1397,7 +1397,7 @@ export function LandingPage({
                   <p>
                     Available:{" "}
                     <span className="text-white font-semibold">
-                      8:00 am – 9:00 pm
+                      8:00 am  9:00 pm
                     </span>
                   </p>
                 </div>
@@ -1407,7 +1407,7 @@ export function LandingPage({
 
           <div className="border-t border-white/10 pt-6 text-center">
             <p className="text-white/30 text-xs">
-              LG Super Fan League • FIFA 2026 Bangladesh •
+              LG Super Fan League - FIFA 2026 Bangladesh 
               Campaign runs mid-June to late July 2026
             </p>
             <p className="mt-2 text-white/40 text-xs">

@@ -40,7 +40,7 @@ export function PhoneInput({ onSubmit }: PhoneInputProps) {
           <div className="px-8 pt-8 pb-6 text-center" style={{ background: 'linear-gradient(145deg, rgba(240,236,228,0.9), rgba(255,255,255,0.72))' }}>
             <img src={lgLogo} alt="LG Electronics" className="h-8 w-auto mx-auto mb-4 bg-white px-3 py-1.5 rounded-lg shadow-sm" />
             <img src={mnewmonic} alt="LG Super Fan League" className="h-24 w-auto mx-auto" />
-            <p className="text-xs font-bold uppercase tracking-[0.15em] mt-3" style={{ color: '#888' }}>FIFA World Cup 2026 · Bangladesh</p>
+            <p className="text-xs font-bold uppercase tracking-[0.15em] mt-3" style={{ color: '#888' }}>FIFA World Cup 2026 - Bangladesh</p>
           </div>
 
           {/* Form section */}
@@ -65,7 +65,7 @@ export function PhoneInput({ onSubmit }: PhoneInputProps) {
             </div>
 
             <button type="submit" onClick={handleSubmit} disabled={loading} className="btn-premium w-full flex items-center justify-center gap-2">
-              {loading ? <><LoadingSpinner className="w-4 h-4" /> Sending…</> : 'Send OTP →'}
+              {loading ? <><LoadingSpinner className="w-4 h-4" /> Sending...</> : 'Send OTP '}
             </button>
 
             <p className="text-center text-xs text-gray-400 pt-1">

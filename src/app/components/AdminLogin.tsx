@@ -73,7 +73,7 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
         .update({ last_login: new Date().toISOString() })
         .eq('id', admin.id);
 
-      console.log('✅ Admin login successful:', admin.name);
+      console.log(' Admin login successful:', admin.name);
 
       // Store session in localStorage
       localStorage.setItem('admin_session', sessionToken);
@@ -181,17 +181,17 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
               <p><strong>Password:</strong> admin123</p>
             </div>
             <p className="text-xs text-red-600 font-semibold mt-2">
-              ⚠️ Change password in production!
+               Change password in production!
             </p>
           </div>
 
-          {/* Back to User App */}
+          {/* <- Back to User App */}
           <div className="text-center">
             <Link
               to="/"
               className="text-sm text-lg-deep-purple hover:text-lg-purple font-semibold transition-colors"
             >
-              ← Back to User App
+               <- Back to User App
             </Link>
           </div>
         </div>

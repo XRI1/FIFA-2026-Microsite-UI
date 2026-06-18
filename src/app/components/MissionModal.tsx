@@ -95,7 +95,7 @@ export function MissionModal({ mission, userPhone, onClose, onComplete }: Missio
         }
       }
 
-      console.log('Ã¢Å“â€¦ Mission submitted to database:', mission.id);
+      console.log(' Mission submitted to database:', mission.id);
 
       setStep('success');
       confetti({
@@ -129,7 +129,7 @@ export function MissionModal({ mission, userPhone, onClose, onComplete }: Missio
             </div>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-white/20 rounded-lg transition-colors">
-            <span className="text-2xl leading-none">Ã—</span>
+            <span className="text-2xl leading-none"></span>
           </button>
         </div>
 
@@ -300,7 +300,7 @@ function PlayStep({ mission, onSubmit }: { mission: Mission; onSubmit: (data: an
   }
 }
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ Week 1 Specific Missions Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// Week 1 Specific Missions
 
 function useCountdown(seconds: number, onExpire?: () => void) {
   const [timeLeft, setTimeLeft] = useState(seconds);
@@ -353,7 +353,7 @@ function SpotLGProducts({ onSubmit }: { onSubmit: (data: any) => void }) {
           className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none text-center text-2xl font-bold"
         />
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={() => onSubmit({ answer, timeExpired: expired })}
         disabled={!answer}
@@ -430,13 +430,13 @@ function FlagColourQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
           );
         })}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up for this question!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up for this question!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < FLAG_QUESTIONS.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit All Answers'}
+        {qIndex < FLAG_QUESTIONS.length - 1 ? 'Next Question' : 'Submit All Answers'}
       </button>
     </div>
   );
@@ -457,7 +457,7 @@ function LogoHunt({ onSubmit }: { onSubmit: (data: any) => void }) {
         </span>
       </div>
       <TimerBar timeLeft={timeLeft} total={10} color="bg-purple-500" />
-      <img src={imgLogoHunt} alt="World Cup illustration Ã¢â‚¬â€ find the LG logo" className="w-full rounded-xl object-contain max-h-64 bg-gray-100" />
+      <img src={imgLogoHunt} alt="World Cup illustration - find the LG logo" className="w-full rounded-xl object-contain max-h-64 bg-gray-100" />
       <div>
         <label className="block text-sm font-semibold mb-2">Where did you find the LG logo? (describe the location)</label>
         <input
@@ -469,7 +469,7 @@ function LogoHunt({ onSubmit }: { onSubmit: (data: any) => void }) {
           className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none"
         />
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={() => onSubmit({ answer, timeExpired: expired })}
         disabled={!answer}
@@ -502,13 +502,13 @@ function JerseyFlex({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-lg-red/5 border border-lg-red/20 rounded-xl p-4 text-sm text-gray-700 space-y-1">
         <p className="font-bold text-lg-red text-base">Jersey Flex</p>
         <p>Wear your team's favorite jersey, snap a selfie, and upload it!</p>
-        <p className="text-xs text-gray-500 mt-2">Ã°Å¸â€œÅ½ Format: JPG / PNG &nbsp;Ã¢â‚¬Â¢&nbsp; Max size: 5 MB</p>
+        <p className="text-xs text-gray-500 mt-2"> Format: JPG / PNG - Max size: 5 MB</p>
       </div>
       <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-lg-red transition-colors">
         {preview ? (
           <img src={preview} alt="Jersey selfie" className="max-h-60 mx-auto rounded-lg mb-3 object-contain" />
         ) : (
-          <div className="text-6xl mb-3">Ã°Å¸â€˜â€¢</div>
+          <div className="text-6xl mb-3"></div>
         )}
         <label className="cursor-pointer">
           <span className="text-lg-red font-semibold hover:underline">{preview ? 'Change Photo' : 'Upload Selfie'}</span>
@@ -581,17 +581,17 @@ function OLEDTrivia({ onSubmit }: { onSubmit: (data: any) => void }) {
                 : 'border-gray-200 hover:border-gray-300 text-gray-700'
             }`}
           >
-            {val ? 'Ã¢Å“â€¦ True' : 'Ã¢ÂÅ’ False'}
+            {val ? ' True' : ' False'}
           </button>
         ))}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up for this question!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up for this question!</p>}
       <button
         onClick={handleNext}
         disabled={selected === null && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < OLED_QUESTIONS.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit All Answers'}
+        {qIndex < OLED_QUESTIONS.length - 1 ? 'Next Question' : 'Submit All Answers'}
       </button>
     </div>
   );
@@ -618,13 +618,13 @@ function FlagPride({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-sm text-gray-700 space-y-1">
         <p className="font-bold text-yellow-700 text-base">Flag Pride</p>
         <p>Decorate any surface (wall, desk, or bag) with your team flag, take a photo, and show your support!</p>
-        <p className="text-xs text-gray-500 mt-2">Ã°Å¸â€œÅ½ Format: JPG / PNG &nbsp;Ã¢â‚¬Â¢&nbsp; Max size: 5 MB</p>
+        <p className="text-xs text-gray-500 mt-2"> Format: JPG / PNG - Max size: 5 MB</p>
       </div>
       <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-yellow-400 transition-colors">
         {preview ? (
           <img src={preview} alt="Flag pride" className="max-h-60 mx-auto rounded-lg mb-3 object-contain" />
         ) : (
-          <div className="text-6xl mb-3">Ã°Å¸Å¡Â©</div>
+          <div className="text-6xl mb-3"></div>
         )}
         <label className="cursor-pointer">
           <span className="text-yellow-600 font-semibold hover:underline">{preview ? 'Change Photo' : 'Upload Photo'}</span>
@@ -663,14 +663,14 @@ function DreamScreen({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-gray-700 space-y-1">
         <p className="font-bold text-blue-700 text-base">Dream Screen Pick</p>
         <p>Go to lg.com, find your dream World Cup TV, screenshot it, and upload your pick here!</p>
-        <a href="https://lg.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-1 text-blue-600 font-semibold hover:underline text-xs">Ã¢â€ â€™ Visit lg.com</a>
-        <p className="text-xs text-gray-500 mt-2">Ã°Å¸â€œÅ½ Format: JPG / PNG / Screenshot &nbsp;Ã¢â‚¬Â¢&nbsp; Max size: 3 MB</p>
+        <a href="https://lg.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-1 text-blue-600 font-semibold hover:underline text-xs"> Visit lg.com</a>
+        <p className="text-xs text-gray-500 mt-2"> Format: JPG / PNG / Screenshot - Max size: 3 MB</p>
       </div>
       <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
         {preview ? (
           <img src={preview} alt="Dream screen pick" className="max-h-60 mx-auto rounded-lg mb-3 object-contain" />
         ) : (
-          <div className="text-6xl mb-3">Ã°Å¸â€œÂº</div>
+          <div className="text-6xl mb-3"></div>
         )}
         <label className="cursor-pointer">
           <span className="text-blue-600 font-semibold hover:underline">{preview ? 'Change Screenshot' : 'Upload Screenshot'}</span>
@@ -903,12 +903,12 @@ function PredictorMission({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-gray-50 rounded-xl p-6">
         <div className="flex items-center justify-between mb-6">
           <div className="text-center flex-1">
-            <div className="text-4xl mb-2">Ã°Å¸â€¡Â¦Ã°Å¸â€¡Â·</div>
+            <div className="text-4xl mb-2"></div>
             <p className="font-semibold">Argentina</p>
           </div>
           <div className="text-2xl font-bold text-gray-400">vs</div>
           <div className="text-center flex-1">
-            <div className="text-4xl mb-2">Ã°Å¸â€¡Â§Ã°Å¸â€¡Â·</div>
+            <div className="text-4xl mb-2"></div>
             <p className="font-semibold">Brazil</p>
           </div>
         </div>
@@ -961,7 +961,7 @@ function FanArtMission({ onSubmit }: { onSubmit: (data: any) => void }) {
         {preview ? (
           <img src={preview} alt="Fan Art" className="max-h-80 mx-auto rounded-lg mb-4" />
         ) : (
-          <div className="text-6xl mb-4">Ã°Å¸Å½Â¨</div>
+          <div className="text-6xl mb-4"></div>
         )}
         <label className="cursor-pointer">
           <span className="text-lg-red font-semibold hover:underline">
@@ -997,7 +997,7 @@ function GenericMission({ onSubmit }: { onSubmit: (data: any) => void }) {
   );
 }
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ Week 2 Specific Missions Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// Week 2 Specific Missions
 
 // Helper: photo upload with custom instructions
 function PhotoUploadMission({
@@ -1027,12 +1027,12 @@ function PhotoUploadMission({
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-1">
         <p className="font-bold text-gray-900 text-base">{heading}</p>
         <p className="text-sm text-gray-600">{instruction}</p>
-        <p className="text-xs text-gray-400 mt-1">Ã°Å¸â€œÅ½ JPG / PNG &nbsp;Ã¢â‚¬Â¢&nbsp; Max {maxMB} MB</p>
+        <p className="text-xs text-gray-400 mt-1"> JPG / PNG - Max {maxMB} MB</p>
       </div>
       <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-lg-red transition-colors">
         {preview
           ? <img src={preview} alt="Upload preview" className="max-h-56 mx-auto rounded-lg mb-3 object-contain" />
-          : <div className="text-5xl mb-3">Ã°Å¸â€œÂ¸</div>}
+          : <div className="text-5xl mb-3"></div>}
         <label className="cursor-pointer">
           <span className="text-lg-red font-semibold hover:underline">{preview ? 'Change Photo' : 'Upload Photo'}</span>
           <input type="file" accept="image/*" onChange={handleFile} className="hidden" />
@@ -1115,7 +1115,7 @@ function GoalOrNoGoal({ onSubmit }: { onSubmit: (data: any) => void }) {
             selected === 'goal' ? 'bg-green-500 border-green-500 text-white scale-95' : 'border-green-500 text-green-600 hover:bg-green-50'
           }`}
         >
-          Ã¢Å¡Â½ GOAL!
+           GOAL!
         </button>
         <button
           onClick={() => handleAnswer('no-goal')}
@@ -1124,7 +1124,7 @@ function GoalOrNoGoal({ onSubmit }: { onSubmit: (data: any) => void }) {
             selected === 'no-goal' ? 'bg-lg-red border-lg-red text-white scale-95' : 'border-lg-red text-lg-red hover:bg-red-50'
           }`}
         >
-          Ã¢Å“â€¹ NO GOAL
+           NO GOAL
         </button>
       </div>
       {expired && (
@@ -1132,7 +1132,7 @@ function GoalOrNoGoal({ onSubmit }: { onSubmit: (data: any) => void }) {
           onClick={() => handleAnswer('skipped')}
           className="w-full bg-gray-300 text-gray-700 font-bold py-3 rounded-xl"
         >
-          Ã¢ÂÂ° Time's up Ã¢â‚¬â€ Next Ã¢â€ â€™
+           Time's up - Next 
         </button>
       )}
     </div>
@@ -1189,13 +1189,13 @@ function RoomMatchUp({ onSubmit }: { onSubmit: (data: any) => void }) {
           </button>
         ))}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < PUZZLE_IMAGES.length - 1 ? 'Next Puzzle Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < PUZZLE_IMAGES.length - 1 ? 'Next Puzzle' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -1257,7 +1257,7 @@ function LGQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-lg-red/5 border border-lg-red/20 rounded-xl px-4 py-2 text-center">
-        <p className="text-lg-red font-black text-sm uppercase tracking-widest">Fast Tap Poll Ã¢â‚¬â€ Faster Answer, More Points!</p>
+        <p className="text-lg-red font-black text-sm uppercase tracking-widest">Fast Tap Poll - Faster Answer, More Points!</p>
       </div>
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {LG_QUIZ_QUESTIONS.length}</span>
@@ -1289,13 +1289,13 @@ function LGQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
           );
         })}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < LG_QUIZ_QUESTIONS.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < LG_QUIZ_QUESTIONS.length - 1 ? 'Next Question' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -1316,26 +1316,26 @@ function StandeeSelfie({ onSubmit }: { onSubmit: (data: any) => void }) {
 // W2-7: Score Prediction Round of 16
 const ALL_TEAMS = [
   'Algeria','Argentina','Australia','Austria','Belgium','Bosnia & Herzegovina',
-  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"CÃƒÂ´te d'Ivoire",
-  'Croatia','CuraÃƒÂ§ao','Czechia','Ecuador','Egypt','England','France','Germany',
+  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"Cote d'Ivoire",
+  'Croatia','Curacao','Czechia','Ecuador','Egypt','England','France','Germany',
   'Ghana','Haiti','Iran','Iraq','Japan','Jordan','Mexico','Morocco',
   'Netherlands','New Zealand','Norway','Panama','Paraguay','Portugal',
   'Qatar','Saudi Arabia','Scotland','Senegal','South Africa','South Korea',
-  'Spain','Sweden','Switzerland','Tunisia','TÃƒÂ¼rkiye','United States',
+  'Spain','Sweden','Switzerland','Tunisia','Turkiye','United States',
   'Uruguay','Uzbekistan',
 ];
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ Week 3 Specific Missions Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// Week 3 Specific Missions
 
 // W3-1: QF Predictor
 const QF_TEAMS = [
   'Algeria','Argentina','Australia','Austria','Belgium','Bosnia & Herzegovina',
-  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"CÃƒÂ´te d'Ivoire",
-  'Croatia','CuraÃƒÂ§ao','Czechia','Ecuador','Egypt','England','France','Germany',
+  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"Cote d'Ivoire",
+  'Croatia','Curacao','Czechia','Ecuador','Egypt','England','France','Germany',
   'Ghana','Haiti','Iran','Iraq','Japan','Jordan','Mexico','Morocco',
   'Netherlands','New Zealand','Norway','Panama','Paraguay','Portugal',
   'Qatar','Saudi Arabia','Scotland','Senegal','South Africa','South Korea',
-  'Spain','Sweden','Switzerland','Tunisia','TÃƒÂ¼rkiye','United States',
+  'Spain','Sweden','Switzerland','Tunisia','Turkiye','United States',
   'Uruguay','Uzbekistan',
 ];
 const QF_MATCHUPS = [
@@ -1355,18 +1355,18 @@ function QFPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
         <p className="font-bold text-blue-800">Score Prediction: Quarter-Finals</p>
         <p className="text-sm text-blue-700 mt-1">Predict the winning teams for the high-stakes Quarter-Final matchups!</p>
-        <p className="text-xs text-blue-500 mt-1">No upload required Ã¢â‚¬â€ just select your picks.</p>
+        <p className="text-xs text-blue-500 mt-1">No upload required - just select your picks.</p>
       </div>
       <div className="space-y-3">
         {QF_MATCHUPS.map(m => (
           <div key={m.id}>
-            <label className="block text-sm font-bold text-gray-700 mb-1">{m.label} Ã¢â‚¬â€ Who wins?</label>
+            <label className="block text-sm font-bold text-gray-700 mb-1">{m.label} - Who wins?</label>
             <select
               value={picks[m.id] || ''}
               onChange={e => setPicks({ ...picks, [m.id]: e.target.value })}
               className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none text-sm"
             >
-              <option value="">Select a teamÃ¢â‚¬Â¦</option>
+              <option value="">Select a team</option>
               {QF_TEAMS.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
           </div>
@@ -1437,7 +1437,7 @@ function FastestTapPoll({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-2 text-center">
-        <p className="text-orange-700 font-black text-sm uppercase tracking-widest">Ã¢Å¡Â¡ Three rapid-fire questions Ã¢â‚¬â€ one tap each!</p>
+        <p className="text-orange-700 font-black text-sm uppercase tracking-widest"> Three rapid-fire questions - one tap each!</p>
       </div>
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {FASTEST_TAP_QUESTIONS.length}</span>
@@ -1466,7 +1466,7 @@ function FastestTapPoll({ onSubmit }: { onSubmit: (data: any) => void }) {
       </div>
       {expired && (
         <button onClick={() => handlePick('skipped')} className="w-full bg-gray-200 text-gray-700 font-bold py-3 rounded-xl">
-          Ã¢ÂÂ° Time's up Ã¢â‚¬â€ Next Ã¢â€ â€™
+           Time's up - Next 
         </button>
       )}
     </div>
@@ -1504,7 +1504,7 @@ function ColourMatchGame({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold text-gray-600">Scene {qIndex + 1} / {COLOUR_MATCH_DATA.length} Ã¢â‚¬â€ {q.label}</span>
+        <span className="text-sm font-semibold text-gray-600">Scene {qIndex + 1} / {COLOUR_MATCH_DATA.length} - {q.label}</span>
         <span className={`flex items-center gap-1 text-sm font-bold ${timeLeft <= 5 ? 'text-lg-red animate-pulse' : 'text-gray-700'}`}>
           <FlaticonIcon name="clock" className="w-4 h-4" />{timeLeft}s
         </span>
@@ -1526,13 +1526,13 @@ function ColourMatchGame({ onSubmit }: { onSubmit: (data: any) => void }) {
           </button>
         ))}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < COLOUR_MATCH_DATA.length - 1 ? 'Next Scene Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < COLOUR_MATCH_DATA.length - 1 ? 'Next Scene' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -1582,7 +1582,7 @@ function LightningQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-yellow-50 border border-yellow-300 rounded-xl px-4 py-2 text-center">
-        <p className="text-yellow-800 font-black text-sm uppercase tracking-widest">Ã¢Å¡Â¡ Lightning Quiz Ã¢â‚¬â€ 10 seconds to answer!</p>
+        <p className="text-yellow-800 font-black text-sm uppercase tracking-widest"> Lightning Quiz - 10 seconds to answer!</p>
       </div>
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {LIGHTNING_QUESTIONS.length}</span>
@@ -1614,13 +1614,13 @@ function LightningQuiz({ onSubmit }: { onSubmit: (data: any) => void }) {
           );
         })}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < LIGHTNING_QUESTIONS.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < LIGHTNING_QUESTIONS.length - 1 ? 'Next Question' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -1675,7 +1675,7 @@ function WrongAnswerOnly({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-purple-50 border border-purple-200 rounded-xl px-4 py-2 text-center">
-        <p className="text-purple-700 font-black text-sm uppercase tracking-widest">Ã°Å¸Ëœâ€š Wrong Answers Only!</p>
+        <p className="text-purple-700 font-black text-sm uppercase tracking-widest"> Wrong Answers Only!</p>
         <p className="text-purple-600 text-xs mt-0.5">Pick the most hilariously wrong answer</p>
       </div>
       <div className="flex items-center justify-between">
@@ -1705,7 +1705,7 @@ function WrongAnswerOnly({ onSubmit }: { onSubmit: (data: any) => void }) {
         disabled={selected === null}
         className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < WRONG_ANSWER_QUESTIONS.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < WRONG_ANSWER_QUESTIONS.length - 1 ? 'Next Question' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -1761,33 +1761,33 @@ function LGUnscramble({ onSubmit }: { onSubmit: (data: any) => void }) {
           value={input}
           onChange={e => setInput(e.target.value.replace(/[^a-zA-Z]/g, ''))}
           disabled={expired}
-          placeholder="Type the unscrambled wordÃ¢â‚¬Â¦"
+          placeholder="Type the unscrambled word"
           className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-green-500 outline-none text-center text-xl font-bold uppercase tracking-widest"
           maxLength={15}
         />
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!input && !expired}
         className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < UNSCRAMBLE_WORDS.length - 1 ? 'Next Word Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < UNSCRAMBLE_WORDS.length - 1 ? 'Next Word' : 'Submit Answers'}
       </button>
     </div>
   );
 }
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ Week 4 Specific Missions Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// Week 4 Specific Missions
 
 const ALL_TEAMS_W4 = [
   'Algeria','Argentina','Australia','Austria','Belgium','Bosnia & Herzegovina',
-  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"CÃƒÂ´te d'Ivoire",
-  'Croatia','CuraÃƒÂ§ao','Czechia','Ecuador','Egypt','England','France','Germany',
+  'Brazil','Cabo Verde','Canada','Colombia','Congo DR',"Cote d'Ivoire",
+  'Croatia','Curacao','Czechia','Ecuador','Egypt','England','France','Germany',
   'Ghana','Haiti','Iran','Iraq','Japan','Jordan','Mexico','Morocco',
   'Netherlands','New Zealand','Norway','Panama','Paraguay','Portugal',
   'Qatar','Saudi Arabia','Scotland','Senegal','South Africa','South Korea',
-  'Spain','Sweden','Switzerland','Tunisia','TÃƒÂ¼rkiye','United States',
+  'Spain','Sweden','Switzerland','Tunisia','Turkiye','United States',
   'Uruguay','Uzbekistan',
 ];
 
@@ -1805,7 +1805,7 @@ function SFPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
         <p className="font-bold text-blue-800">Score Prediction: Semi-Finals</p>
         <p className="text-sm text-blue-700 mt-1">Select the top 4 powerhouse teams heading into the Semi-Finals!</p>
-        <p className="text-xs text-blue-500 mt-1">No upload required Ã¢â‚¬â€ just select your picks.</p>
+        <p className="text-xs text-blue-500 mt-1">No upload required - just select your picks.</p>
       </div>
       <div className="space-y-3">
         {['Semi-Final Spot 1','Semi-Final Spot 2','Semi-Final Spot 3','Semi-Final Spot 4'].map((label, i) => (
@@ -1816,7 +1816,7 @@ function SFPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
               onChange={e => update(i, e.target.value)}
               className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none text-sm"
             >
-              <option value="">Select a teamÃ¢â‚¬Â¦</option>
+              <option value="">Select a team</option>
               {ALL_TEAMS_W4.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
           </div>
@@ -1835,7 +1835,7 @@ function SFPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
 
 // W4-2: Beat the Clue
 const BEAT_CLUES = [
-  { pts: 100, clue: 'They were the very first team to score a hat-trick in tournament history, back in 1930, courtesy of Guillermo StÃƒÂ¡bile.' },
+  { pts: 100, clue: 'They were the very first team to score a hat-trick in tournament history, back in 1930, courtesy of Guillermo Stabile.' },
   { pts: 80,  clue: 'They hold the infamous record for the most yellow cards received in a single tournament match (9 cards against the Netherlands in 2022).' },
   { pts: 60,  clue: 'They are famously nicknamed La Albiceleste by football fans worldwide.' },
   { pts: 40,  clue: 'The country that lifted the 1986 trophy thanks to Diego Maradona\'s legendary "Hand of God" goal.' },
@@ -1867,7 +1867,7 @@ function BeatTheClue({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-lg-red/5 border border-lg-red/20 rounded-xl p-3 text-center">
-        <p className="text-lg-red font-black text-sm uppercase tracking-widest">Ã¢Å¡Â¡ Beat The Clue!</p>
+        <p className="text-lg-red font-black text-sm uppercase tracking-widest"> Beat The Clue!</p>
         <p className="text-gray-600 text-xs mt-0.5">The faster you guess, the more points you score</p>
       </div>
 
@@ -1900,7 +1900,7 @@ function BeatTheClue({ onSubmit }: { onSubmit: (data: any) => void }) {
         type="text"
         value={answer}
         onChange={e => setAnswer(e.target.value)}
-        placeholder="Type the team nameÃ¢â‚¬Â¦"
+        placeholder="Type the team name"
         className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none text-center font-bold"
       />
 
@@ -1911,7 +1911,7 @@ function BeatTheClue({ onSubmit }: { onSubmit: (data: any) => void }) {
             disabled={expired && clueIndex === BEAT_CLUES.length - 1}
             className="py-3 rounded-xl border-2 border-gray-300 text-gray-600 font-bold text-sm hover:border-gray-400 transition-all"
           >
-            Next Clue ({BEAT_CLUES[clueIndex + 1].pts} pts) Ã¢â€ â€™
+            Next Clue ({BEAT_CLUES[clueIndex + 1].pts} pts) 
           </button>
         )}
         <button
@@ -1933,7 +1933,7 @@ function FinalPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-center">
-        <p className="text-2xl mb-1">Ã°Å¸Ââ€ </p>
+        <p className="text-2xl mb-1"></p>
         <p className="font-bold text-yellow-800 text-base">Final Prediction</p>
         <p className="text-sm text-yellow-700 mt-1">Who takes home the ultimate trophy? Drop your World Cup Champion pick before the final match begins!</p>
         <p className="text-xs text-yellow-600 mt-1">No upload required.</p>
@@ -1943,7 +1943,7 @@ function FinalPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
         onChange={e => setPick(e.target.value)}
         className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-yellow-500 outline-none text-sm font-semibold"
       >
-        <option value="">Select the World Cup ChampionÃ¢â‚¬Â¦</option>
+        <option value="">Select the World Cup Champion</option>
         {ALL_TEAMS_W4.map(t => <option key={t} value={t}>{t}</option>)}
       </select>
       <button
@@ -1951,7 +1951,7 @@ function FinalPredictor({ onSubmit }: { onSubmit: (data: any) => void }) {
         disabled={!pick}
         className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {pick ? `Submit: ${pick} Ã°Å¸Ââ€ ` : 'Pick your champion'}
+        {pick ? `Submit: ${pick} ` : 'Pick your champion'}
       </button>
     </div>
   );
@@ -1966,15 +1966,15 @@ function FootballMemory({ onSubmit }: { onSubmit: (data: any) => void }) {
     <div className="space-y-4">
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
         <p className="font-bold text-gray-900 text-base">My Football Memory</p>
-        <p className="text-sm text-gray-600 mt-1">Share your all-time favorite World Cup memory in 1Ã¢â‚¬â€œ2 sentences!</p>
-        <p className="text-xs text-gray-400 mt-1">Max 250 characters Ã¢â‚¬Â¢ No upload required</p>
+        <p className="text-sm text-gray-600 mt-1">Share your all-time favorite World Cup memory in 1-2 sentences!</p>
+        <p className="text-xs text-gray-400 mt-1">Max 250 characters - No upload required</p>
       </div>
       <div>
         <textarea
           value={text}
           onChange={e => setText(e.target.value.slice(0, MAX))}
           rows={5}
-          placeholder="e.g. Watching Maradona's Hand of God goal with my dad in 1986 Ã¢â‚¬â€ we still argue about it to this day!"
+          placeholder="e.g. Watching Maradona's Hand of God goal with my dad in 1986 - we still argue about it to this day!"
           className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-lg-red outline-none resize-none text-sm"
         />
         <div className={`text-right text-xs mt-1 font-semibold ${text.length >= MAX ? 'text-lg-red' : 'text-gray-400'}`}>
@@ -2045,13 +2045,13 @@ function MazeGame({ onSubmit }: { onSubmit: (data: any) => void }) {
           </button>
         ))}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < MAZE_ROUNDS.length - 1 ? 'Next Maze Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < MAZE_ROUNDS.length - 1 ? 'Next Maze' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -2090,13 +2090,13 @@ function LifesGoodMoment({ onSubmit }: { onSubmit: (data: any) => void }) {
           onClick={() => setMode('text')}
           className={`flex-1 py-2.5 font-bold text-sm transition-all ${mode === 'text' ? 'bg-lg-red text-white' : 'text-gray-600 hover:bg-gray-50'}`}
         >
-          Ã¢Å“ÂÃ¯Â¸Â Text (150 chars)
+           Text (150 chars)
         </button>
         <button
           onClick={() => setMode('photo')}
           className={`flex-1 py-2.5 font-bold text-sm transition-all ${mode === 'photo' ? 'bg-lg-red text-white' : 'text-gray-600 hover:bg-gray-50'}`}
         >
-          Ã°Å¸â€œÂ¸ Photo (5 MB)
+           Photo (5 MB)
         </button>
       </div>
 
@@ -2106,7 +2106,7 @@ function LifesGoodMoment({ onSubmit }: { onSubmit: (data: any) => void }) {
             value={text}
             onChange={e => setText(e.target.value.slice(0, MAX))}
             rows={4}
-            placeholder="Life's Good meansÃ¢â‚¬Â¦ (include #LGSuperfanLeague)"
+            placeholder="Life's Good means (include #LGSuperfanLeague)"
             className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-green-500 outline-none resize-none text-sm"
           />
           <div className={`text-right text-xs mt-1 font-semibold ${text.length >= MAX ? 'text-lg-red' : 'text-gray-400'}`}>
@@ -2117,7 +2117,7 @@ function LifesGoodMoment({ onSubmit }: { onSubmit: (data: any) => void }) {
         <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-green-400 transition-colors">
           {preview
             ? <img src={preview} alt="Preview" className="max-h-48 mx-auto rounded-lg mb-3 object-contain" />
-            : <div className="text-5xl mb-3">Ã°Å¸Å’Å¸</div>}
+            : <div className="text-5xl mb-3"></div>}
           <label className="cursor-pointer">
             <span className="text-green-600 font-semibold hover:underline">{preview ? 'Change Photo' : 'Upload Photo'}</span>
             <input type="file" accept="image/*" onChange={handleFile} className="hidden" />
@@ -2131,7 +2131,7 @@ function LifesGoodMoment({ onSubmit }: { onSubmit: (data: any) => void }) {
         disabled={!canSubmit}
         className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        Share My Life's Good Moment Ã°Å¸Å’Å¸
+        Share My Life's Good Moment 
       </button>
     </div>
   );
@@ -2181,7 +2181,7 @@ function LGBrandTrivia({ onSubmit }: { onSubmit: (data: any) => void }) {
   return (
     <div className="space-y-4">
       <div className="bg-lg-red/5 border border-lg-red/20 rounded-xl px-4 py-2 text-center">
-        <p className="text-lg-red font-black text-sm uppercase tracking-widest">Ã°Å¸ÂÂ·Ã¯Â¸Â LG Brand Trivia</p>
+        <p className="text-lg-red font-black text-sm uppercase tracking-widest"> LG Brand Trivia</p>
       </div>
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-600">Q{qIndex + 1} / {BRAND_TRIVIA.length}</span>
@@ -2213,13 +2213,13 @@ function LGBrandTrivia({ onSubmit }: { onSubmit: (data: any) => void }) {
           );
         })}
       </div>
-      {expired && <p className="text-lg-red text-sm text-center font-semibold">Ã¢ÂÂ° Time's up!</p>}
+      {expired && <p className="text-lg-red text-sm text-center font-semibold"> Time's up!</p>}
       <button
         onClick={handleNext}
         disabled={!selected && !expired}
         className="w-full bg-lg-red hover:bg-lg-red/90 text-white font-bold py-3 rounded-xl transition-all disabled:opacity-50"
       >
-        {qIndex < BRAND_TRIVIA.length - 1 ? 'Next Question Ã¢â€ â€™' : 'Submit Answers'}
+        {qIndex < BRAND_TRIVIA.length - 1 ? 'Next Question' : 'Submit Answers'}
       </button>
     </div>
   );
@@ -2259,7 +2259,7 @@ function ScorePrediction({ onSubmit }: { onSubmit: (data: any) => void }) {
           {selected.map(t => (
             <span key={t} className="bg-lg-red text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
               {t}
-              <button onClick={() => toggle(t)} className="hover:opacity-70">Ã¢Å“â€¢</button>
+              <button onClick={() => toggle(t)} className="hover:opacity-70"></button>
             </span>
           ))}
         </div>
@@ -2290,7 +2290,7 @@ function ScorePrediction({ onSubmit }: { onSubmit: (data: any) => void }) {
             >
               <span className={`w-5 h-5 rounded flex items-center justify-center border-2 flex-shrink-0 ${
                 isSelected ? 'bg-lg-red border-lg-red text-white text-xs' : 'border-gray-300'
-              }`}>{isSelected && 'Ã¢Å“â€œ'}</span>
+              }`}>{isSelected && 'check'}</span>
               {team}
             </button>
           );

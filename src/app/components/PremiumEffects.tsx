@@ -35,7 +35,7 @@ export function PremiumFootballAtmosphere() {
   );
 }
 
-// ── 1. Custom Glowing Cursor ─────────────────────────────────────
+//  1. Custom Glowing Cursor 
 export function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -96,7 +96,7 @@ export function CustomCursor() {
   );
 }
 
-// ── 2. 3D Tilt Card ──────────────────────────────────────────────
+//  2. 3D Tilt Card 
 export function TiltCard({
   children, className = '', intensity = 12,
 }: {
@@ -140,7 +140,7 @@ export function TiltCard({
   );
 }
 
-// ── 3. Magnetic Button ───────────────────────────────────────────
+//  3. Magnetic Button 
 export function MagneticButton({
   children, className = '', onClick, strength = 0.4,
 }: {
@@ -171,7 +171,7 @@ export function MagneticButton({
   );
 }
 
-// ── 4. Animated Counter ──────────────────────────────────────────
+//  4. Animated Counter 
 export function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
   const [display, setDisplay] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
@@ -199,7 +199,7 @@ export function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?
   return <span ref={ref}>{display.toLocaleString()}{suffix}</span>;
 }
 
-// ── 5. Cursor Spotlight (hero section) ───────────────────────────
+//  5. Cursor Spotlight (hero section) 
 export function CursorSpotlight({ color = 'rgba(200,0,44,0.12)' }: { color?: string }) {
   const [pos, setPos] = useState({ x: -999, y: -999 });
   const ref = useRef<HTMLDivElement>(null);
@@ -229,12 +229,12 @@ export function CursorSpotlight({ color = 'rgba(200,0,44,0.12)' }: { color?: str
   );
 }
 
-// ── 6. Particle Burst on Click ───────────────────────────────────
+//  6. Particle Burst on Click 
 export function ClickParticles() {
   const [particles, setParticles] = useState<{ id: number; x: number; y: number; emoji: string }[]>([]);
 
   useEffect(() => {
-    const EMOJIS = ['⚽', '🏆', '⭐', '🔥', '✨', '💥'];
+    const EMOJIS = ['', '', '', '', '', ''];
     let id = 0;
     const onClick = (e: MouseEvent) => {
       const newParticles = Array.from({ length: 6 }, () => ({
@@ -272,7 +272,7 @@ export function ClickParticles() {
   );
 }
 
-// ── 7. Scroll Progress Bar ────────────────────────────────────────
+//  7. Scroll Progress Bar 
 export function ScrollProgressBar() {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
@@ -292,8 +292,8 @@ export function ScrollProgressBar() {
   );
 }
 
-// ── 8. Text Scramble ─────────────────────────────────────────────
-const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789⚽🏆';
+//  8. Text Scramble 
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 export function ScrambleText({ text, trigger = true }: { text: string; trigger?: boolean }) {
   const [display, setDisplay] = useState(text);
 

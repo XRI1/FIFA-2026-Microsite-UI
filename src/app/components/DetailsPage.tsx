@@ -23,7 +23,7 @@ export function DetailsPage() {
           <div className="mb-8">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-2">DETAILS SECTION</h2>
             <p className="text-gray-500 text-sm md:text-base">
-              About the campaign, official products, terms & partner info — the credibility footer
+              About the campaign, official products, terms & partner info  the credibility footer
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export function DetailsPage() {
               <ul className="space-y-4">
                 {[
                   'Open to Bangladesh residents aged 18 and above',
-                  'One account per person — verified by mobile number',
+                  'One account per person  verified by mobile number',
                   'Point manipulation or bot activity results in permanent disqualification',
                   "LG Bangladesh's decision on all matters is final and binding",
                   'Full terms available at lg.com/bd/superfan-terms',

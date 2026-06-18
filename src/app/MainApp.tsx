@@ -80,7 +80,7 @@ export function MainApp() {
         });
       }
 
-      console.log(`📱 OTP screen (dummy mode) for ${phone}`);
+      console.log(` OTP screen (dummy mode) for ${phone}`);
       setAppState('otp');
     } catch (err) {
       console.error('Error in phone submit:', err);
@@ -167,7 +167,7 @@ export function MainApp() {
           return;
         }
 
-        console.log('✅ User team updated:', data);
+        console.log(' User team updated:', data);
 
         setUserData({
           name: data.name,
@@ -198,7 +198,7 @@ export function MainApp() {
           return;
         }
 
-        console.log('✅ New user created:', data);
+        console.log(' New user created:', data);
 
         setUserData({
           name: data.name,
