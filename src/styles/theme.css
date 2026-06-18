@@ -233,6 +233,12 @@
     min-height: 100vh;
   }
 
+  .page-transition-frame {
+    min-height: 100vh;
+    transform-origin: center top;
+    will-change: opacity, transform, filter;
+  }
+
   .premium-football-atmosphere {
     position: fixed;
     inset: 0;
